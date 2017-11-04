@@ -1,0 +1,9 @@
+body{margin:0;}
+div{
+    float:left;
+    border-radius:15%;
+    margin:2%;
+    padding-top:29.3%;
+    width:29.3%;
+    background-color:orange;
+}
