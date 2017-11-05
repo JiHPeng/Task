@@ -7,14 +7,18 @@ body{color:white;
 
 .header img{
     margin: 15px;
-    height: 50px;}
+    height: 100px;}
 
-.main{margin:0 25% 0 25%;}
+.main{margin:200px 20% 200px 20%;}
 .main img{
     display: block;
-    height:100px;
+    height:200px;
     margin:0 auto;
 }
-.main p{display: block;}
+.main p{display: block;
+    font-size:4rem;}
 
-.logo_left{position: relative;}
+.footer{margin:200px;}
+.footer img{margin:0 auto;display: block;}
+.logo_left{position: relative;right:25%;}
+.logo_right{position: relative;left:25%;bottom:147px;}
