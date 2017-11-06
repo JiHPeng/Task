@@ -4,20 +4,20 @@ body{color:white;
     background-color:#68cdd5;}
 
 .header img{
-    margin: 20px;
-    height:30px;
+    margin: 1em;
+    height:3em;
     }
 
-.main{margin:50px 20% 100px 20%;}
+.main{margin:5em 20% 10em 20%;}
 .main img{
     display: block;
         margin:0 auto;
-    height:50px;
+    height:4em;
 }
 .main p{display: block;
-    font-size:20px;}
+    font-size:2em;}
 
 .footer{margin:20%;}
-.footer img{margin:0 auto;display: block;height:100px;}
+.footer img{margin:0 auto;display: block;height:8em;}
 .logo_left{position: relative;right:40%;}
-.logo_right{position: relative;left:40%;bottom:100px;}
+.logo_right{position: relative;left:40%;bottom:8em;}
