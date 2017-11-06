@@ -3,22 +3,21 @@ html{font-size: 62.5%;}
 body{color:white;
     background-color:#68cdd5;}
 
-.header{margin-bottom: 50px;}
-
 .header img{
-    margin: 15px;
-    height: 100px;}
+    margin: 20px;
+    height:30px;
+    }
 
-.main{margin:200px 20% 200px 20%;}
+.main{margin:50px 20% 100px 20%;}
 .main img{
     display: block;
-    height:200px;
-    margin:0 auto;
+        margin:0 auto;
+    height:50px;
 }
 .main p{display: block;
-    font-size:4rem;}
+    font-size:20px;}
 
-.footer{margin:200px;}
-.footer img{margin:0 auto;display: block;}
+.footer{margin:20%;}
+.footer img{margin:0 auto;display: block;height:100px;}
 .logo_left{position: relative;right:40%;}
-.logo_right{position: relative;left:40%;bottom:147px;}
+.logo_right{position: relative;left:40%;bottom:100px;}
