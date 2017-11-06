@@ -16,7 +16,7 @@ body{color:white;
 .main p{display: block;
     font-size:2em;}
 
-.footer{margin:20%;}
-.footer img{margin:0 auto;display: block;height:8em;}
+.footer{margin:0 20%;}
+.footer img{display:block;margin:0 auto;height:8em;}
 .logo_left{position: relative;right:40%;}
 .logo_right{position: relative;left:40%;bottom:8em;}
