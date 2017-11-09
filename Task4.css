@@ -1,9 +1,29 @@
-body{margin:0 0;}
-header{background-color:#5fc0cd;height:88px
+body{background-color: #eff0f4;
+    margin:0;}
+header{background-color:#5fc0cd;
+    height:40px;line-height: 40px;padding:0 5px;}
 
+header p{color: white;
+    font-size:18px;
+    text-align: center;
+    display: block;
+    margin: 0;
 }
+.left{float:left;
+    }
+.middle{position:absolute;
+    top:0;left:0;
+    width:100%;
+    margin: 0 0;
+    }
+.right{float: right;}
 
-header p{color: white;font-size: 15px;}
-.left{}
-.middle{}
-.right{}
+.account{background-color: white;margin-top: 30px;}
+.account img{height: 40px;float: left;}
+.account input{height:40px;border:none;width: 80%;outline: none;
+    }
+
+.login{background-color:#5fc0cd;height:50px;margin-top: 30px;line-height: 50px;width: 100%;padding: 0;outline: none;border: none;}
+.login p{font-size: 20px;text-align: center;color: white;margin: 0;}
+
+.footer p{float: right;margin-right: 10px;color:#5fc0cd;text-decoration: underline;}
