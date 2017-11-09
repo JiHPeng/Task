@@ -20,10 +20,23 @@ header p{color: white;
 
 .account{background-color: white;margin-top: 30px;}
 .account img{height: 40px;float: left;}
-.account input{height:40px;border:none;width: 80%;outline: none;
+.account input{height:40px;
+    border:none;
+    width: 80%;
+    outline: none;
     }
 
-.login{background-color:#5fc0cd;height:50px;margin-top: 30px;line-height: 50px;width: 100%;padding: 0;outline: none;border: none;}
+.login{background-color:#5fc0cd;
+    height:50px;
+    margin-top: 30px;
+    line-height: 50px;
+    width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;}
 .login p{font-size: 20px;text-align: center;color: white;margin: 0;}
 
-.footer p{float: right;margin-right: 10px;color:#5fc0cd;text-decoration: underline;}
+.footer p{float: right;
+    margin-right: 10px;
+    color:#5fc0cd;
+    text-decoration: underline;}
