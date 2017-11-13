@@ -1,7 +1,9 @@
-body {margin: 0;
+body {
+    margin: 0;
     background-color: white;
 }
-header {position: fixed;
+header {
+    position: fixed;
     top: 0;
     z-index: 2;
     height: 50px;
@@ -9,69 +11,81 @@ header {position: fixed;
     line-height: 50px;
     background-color: #5fc0cd;
 }
-header img {height: 30px;
+header img {
     float: left;
+    height: 30px;
     margin: 10px 0 20px 10px;
 }
-header p {margin: 0;
-    width: 100%;
+header p {
     position: absolute;
     left: 0;
     z-index: 1;
+    margin: 0;
+    width: 100%;
     text-align: center;
     font-size: 20px;
     color: white;
 }
 .mid {
-    top: 50px;
-    height:300px;
+    margin-top: 45px;
+    height:250px;
     width: 100%;
     background: url(images/task5-1_06.png) no-repeat 0 0 scroll;
-    background-size: 100% 300px;
+    background-size: 100% 250px;
 }
-.mid p {margin:0;
+.mid p {
+    margin:0;
     color: white;
 }
-.mid-left {margin: 80px 20px;
+.mid-left {
     float: left;
+    margin: 60px 20px;
     height: 120px;
 }
-.mid-right-p1 {position: absolute;
-    top:100px;
+.mid-right-p1 {
+    position: absolute;
+    top:120px;
     left:180px;
     margin: 0;
     font-size: 20px;
 }
-.mid-right-p2 {position: absolute;
-    top:150px;
+.mid-right-p2 {
+    position: absolute;
+    top:170px;
     left:180px;
     margin: 0;
     font-size: 15px;
 }
 
-main {overflow: hidden;
+main {
+    overflow: hidden;
 }
-main img{height:20px;
+main img{
     position: relative;
     top: 2px;
+    height:20px;
     margin: 0 15px;
 }
-main p {float: left;
+main p {
+    float: left;
     border-bottom: solid 1px #e1e5e7;
     font-size: 18px;
 }
-main .title {float: none;
+main .title {
+    float: none;
     padding: 20px 0 20px 0;
     margin: 0;
 }
-main .row1 {padding-bottom: 20px;
+main .row1 {
+    padding-bottom: 20px;
     margin-left: 20px;
     width:calc(100% - 20px);
 }
-main .row2 {padding-bottom: 20px;
-    text-indent: 10px;
+main .row2 {
+    padding-bottom: 20px;
     margin: 0 0 20px 20px;
     width:calc(100% - 20px);
+    text-indent: 10px;
     color: #999999;
 }
 main .row2b {
@@ -87,13 +101,15 @@ main .box {
     display: flex;
     display: -webkit-flex;
 }
-main .row3{padding-bottom: 20px;
+main .row3{
+    padding-bottom: 20px;
     text-indent: 10px;
     margin: 0 0 0 20px;
     border: none;
     color: #999999;
 }
-main .row4{padding-bottom: 20px;
+main .row4{
+    padding-bottom: 20px;
     margin: 0;
     width: calc(100% - 160px);
     border: none;
@@ -101,14 +117,17 @@ main .row4{padding-bottom: 20px;
 }
 main .bar {
     float: right;
+    position: static;
     margin: 0;
     height: 1px;
-    position: static;
     width: calc(100% - 20px);
 }
 
-main .icon_divide {margin: 0 10px;}
-main .icon_star {margin: 0 5px 0 0;
+main .icon_divide {
+    margin: 0 10px;
+}
+main .icon_star {
+    margin: 0 5px 0 0;
     height: 18px;
 }
 
@@ -118,32 +137,34 @@ main .icon_star {margin: 0 5px 0 0;
     height: 80px;
 }
 
-footer {position: fixed;
+footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: white;
     padding-bottom: 10px;
+    background-color: white;
 }
 
 footer .left {
     float: left;
     margin: 0 0 0 4%;
+    width: 44%;
     border: solid 1px #5fc0cd;
     border-radius: 10px;
-    width: 44%;
     background-color: white;
 }
 footer .right {
     float: right;
     margin: 0 4% 0 0;
+    width: 44%;
     border: solid 1px #5fc0cd;
     background-color: #5fc0cd;
     border-radius: 10px;
-    width: 44%;
 }
-footer p {text-align: center;
+footer p {
     margin: 15px 0;
     font-size: 20px;
+    text-align: center;
 }
 footer .left p {
     color: #5fc0cd;
