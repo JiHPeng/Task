@@ -48,14 +48,16 @@ header p {margin: 0;
     margin: 0;
     font-size: 15px;
 }
+
+
 main img{height:20px;
     position: relative;
     top: 2px;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 main p {float: left;
     border-bottom: solid 1px #e1e5e7;
-    font-size: 20px;
+    font-size: 18px;
 }
 main .title {float: none;
     padding: 20px 0 20px 0;
@@ -69,14 +71,49 @@ main .row2 {padding-bottom: 20px;
     text-indent: 10px;
     margin: 0 0 20px 20px;
     width:calc(100% - 20px);
+    color: #999999;
+}
+main .row2b {
+    color: black;
+}
+main .row2r {
+    color: #e26163;
+}
+main .row3{padding-bottom: 20px;
+    text-indent: 10px;
+    margin: 0 0 0 20px;
+    border: none;
+    color: #999999;
+}
+main .row4{padding-bottom: 20px;
+    margin: 0;
+    width: calc(100% - 160px);
+    border: none;
+    font-size: 15px;
+}
+main .bar {
+    float: right;
+    height: 1px;
+    position: static;
+    width: calc(100% - 20px);
 }
 
+main .icon_divide {margin: 0 10px;}
+main .icon_star {margin: 0 5px 0 0;
+    height: 18px;
+}
 
-main .icon_divide {margin: 0 0 0 20px;}
+.indent {
+    float: left;
+    margin: 0 auto;
+    height: 80px;
+}
+
 footer {position: fixed;
     bottom: 0;
     width: 100%;
     background-color: white;
+    padding-bottom: 10px;
 }
 
 footer .left {
@@ -84,7 +121,7 @@ footer .left {
     margin: 0 0 0 4%;
     border: solid 1px #5fc0cd;
     border-radius: 10px;
-    width: 45%;
+    width: 44%;
     background-color: white;
 }
 footer .right {
@@ -93,9 +130,12 @@ footer .right {
     border: solid 1px #5fc0cd;
     background-color: #5fc0cd;
     border-radius: 10px;
-    width: 45%;
+    width: 44%;
 }
-footer p {text-align: center;}
+footer p {text-align: center;
+    margin: 15px 0;
+    font-size: 20px;
+}
 footer .left p {
     color: #5fc0cd;
 }
