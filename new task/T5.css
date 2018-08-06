@@ -99,19 +99,20 @@ footer {
 }
 
 button {
-    margin: 5px 10px;
-    width:40%;
+    width:48%;
     border: 2px solid #68cdd5;
     border-radius: 15px;
     outline: none;
 }
 
 .button1 {
+    margin: 0 1% 5px 1%;
     background: white;
     color: #68cdd5;
 }
 
 .button2 {
+    margin: 0 1% 5px 0;
     background: #68cdd5;
     color: white;
 }
