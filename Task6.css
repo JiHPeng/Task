@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 4rem 0;
-    height:900px;
 }
 header {
     display: flex;
@@ -15,87 +14,59 @@ header {
     z-index: 1;
 }
 
-p {
-    margin: 1rem 0;
+header a {
+    width: 42px;
+    height: 44px;
+    background-image: url("images/task6/CssGaga.png");
+    background-position: 0 -96px;
+    transform: scale(0.5);
 }
 
 .span-hidden {
     margin: 0 1rem;
     width: 2rem;
 }
-header img {
-    margin: 0 1rem;
-    width: 2rem;
+
+.btn-box {
 }
 
-.btn-group {
-}
 .btn-primary {
     border-radius: 1rem;
 }
 
-
 main {
     width: 100%;
+}
+
+select {
+    text-align-last: center;
+    border: none;
+    width: 30%;
+    height: 2.5rem;
+    color: #9d9d9d;
+}
+
+.select-center {
+    width: 35%;
+    border-left: 0.1rem solid #eff0f4;
+    border-right: 0.1rem solid #eff0f4;
 }
 
 .main-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0;
-}
-
-.dropdown {
-    position: relative;
-    width: 33%;
-}
-
-.span-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    text-align: center;
+    padding: 0.5rem 1rem;
     background-color: white;
-    box-shadow: 0 8px 16px 0 #9d9d9d;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.span-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid #9d9d9d;
-    border-left: 1px solid #9d9d9d;
-}
-
-.span-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-img {
-    margin-left: 1rem;
-    align-self: center;
-}
-
-hr {
-    margin: 0;
+    border-bottom: 0.1rem solid #eff0f4;
+    z-index: 2;
 }
 
 ul {
     margin: 0;
-    padding: 0;
+    padding: 4rem 0 0 0;
 }
 
 li {
@@ -103,35 +74,57 @@ li {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 1rem;
     border-bottom: 0.1rem solid #eff0f4;
 }
 
-.list-left {
+.icon1 {
+    position: relative;
+    top: 0.5rem;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/task6/CssGaga.png");
+    background-position: -96px 0;
+    transform: scale(0.5);
 }
 
-.list-right {
-    padding-right: 2rem;
+.icon2 {
+    position: relative;
+    top: 0.5rem;
+    display: inline-block;
+    width: 19px;
+    height: 23px;
+    margin: 0 2px;
+    background-image: url("images/task6/CssGaga.png");
+    background-position: -96px -26px;
+    transform: scale(0.5);
 }
 
-.main-img2 {
-    margin: 0 0.5rem;
-    height: 1rem;
+.span-p {
+    color: #9d9d9d;
+}
+
+.list-p1 {
+    margin: 0.5rem 0 0 0;
+    text-indent: 28px;
 }
 
 .list-p2 {
     vertical-align: middle;
+    padding: 0.5rem 2rem 0 0;
+    margin: 0;
+    color: #c12e2a;
 }
 
 .arrow-right {
     display: inline-block;
-    border-top: 0.05rem solid #c12e2a;
-    border-right: 0.05rem solid #c12e2a;
+    border-top: 0.05rem solid #68cdd5;
+    border-right: 0.05rem solid #68cdd5;
     width: 1rem;
     height: 1rem;
     transform: rotate(45deg)
 }
-
-
 
 footer {
     position: fixed;
@@ -139,9 +132,50 @@ footer {
     left: 0;
     right:0;
     display: flex;
-    display: -webkit-flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20%;
     height: 5rem;
-    line-height: 5rem;
     background-color: #eff0f4;
+}
+
+footer .p1 {
+    position: relative;
+    bottom: 0.5rem;
+    text-align: center;
+    margin: 0;
+    color: #68cdd5;
+    font-size: 1.2rem;
+}
+
+footer .p2 {
+    position: relative;
+    bottom: 0.7rem;
+    text-align: center;
+    margin: 0;
+    color: #9d9d9d;
+    font-size: 1.2rem;
+}
+
+.img-left {
+    height: 40px;
+    width: 46px;
+    background-image: url("images/task6/CssGaga.png");
+    background-position: -44px -139px;
+    transform: scale(0.5);
+}
+
+.img-center {
+    height: 94px;
+    width: 94px;
+    background-image: url("images/task6/CssGaga.png");
+    transform: scale(0.5);
+}
+
+.img-right {
+    height: 42px;
+    width: 41px;
+    background-image: url("images/task6/CssGaga.png");
+    background-position: -44px -96px;
+    transform: scale(0.5);
 }
