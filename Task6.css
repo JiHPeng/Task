@@ -27,11 +27,27 @@ header a {
     width: 2rem;
 }
 
-.btn-box {
+.btn-group {
+    border-radius: 0.5rem;
+    background-color: #1b6d85;
 }
 
-.btn-primary {
-    border-radius: 1rem;
+.btn-left {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-right {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #68cdd5;
+    background-color: white;
 }
 
 main {
