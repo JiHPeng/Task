@@ -1,5 +1,6 @@
 body {
     padding-top: 4rem;
+    padding-bottom: 110px;
     background-color: #68cdd5;
 }
 
@@ -13,6 +14,8 @@ header {
     justify-content: space-between;
     padding: 1rem 1rem;
     color: white;
+    background-color: #68cdd5;
+    z-index: 1;
 }
 
 header img {
@@ -52,8 +55,8 @@ header img {
 
 .box2 {
     border: 3px solid white;
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
 }
 
 .box3 {
@@ -74,4 +77,32 @@ header img {
     color: white;
 }
 
+.icon-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 6rem;
+}
 
+.icon-box>img {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 2rem 2rem;
+    background-color: #68cdd5;
+}
+
+footer>p {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+    background-color: #eea236;
+}
