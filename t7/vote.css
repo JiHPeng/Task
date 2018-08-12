@@ -34,6 +34,13 @@ header img {
     height: 3rem;
 }
 
+audio {
+    position: absolute;
+    right: 1rem;
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
 .arrow {
     margin-left: 2rem;
     width: 0;
@@ -107,7 +114,15 @@ footer {
     background-color: #68cdd5;
 }
 
-footer>p {
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+footer p {
     padding: 1rem 0;
     font-size: 2rem;
     color: white;
