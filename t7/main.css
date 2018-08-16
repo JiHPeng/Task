@@ -59,7 +59,6 @@ header img {
 }
 
 .box {
-    position: relative;
     text-align: center;
     background-color: white;
     border: 1px solid #c8c9cd;
@@ -73,6 +72,10 @@ header img {
     color: #eea236;
 }
 
+.box2 {
+    position: relative;
+}
+
 .type {
     margin: 1rem 1.5rem;
     padding: 2rem 0;
@@ -80,11 +83,11 @@ header img {
     background-color: #69d1e9;
 }
 
-.box:after {
+.box2:after {
     content: '';
     position: absolute;
     right: -10px;
-    top: 50%;
+    top: calc(50% - 24px);
     border: 12px solid;
     border-color:transparent transparent transparent #eea236;
     width:0;
