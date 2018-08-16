@@ -9,7 +9,8 @@ header {
     left: 0;
     right: 0;
     padding: 1rem;
-    background-color: #68cdd5;
+    background-color: #29bde0;
+    z-index: 1;
 }
 
 a:active {
@@ -38,7 +39,7 @@ header img {
     align-items: center;
     justify-content: space-between;
     margin: 1.5rem 0;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.5rem;
     border: 1px solid #c8c9cd;
     font-size: 1.5rem;
     background-color: white;
@@ -76,15 +77,15 @@ header img {
     margin: 1rem 1.5rem;
     padding: 2rem 0;
     color: white;
-    background-color: #68cdd5;
+    background-color: #69d1e9;
 }
 
 .box:after {
     content: '';
     position: absolute;
-    right: -0.5rem;
+    right: -10px;
     top: 50%;
-    border: 10px solid;
+    border: 12px solid;
     border-color:transparent transparent transparent #eea236;
     width:0;
     height:0;
