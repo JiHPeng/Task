@@ -1,7 +1,7 @@
 body {
     padding-top: 4rem;
     padding-bottom: 110px;
-    background-color: #68cdd5;
+    background-color: #29bde0;
 }
 
 header {
@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     padding: 1rem 1rem;
     color: white;
-    background-color: #68cdd5;
+    background-color: #29bde0;
     z-index: 1;
 }
 
@@ -26,8 +26,8 @@ header img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1rem;
-    background-color: #6ae5ed;
+    padding: 0.5rem 1rem;
+    background-color: #b9e9f5;
 }
 
 .main-top img {
@@ -58,13 +58,13 @@ audio {
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 10vw;
 }
 
 .box2 {
     border: 3px solid white;
-    width: 6rem;
-    height: 6rem;
+    width: 25vw;
+    height: 25vw;
 }
 
 .box2:hover .icon-box {
@@ -76,7 +76,8 @@ audio {
     align-items: center;
     justify-content: center;
     height: 70%;
-    background-color: #eea236;
+    background-color: #f5c97b;
+    font-size: 5vw;
 }
 
 .box4 {
@@ -84,8 +85,8 @@ audio {
     align-items: center;
     justify-content: center;
     height: 30%;
-    background-color: #8a6d3b;
-    font-size: 12px;
+    background-color: #83b09a;
+    font-size: 5vw;
     color: white;
 }
 
@@ -95,12 +96,12 @@ audio {
     visibility: hidden;
     padding: 1rem 0;
     margin-left: -3px;
-    width: 6rem;
+    width: 25vw;
 }
 
 .icon-box>img {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 5vw;
+    height: 5vw;
     background-color: white;
 }
 
@@ -111,7 +112,7 @@ footer {
     right: 0;
     text-align: center;
     padding: 2rem 2rem;
-    background-color: #68cdd5;
+    background-color: #29bde0;
 }
 
 a:hover {
