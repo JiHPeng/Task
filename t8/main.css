@@ -105,6 +105,10 @@ body {
     margin-bottom: 20px;
 }
 
+footer {
+    color: white;
+}
+
 .col-xs-4 p span {
     margin-right: 30px;
 }
