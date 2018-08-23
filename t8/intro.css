@@ -19,9 +19,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 10%;
+    padding: 0 10%;
     width: 100%;
+    height: 100px;
     background-color: #29b078;
+}
+
+
+header ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    padding: 0 35px;
+    float: left;
+}
+
+header li a {
+    color: white;
+}
+
+header li a:hover {
+    text-decoration: none;
+}
+
+.li-active {
+    border-bottom: 3px solid white;
+    box-shadow: 0 1px 0 #e1e1e1;
 }
 
 .top3 {
@@ -96,29 +126,42 @@ body {
     margin: 20px 0;
 }
 
-#container2 {
-    padding: 10px 10%;
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+footer li:hover {
+    text-decoration: underline;
+}
+
+.footer-row2 {
+    margin: 0;
+    padding: 20px 10% 0 10%;
+    color: white;
     background-color: #29b078;
 }
 
-.col-xs-4 p {
-    margin-bottom: 20px;
-}
-
-footer {
-    color: white;
-}
-
-.col-xs-4 p span {
-    margin-right: 30px;
-}
-
-.footer-right {
+.footer-code {
     float: right;
-    clear: right;
+    text-align: center;
 }
 
 #copyright {
     text-align: center;
+    padding: 10px 0;
+    color: white;
+    border-top: 1px solid white;
+    background-color: #29b078;
 }
 
+footer p {
+    margin-bottom: 30px;
+}
+
+footer .p2 {
+    margin-bottom: 10px;
+}
