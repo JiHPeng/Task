@@ -29,6 +29,18 @@ body {
     width: 100%;
 }
 
+.glyphicon-menu-left {
+    font-size: 40px;
+    top:calc(50% - 20px);
+    left: 50px;
+}
+
+.glyphicon-menu-right {
+    font-size: 40px;
+    top:calc(50% - 20px);
+    right: 50px;
+}
+
 
 header ul {
     height: 100%;
@@ -36,7 +48,7 @@ header ul {
     padding: 0;
 }
 
-header li {
+ul li {
     display: flex;
     align-items: center;
     height: 100%;
@@ -45,11 +57,11 @@ header li {
     float: left;
 }
 
-header li a {
+ul li a {
     color: white;
 }
 
-header li a:hover {
+ul li a:hover {
     text-decoration: none;
 }
 

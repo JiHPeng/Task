@@ -60,6 +60,10 @@ header li a:hover {
     background-color: #f1a750;
 }
 
+main>p>a {
+    color: #29b078;
+}
+
 #container1 {
     padding: 10px 10%;
     background-color: #fafafa;
