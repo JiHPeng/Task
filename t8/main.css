@@ -181,6 +181,10 @@ ul li a:hover {
     background-color: white;
 }
 
+.row4 img {
+    max-width: 100%;
+}
+
 .row4:hover {
     box-shadow: 1px 0 5px 5px #989898;
     position: relative;
@@ -192,6 +196,12 @@ ul li a:hover {
     background-color: white;
 }
 
+.footer-row2 {
+    text-align: center;
+    padding: 0 10% 10px 10%;
+    background-color: white;
+}
+
 footer ul {
     display: flex;
     align-items: center;
@@ -200,11 +210,15 @@ footer ul {
     list-style: none;
 }
 
+footer li {
+    padding: 0;
+}
+
 footer li:hover {
     text-decoration: underline;
 }
 
-.footer-row2 {
+.footer-row3 {
     margin: 0;
     padding: 20px 10% 0 10%;
     color: white;
@@ -226,6 +240,11 @@ footer li:hover {
 
 footer p {
     margin-bottom: 30px;
+}
+
+footer .p1 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 footer .p2 {

@@ -64,6 +64,14 @@ header li a:hover {
     background-color: #f1a750;
 }
 
+.top3 .left {
+    width: 45%;
+}
+
+.top3 .right {
+    width: 50%;
+}
+
 main>p>a {
     color: #29b078;
 }
@@ -124,6 +132,10 @@ main>p>a {
     align-items: center;
     padding: 20px 50px;
     border-bottom: 1px solid #cfcfcf;
+}
+
+.enterprise .icon1 {
+    width: 100%;
 }
 
 .intro {
