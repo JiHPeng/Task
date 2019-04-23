@@ -153,7 +153,7 @@ ul li a:hover {
 }
 
 .row3-flex img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .row3 .p1 {
@@ -223,6 +223,7 @@ footer li:hover {
 
 .footer-row3 {
     margin: 0;
+    margin-top: 20px;
     padding: 20px 10% 0 10%;
     color: white;
     background-color: #29b078;
@@ -246,6 +247,7 @@ footer p {
 }
 
 footer .p1 {
+    text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
@@ -278,6 +280,32 @@ footer .p2 {
         width: 100%;
         text-align: center;
     }
+
+    .footer-row1 {
+        float: left;
+        position: relative;
+        width: 50%;
+        margin: 0;
+    }
+
+    .footer-row2 {
+        float: left;
+        position: relative;
+        padding: 10px 10%;
+        width: 50%;
+        margin: 0;
+    }
+
+    footer ul {
+        display: block;
+        text-align: center;
+    }
+
+    footer ul li {
+        float: none;
+        display: block;
+        margin: 10px;
+    }
 }
 
 
@@ -297,7 +325,7 @@ footer .p2 {
 
     .tag {
         position: absolute;
-        top: 6.5%;
+        top: 6%;
         right: 10%;
         width: 40px;
         height: 40px;
@@ -310,22 +338,22 @@ footer .p2 {
     }
 
     .option {
-        opacity: 0;
         display: none;
     }
 
     .tag:hover + .option {
-        opacity: 1;
         display: block;
-        transition: 2s;
     }
 
     .option div {
         padding: 15px 0;
         background-color: #269665;
-        color: white;
         text-align: center;
         font-size: 16px;
+    }
+
+    .option div a {
+        color: white;
     }
 
     .top2 ul {
@@ -335,4 +363,32 @@ footer .p2 {
     #main .row .col-xs-6 {
         margin-bottom: 80px;
     }
+
+    .row2 img {
+        display: none;
+    }
+
+    .row3-flex {
+        display: block;
+    }
+
+    .row3 {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .row3 img {
+        width: auto;
+    }
+
+    .row4 {
+        width: 100%;
+    }
+
+    .box4 {
+        height: auto;
+        display: block;
+    }
+
+
 }
