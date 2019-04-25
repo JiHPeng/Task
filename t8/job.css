@@ -47,13 +47,12 @@ header li a {
     font-size: 18px;
 }
 
-header li a:hover {
+header ul li a:hover {
     text-decoration: none;
 }
 
 .li-active {
     border-bottom: 3px solid white;
-    box-shadow: 0 1px 0 #e1e1e1;
 }
 
 .top3 {
@@ -277,14 +276,9 @@ footer .p2 {
         display: none;
     }
 
-    .tag {
+    #mynavbar {
         display: none;
     }
-
-    .option {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -301,44 +295,25 @@ footer .p2 {
         display: none;
     }
 
-    .tag {
-        position: absolute;
-        top: 6%;
-        right: 10%;
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    .tag img {
-        width: 100%;
-        opacity: 0.6;
-    }
-
-    .option {
-        opacity: 0;
-        display: none;
-    }
-
-    .tag:hover + .option {
-        opacity: 1;
-        display: block;
-        transition: 2s;
-    }
-
-    .option div {
-        padding: 15px 0;
-        background-color: #269665;
-        color: white;
-        text-align: center;
-        font-size: 16px;
-    }
-
     .top2 ul {
-        display: none;
+        width: 100%;
     }
 
     .intro-sm {
         width: 100%;
     }
+}
+
+#mynavbar {
+    background-color: #29B078;
+}
+
+#mynavbar li {
+    float: none;
+    text-align: center;
+    background-color: #29B078;
+}
+
+nav button img {
+    height: 49px;
 }

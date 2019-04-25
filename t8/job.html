@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="job.css" type="text/css">
-    <title>Title</title>
+    <title>职业</title>
 </head>
 <body>
     <header>
@@ -21,32 +23,46 @@
                 <img src="../images/t8/intro_03.png">
             </div>
         </div>
-        <div class="top2">
-            <img src="../images/t8/intro_04.png">
-            <ul>
-                <li class="li-active">
-                    <a href="main.html">首页</a>
-                </li>
-                <li>
-                    <a href="job.html">职业</a>
-                </li>
-                <li>
-                    <a href="intro.html">推荐</a>
-                </li>
-                <li>
-                    <a href="">关于</a>
-                </li>
-            </ul>
-        </div>
-        <div class="tag">
-            <img src="../images/t8/menu.png">
-        </div>
-        <div class="option">
-            <div>首页</div>
-            <div>职业</div>
-            <div>关于</div>
-            <div>推荐</div>
-        </div>
+        <nav class="top2">
+            <div>
+                <img class="skilltree" src="../images/t8/intro_04.png">
+            </div>
+            <div>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#mynavbar">
+                    <img src="../images/t8/menu.png">
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="">
+                        <li class="li-active">
+                            <a href="main.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="job.html">职业</a>
+                        </li>
+                        <li>
+                            <a href="intro.html">推荐</a>
+                        </li>
+                        <li>
+                            <a href="">关于</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <ul class="collapse" id="mynavbar">
+            <li>
+                <a href="main.html">首页</a>
+            </li>
+            <li>
+                <a href="job.html">职业</a>
+            </li>
+            <li>
+                <a href="intro.html">推荐</a>
+            </li>
+            <li>
+                <a href="">关于</a>
+            </li>
+        </ul>
     </header>
     <main class="container-fluid box">
         <div class="nav1">

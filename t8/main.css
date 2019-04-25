@@ -70,7 +70,6 @@ ul li a:hover {
 
 .li-active {
     border-bottom: 3px solid white;
-    box-shadow: 0 1px 0 #e1e1e1;
 }
 
 #main {
@@ -261,14 +260,9 @@ footer .p2 {
         display: none;
     }
 
-    .tag {
+    #mynavbar {
         display: none;
     }
-
-    .option {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 520px) {
@@ -323,43 +317,6 @@ footer .p2 {
         display: none;
     }
 
-    .tag {
-        position: absolute;
-        top: 6%;
-        right: 10%;
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    .tag img {
-        width: 100%;
-        opacity: 0.6;
-    }
-
-    .option {
-        display: none;
-    }
-
-    .tag:hover + .option {
-        display: block;
-    }
-
-    .option div {
-        padding: 15px 0;
-        background-color: #269665;
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .option div a {
-        color: white;
-    }
-
-    .top2 ul {
-        display: none;
-    }
-
     #main .row .col-xs-6 {
         margin-bottom: 80px;
     }
@@ -390,5 +347,22 @@ footer .p2 {
         display: block;
     }
 
-
+    .top2 ul {
+        width: 100%;
+    }
 }
+
+#mynavbar {
+    background-color: #29B078;
+}
+
+#mynavbar li {
+    float: none;
+    text-align: center;
+    background-color: #29B078;
+}
+
+nav button img {
+    height: 49px;
+}
+
