@@ -148,7 +148,7 @@ ul li a:hover {
 .row3-flex {
     display: flex;
     justify-content: space-between;
-    margin: 10% 0;
+    margin-top: 10%;
 }
 
 .row3-flex img {
@@ -165,6 +165,19 @@ ul li a:hover {
     text-align: left;
     font-size: 16px;
     color: #9d9d9d;
+}
+
+.change-all {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.change {
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    background: #c0c0c0;
+    border-radius: 50%;
 }
 
 .box4 {
