@@ -1,0 +1,199 @@
+
+.top1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #1d7ad9;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.sign button {
+    float: left;
+    padding: 10px;
+    background-color: #1d7ad9;
+    border: none;
+    outline: none;
+    color:white;
+}
+
+.sign button:hover {
+    background-color: white;
+    color: black;
+}
+
+nav {
+    background-color: #f9f9f9;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10%;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 2%;
+}
+
+nav ul li button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    box-shadow:1px 1px 1px #dedede;
+}
+
+nav ul li button:hover {
+    background-color: #1d7ad9;
+    color: white;
+}
+
+/* header结束 */
+
+form {
+    border: 1px solid #afafaf;
+}
+
+main>.padding10>p {
+    padding: 0 15px;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: large;
+    border-left: 3px solid #1d7ad9;
+}
+
+.padding10 {
+    padding: 0 10%;
+}
+
+.bg-gray {
+    background-color: #dedede;
+}
+
+.choose1 {
+    padding: 10px;
+    color: #1d7ad9;
+    font-weight: bold;
+}
+
+.bordertb {
+    border-top: 1px solid #afafaf;
+    border-bottom: 1px solid #afafaf;
+}
+
+.row1 {
+    padding: 20px 10px;
+}
+
+.row1 input {
+    width: 20px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row1>.space-between {
+    width: 20em;
+}
+
+.row1 label {
+    color: #666666;
+}
+
+.row2 {
+    padding: 20px 10px;
+}
+
+.row2 input {
+}
+
+.width50px {
+    width: 50px;
+}
+
+.row2>div>.space-between {
+    padding: 10px 0;
+}
+
+.row2 label {
+    margin-right: 10px;
+}
+
+.row3 {
+    padding: 20px 10px;
+}
+
+.row4 {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.sub {
+    width: 150px;
+    color: white;
+    background-color: #cd0000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* main完结 */
+
+footer {
+    position: relative;
+    padding: 0 10%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex p {
+    margin-right: 10px;
+}
+
+footer>.space-between {
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+
+
+.right {
+    width: 30%;
+}
+
+.right img {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 20px;
+}
+
+.bottom {
+    text-align: center;
+    padding: 5px 0;
+    color: white;
+    background-color: #1d7ad9;
+}
+
+
+
+
+
+
+
+
