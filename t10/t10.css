@@ -147,7 +147,7 @@ main>.padding10>p {
     background-color: #cd0000;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 /* main完结 */
@@ -161,7 +161,9 @@ footer {
     display: flex;
 }
 
-.flex p {
+.flex a {
+    color: #999999;
+    text-decoration: none;
     margin-right: 10px;
 }
 
