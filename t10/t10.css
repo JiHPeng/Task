@@ -192,9 +192,77 @@ footer>.space-between {
     background-color: #1d7ad9;
 }
 
+/* footer结束 */
 
+@media screen and (max-width: 768px) {
 
+    .padding10 {
+        padding: 5%;
+    }
 
+    .row1 {
+
+    }
+
+    .row1>.space-between {
+        width: 15em;
+    }
+
+    footer {
+        padding: 0 5%;
+    }
+
+    footer>.space-between {
+        display: block;
+        text-align: center;
+    }
+
+    footer>.space-between>div {
+        text-align: center;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right>img {
+        position: static;
+        display: inline;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .row3>.space-between {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .row2 {
+        display: block;
+        text-align: center;
+    }
+
+    .row2>select {
+        width: 50%;
+    }
+
+    .row2 label {
+        margin: 0;
+    }
+
+    .row3 {
+        display: block;
+        text-align: center;
+    }
+
+}
 
 
 
