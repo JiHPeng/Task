@@ -168,6 +168,7 @@ input[type=radio] {
 input[type=radio]:checked + .radio-input {
     display: inline-block;
     background: url(../images/t10/radio.png) center no-repeat;
+    background-size: 15px 15px;
 }
 
 .choose1 {
