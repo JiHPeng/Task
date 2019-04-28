@@ -1,0 +1,50 @@
+body {
+
+}
+
+.test-label{margin:20px 20px 0 0;display:inline-block}
+
+.test-radio{display:none}
+.test-radioInput{
+    background-color: #5e57ff;
+    border-radius:100%;
+    display:inline-block;
+    height:16px;
+    margin-right:10px;
+    margin-top: -1px;
+    vertical-align:middle;
+    width:16px;
+    line-height:1}
+.test-radio:checked+ .test-radioInput:after{
+    background-color:#57ad68;
+    border-radius:100%;
+    content:"";
+    display:inline-block;
+    height:12px;
+    margin:2px;
+    width:12px}
+
+.label1 {
+
+}
+
+.test {
+    display: none;
+}
+
+.radioinput {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+
+.test:checked + .radioinput:after {
+    background: url(./images/t10/radio.png) no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+}

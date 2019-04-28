@@ -15,6 +15,11 @@
     color: black;
 }
 
+.sign {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
 .sign button {
     float: left;
     padding: 10px;
@@ -25,6 +30,7 @@
 }
 
 .sign button:hover {
+    padding: 10px 30px;
     background-color: white;
     color: black;
 }
@@ -58,10 +64,66 @@ nav ul li button:hover {
     color: white;
 }
 
-/* header结束 */
+
+
+
+.relative {
+    position: relative;
+}
+
+.guide {
+    width: 140px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.guide1 {
+    position: absolute;
+    top:19px;
+    height: 5px;
+    width: 140px;
+    border-radius: 2px;
+    background-color: #cccccc;
+    z-index: -1;
+}
+
+.guide2 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    background-color: #cccccc;
+    color: white;
+    z-index: 1;
+}
+
+.hover1 {
+    display: inline-block;
+    margin-left: -6px;
+}
+
+.hover1:hover .guide>div {
+    background-color: #ff7f02;
+}
+
+.hover1:hover p {
+    color: #ff7f02;
+}
+
+.hover1>p {
+    color: #cccccc;
+}
+
+
+    /* header结束 */
 
 form {
     border: 1px solid #afafaf;
+}
+
+main input:checked {
+    color: #1d7ad9;
 }
 
 main>.padding10>p {
@@ -73,17 +135,55 @@ main>.padding10>p {
 }
 
 .padding10 {
-    padding: 0 10%;
+    padding: 0 8%;
 }
 
 .bg-gray {
     background-color: #dedede;
 }
 
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../images/t10/pull-arrow.png) 97%  no-repeat;
+    padding:5px 30px 5px 10px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.radio-input {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+
+input[type=radio]:checked + .radio-input {
+    display: inline-block;
+    background: url(../images/t10/radio.png) center no-repeat;
+}
+
 .choose1 {
     padding: 10px;
     color: #1d7ad9;
     font-weight: bold;
+    font-size: 18px;
+}
+
+.vertical-top {
+    vertical-align: top;
+}
+
+
+.choose1>img {
+    margin-right: 5px;
 }
 
 .bordertb {
@@ -109,7 +209,7 @@ main>.padding10>p {
     width: 20em;
 }
 
-.row1 label {
+main label {
     color: #666666;
 }
 
@@ -154,7 +254,6 @@ main>.padding10>p {
 
 footer {
     position: relative;
-    padding: 0 10%;
 }
 
 .flex {
@@ -168,7 +267,7 @@ footer {
 }
 
 footer>.space-between {
-    padding: 20px 0;
+    padding: 20px 10%;
     background-color: #f0f0f0;
 }
 
@@ -195,6 +294,9 @@ footer>.space-between {
 /* footer结束 */
 
 @media screen and (max-width: 768px) {
+    nav ul {
+        padding: 20px 5%;
+    }
 
     .padding10 {
         padding: 5%;
@@ -204,17 +306,10 @@ footer>.space-between {
 
     }
 
-    .row1>.space-between {
-        width: 15em;
-    }
-
-    footer {
-        padding: 0 5%;
-    }
-
     footer>.space-between {
         display: block;
         text-align: center;
+        padding: 20px 5%;
     }
 
     footer>.space-between>div {
@@ -237,30 +332,49 @@ footer>.space-between {
 }
 
 @media screen and (max-width: 650px) {
-    .row3>.space-between {
+
+
+    .row1 {
         display: block;
+        text-align: center;
     }
 
-}
+    .row1>.space-between {
+        display: block;
+        text-align: center;
+        width: auto;
+    }
 
-@media screen and (max-width: 375px) {
     .row2 {
         display: block;
         text-align: center;
     }
 
-    .row2>select {
-        width: 50%;
+    .row2 .space-between {
+        display: block;
+        text-align: center;
     }
 
-    .row2 label {
-        margin: 0;
+    label {
+        display: block;
+        margin-bottom: 15px;
+        margin-right:0;
     }
 
     .row3 {
         display: block;
         text-align: center;
     }
+
+    .row3>.space-between {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+
 
 }
 
