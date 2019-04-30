@@ -266,9 +266,6 @@ footer .p2 {
         margin: 2% 2%;
     }
 
-    .col-sm-1 {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 769px) {
@@ -301,6 +298,10 @@ footer .p2 {
 
     .intro-sm {
         width: 100%;
+    }
+
+    .col-sm-1 {
+        display: none;
     }
 }
 

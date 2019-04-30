@@ -149,6 +149,7 @@ ul li a:hover {
     display: flex;
     justify-content: space-between;
     margin-top: 10%;
+    padding: 2px 2px;
 }
 
 .row3-flex img {
@@ -288,31 +289,6 @@ footer .p2 {
         text-align: center;
     }
 
-    .footer-row1 {
-        float: left;
-        position: relative;
-        width: 50%;
-        margin: 0;
-    }
-
-    .footer-row2 {
-        float: left;
-        position: relative;
-        padding: 10px 10%;
-        width: 50%;
-        margin: 0;
-    }
-
-    footer ul {
-        display: block;
-        text-align: center;
-    }
-
-    footer ul li {
-        float: none;
-        display: block;
-        margin: 10px;
-    }
 }
 
 
@@ -328,10 +304,6 @@ footer .p2 {
 
     .top1 {
         display: none;
-    }
-
-    #main .row .col-xs-6 {
-        margin-bottom: 80px;
     }
 
     .row2 img {
@@ -365,6 +337,47 @@ footer .p2 {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .row2 img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #main .row .col-xs-6 {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .footer-row1 {
+        float: left;
+        position: relative;
+        width: 50%;
+        margin: 0;
+    }
+
+    .footer-row2 {
+        float: left;
+        position: relative;
+        padding: 10px 10%;
+        width: 50%;
+        margin: 0;
+    }
+
+    footer ul {
+        display: block;
+        text-align: center;
+    }
+
+    footer ul li {
+        float: none;
+        display: block;
+        margin: 10px;
+    }
+
+}
+
 #mynavbar {
     background-color: #29B078;
 }
@@ -377,5 +390,29 @@ footer .p2 {
 
 nav button img {
     height: 49px;
+}
+
+.mycar2 {
+    position: static;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.mycar2 li {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #afafaf;
+    border-radius: 10px;
+}
+
+
+.mycar2>.active {
+    background-color: #5cb85c;
 }
 
