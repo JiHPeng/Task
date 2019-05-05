@@ -2,6 +2,8 @@ body {
 
 }
 
+
+
 .top1 {
     display: flex;
     align-items: center;
@@ -16,12 +18,15 @@ body {
 }
 
 .top2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 1% 10%;
     width: 100%;
     background-color: #29b078;
+}
+
+.space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .top3 {
@@ -294,7 +299,7 @@ footer .p2 {
 
 @media screen and (max-width: 768px) {
     .sign {
-        float: right;
+        text-align: right;
         padding: 5px 10px;
     }
 
@@ -378,6 +383,21 @@ footer .p2 {
 
 }
 
+@media screen and (min-width: 768px) {
+    #mynavbar {
+        width: auto;
+    }
+
+    #mynavbar > ul {
+        display: flex;
+    }
+
+    .top2 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 #mynavbar {
     background-color: #29B078;
 }
@@ -389,7 +409,9 @@ footer .p2 {
 }
 
 nav button img {
+    background-color: #3e7d3e;
     height: 49px;
+    border-radius: 5px;
 }
 
 .mycar2 {
