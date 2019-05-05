@@ -237,6 +237,11 @@ main label {
     padding: 20px 10px;
 }
 
+.row3 > .space-between {
+    display: inline-block;
+
+}
+
 .row4 {
     text-align: center;
     padding: 30px 0;
