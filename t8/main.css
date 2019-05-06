@@ -45,13 +45,6 @@ body {
     right: 50px;
 }
 
-
-header ul {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 ul li {
     display: flex;
     align-items: center;
@@ -390,6 +383,7 @@ footer .p2 {
 
     #mynavbar > ul {
         display: flex;
+        margin:0;
     }
 
     .top2 {

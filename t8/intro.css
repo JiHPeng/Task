@@ -28,7 +28,6 @@ body {
 }
 
 header ul {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -253,6 +252,7 @@ footer .p2 {
 
     #mynavbar > ul {
         display: flex;
+        margin:0;
     }
 
     .top2 {
