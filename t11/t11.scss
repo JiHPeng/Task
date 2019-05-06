@@ -1,0 +1,64 @@
+$body-bg-color: #cccccc;
+
+body {
+  background-color: $body-bg-color;
+  font-size: 25px;
+}
+
+$bg-color: #5fc0cd;
+
+$height: 80px;
+
+$padding: 0 5%;
+
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+  height:$height;
+  background-color: $bg-color;
+}
+
+$text-color: white;
+
+header span {
+  color: $text-color;
+}
+
+$width: 100%;
+
+$label-margin-top: 10px;
+
+label {
+  $icon-width: 80px;
+  $icon-display: inline-block;
+  display: flex;
+  align-items: center;
+  width: $width;
+  margin-top: $label-margin-top;
+  background-color: $text-color;
+  span {
+    display: $icon-display;
+    text-align: center;
+    width: $icon-width;
+    height: 100%;
+  }
+  input {
+    padding-left: 40px;
+    width: calc(100% - 120px);
+    height: $height;
+    border: none;
+    border-left: 1px solid $body-bg-color;
+    outline: none;
+  }
+}
+
+button {
+  margin-top: 20px;
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
