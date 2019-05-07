@@ -12,10 +12,8 @@ header {
 
 header span a {
   color: white; }
-
-header span a:hover {
-  color: #000000;
-  text-decoration: none; }
+  header span a:hover {
+    text-decoration: none; }
 
 label {
   display: flex;
@@ -37,6 +35,9 @@ label {
     outline: none; }
   label input::-webkit-input-placeholder {
     color: #eff0f4; }
+  label input::-webkit-inner-spin-button,
+  label input::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
 
 button {
   margin-top: 20px;
@@ -49,6 +50,7 @@ footer {
   padding: 0 5%;
   text-align: right; }
 
+/* sdasds */
 footer a {
   color: #5fc0cd; }
 
