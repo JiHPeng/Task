@@ -2,8 +2,6 @@ body {
 
 }
 
-
-
 .top1 {
     display: flex;
     align-items: center;
@@ -18,7 +16,7 @@ body {
 }
 
 .top2 {
-    padding: 1% 10%;
+    padding: 0 10%;
     width: 100%;
     background-color: #29b078;
 }
@@ -224,12 +222,21 @@ footer ul {
     list-style: none;
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 footer li {
     padding: 0;
 }
 
 footer li:hover {
-    text-decoration: underline;
+    border-bottom:1px solid black;
 }
 
 .footer-row3 {
@@ -238,11 +245,6 @@ footer li:hover {
     padding: 20px 10% 0 10%;
     color: white;
     background-color: #29b078;
-}
-
-.footer-code {
-    float: right;
-    text-align: center;
 }
 
 #copyright {
@@ -274,6 +276,11 @@ footer .p2 {
 
     #mynavbar {
         display: none;
+    }
+
+    .footer-code {
+        float: right;
+        text-align: center;
     }
 }
 
@@ -333,6 +340,8 @@ footer .p2 {
     .top2 ul {
         width: 100%;
     }
+
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -403,9 +412,13 @@ footer .p2 {
 }
 
 nav button img {
-    background-color: #3e7d3e;
+    background-color: #2ccf8c;
     height: 49px;
     border-radius: 5px;
+}
+
+nav button img:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mycar2 {
