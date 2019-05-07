@@ -1,5 +1,5 @@
 body {
-  background-color: #cccccc;
+  background-color: #eff0f4;
   font-size: 25px; }
 
 header {
@@ -10,8 +10,12 @@ header {
   height: 80px;
   background-color: #5fc0cd; }
 
-header span {
+header span a {
   color: white; }
+
+header span a:hover {
+  color: #000000;
+  text-decoration: none; }
 
 label {
   display: flex;
@@ -29,8 +33,10 @@ label {
     width: calc(100% - 120px);
     height: 80px;
     border: none;
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #eff0f4;
     outline: none; }
+  label input::-webkit-input-placeholder {
+    color: #eff0f4; }
 
 button {
   margin-top: 20px;
@@ -38,5 +44,12 @@ button {
   height: 80px;
   background-color: #5fc0cd;
   color: white; }
+
+footer {
+  padding: 0 5%;
+  text-align: right; }
+
+footer a {
+  color: #5fc0cd; }
 
 /*# sourceMappingURL=t11.css.map */
