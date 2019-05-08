@@ -1,3 +1,7 @@
+.row {
+    margin: 0;
+}
+
 
 .top1 {
     display: flex;
@@ -63,9 +67,6 @@ nav ul li button:hover {
     background-color: #1d7ad9;
     color: white;
 }
-
-
-
 
 .relative {
     position: relative;
@@ -274,21 +275,28 @@ footer {
 }
 
 footer>.space-between {
-    padding: 20px 10%;
+    padding: 20px 8%;
     background-color: #f0f0f0;
 }
 
-
-
 .right {
-    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    width: 35%;
+}
+
+.right > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right p {
+    margin: 0;
 }
 
 .right img {
     display: block;
-    position: absolute;
-    right: 10%;
-    top: 20px;
 }
 
 .bottom {
@@ -309,10 +317,6 @@ footer>.space-between {
         padding: 5%;
     }
 
-    .row1 {
-
-    }
-
     footer>.space-between {
         display: block;
         text-align: center;
@@ -328,6 +332,7 @@ footer>.space-between {
     }
 
     .right {
+        display: block;
         width: 100%;
     }
 
@@ -339,8 +344,6 @@ footer>.space-between {
 }
 
 @media screen and (max-width: 650px) {
-
-
     .row1 {
         display: block;
         text-align: center;
