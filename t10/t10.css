@@ -276,6 +276,10 @@ footer {
     margin-right: 10px;
 }
 
+.flex a:hover {
+    color: #1d7ad9;
+}
+
 footer>.space-between {
     padding: 20px 8%;
     background-color: #f0f0f0;
