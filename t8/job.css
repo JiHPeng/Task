@@ -4,7 +4,6 @@ body {
 
 .row {
     margin: 0;
-    padding: 0;
 }
 /* header */
 .top1 {
@@ -36,7 +35,7 @@ body {
 }
 
 #mynavbar {
-    padding: 0;
+    background-color: #29B078;
     border: none;
 }
 
@@ -270,7 +269,6 @@ footer ul {
     justify-content: space-between;
     padding: 0;
     list-style: none;
-
 }
 
 footer li {
@@ -288,7 +286,6 @@ footer li:hover {
     color: white;
     background-color: #29b078;
 }
-
 
 #copyright {
     text-align: center;

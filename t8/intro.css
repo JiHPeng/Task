@@ -1,6 +1,11 @@
 body {
 
 }
+
+.row {
+    margin: 0;
+}
+
 /* header */
 
 .top1 {
@@ -197,6 +202,7 @@ footer ul {
     align-items: center;
     justify-content: space-between;
     padding: 0;
+    list-style: none;
 }
 
 footer li {
