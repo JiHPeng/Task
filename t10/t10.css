@@ -266,6 +266,7 @@ footer {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex a {
@@ -279,10 +280,18 @@ footer>.space-between {
     background-color: #f0f0f0;
 }
 
+.left {
+    width: 33%;
+}
+
+.mid {
+    width: 33%;
+}
+
 .right {
     display: flex;
     justify-content: flex-end;
-    width: 35%;
+    width: 33%
 }
 
 .right > div {
@@ -329,6 +338,14 @@ footer>.space-between {
 
     .flex {
         display: block;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .mid {
+        width: 100%;
     }
 
     .right {
