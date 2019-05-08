@@ -366,6 +366,14 @@ footer>.space-between {
 }
 
 @media screen and (max-width: 650px) {
+    .hover1 {
+        display: block;
+    }
+
+    .relative {
+        left: calc(50% - 70px);
+    }
+
     .row1 {
         display: block;
         text-align: center;
