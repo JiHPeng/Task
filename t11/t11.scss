@@ -2,7 +2,8 @@ $body-bg-color: #eff0f4;
 
 body {
   background-color: $body-bg-color;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: lighter;
 }
 
 $bg-color: #5fc0cd;
@@ -77,6 +78,7 @@ button {
 }
 
 footer {
+  margin-top: $label-margin-top;
   padding: $padding;
   text-align: right;
 }
