@@ -1,0 +1,92 @@
+.row {
+  margin: 0; }
+
+body {
+  margin-top: 134px;
+  margin-bottom: 94px;
+  color: #999999;
+  font-size: 24px; }
+  body .container-fluid {
+    padding: 0; }
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+  header .top1 {
+    padding: 0 5%;
+    height: 90px;
+    background-color: #5fc0cd; }
+    header .top1 .top-left {
+      width: 42px; }
+    header .top1 .btn-bg {
+      border-radius: 10px;
+      background-color: #55a8b3; }
+      header .top1 .btn-bg button {
+        padding: 10px 12px;
+        color: #ffffff;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-radius: 10px; }
+        header .top1 .btn-bg button:hover {
+          color: #5fc0cd;
+          background-color: #ffffff; }
+
+label {
+  margin: 0; }
+
+.top2 {
+  padding: 0 5%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e2e2; }
+  .top2 select {
+    flex: 1;
+    margin: 5px 0;
+    color: #999999;
+    outline: none;
+    border: none;
+    text-align: justify;
+    text-align-last: center; }
+    .top2 select:nth-last-of-type(2) {
+      border-left: 1px solid #e2e2e2;
+      border-right: 1px solid #e2e2e2; }
+
+/* main */
+main > form > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  main > form > ul > li {
+    padding: 0 5%;
+    border-bottom: 1px solid #e2e2e2; }
+    main > form > ul > li div {
+      padding: 10px; }
+      main > form > ul > li div .icon1 {
+        padding-right: 5px; }
+      main > form > ul > li div .icon2 {
+        padding-left: 3px;
+        padding-right: 7px; }
+      main > form > ul > li div .pad-left {
+        padding-left: 34px;
+        color: #000000; }
+      main > form > ul > li div .right-arrow {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        transform: rotate(45deg);
+        border-top: 2px solid #1b6d85;
+        border-right: 2px solid #1b6d85; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  background-color: #e2e2e2; }
+  footer img {
+    display: block; }
+
+/*# sourceMappingURL=t12.css.map */
