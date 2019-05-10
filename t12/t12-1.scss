@@ -101,16 +101,23 @@ body {
               padding-right: 7px;
             }
             .pad-left {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
               padding-left: 34px;
               color: #000000;
             }
-            .right-arrow {
-              display: inline-block;
-              width: 15px;
-              height: 15px;
-              transform:rotate(45deg);
-              border-top: $border2;
-              border-right: $border2;
+            .text-red {
+              color: red;
+              white-space: nowrap;
+              .right-arrow {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                transform:rotate(45deg);
+                border-top: $border2;
+                border-right: $border2;
+              }
             }
           }
         }
@@ -142,11 +149,18 @@ body {
   body {
     $padding: 0;
     font-size: 16px;
-    .top1, .top2, li{
+    .top2, li{
       padding: $padding!important;
     }
     .top1 img {
       height: 30px;
+    }
+    .right-arrow {
+      width: 10px!important;
+      height: 10px!important;
+    }
+    .icon1, .icon2 {
+      height:14px;
     }
     footer {
       font-size: 16px;

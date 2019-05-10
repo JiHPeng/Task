@@ -76,15 +76,21 @@ body {
           padding-left: 3px;
           padding-right: 7px; }
         body main > form > ul li > a div .pad-left {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           padding-left: 34px;
           color: #000000; }
-        body main > form > ul li > a div .right-arrow {
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          transform: rotate(45deg);
-          border-top: 2px solid #1b6d85;
-          border-right: 2px solid #1b6d85; }
+        body main > form > ul li > a div .text-red {
+          color: red;
+          white-space: nowrap; }
+          body main > form > ul li > a div .text-red .right-arrow {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+            border-top: 2px solid #1b6d85;
+            border-right: 2px solid #1b6d85; }
   body footer {
     position: fixed;
     bottom: 0;
@@ -104,10 +110,15 @@ body {
 @media screen and (max-width: 500px) {
   body {
     font-size: 16px; }
-    body .top1, body .top2, body li {
+    body .top2, body li {
       padding: 0 !important; }
     body .top1 img {
       height: 30px; }
+    body .right-arrow {
+      width: 10px !important;
+      height: 10px !important; }
+    body .icon1, body .icon2 {
+      height: 14px; }
     body footer {
       font-size: 16px; }
       body footer img {
