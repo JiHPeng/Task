@@ -1,0 +1,152 @@
+body {
+  $padding-row: 0 20px;
+  $bg-color: #5fc0cd;
+  $color: #5fc0cd;
+
+  @mixin fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+  }
+
+  margin: 0;
+  padding: 66px 0;
+  > header {
+    @include fixed;
+    top:0;
+    > .top1 {
+      @include flex-center;
+      justify-content: space-between;
+      padding: $padding-row;
+      background-color: $bg-color;
+      > .top-left {
+        $border: 3px solid #ffffff;
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-bottom: $border;
+        border-left: $border;
+        transform: rotate(45deg);
+      }
+      > .top-middle {
+        padding: 20px;
+        font-size: 20px;
+        color: #ffffff;
+      }
+      > .top-right {
+        display: inline-block;
+        width: 28px;
+      }
+    }
+  }
+  main {
+    $intro-border: 1px solid #e1e5e7;
+    font-size: 18px;
+    > .data {
+      > .flex {
+        @include flex-center;
+        padding: 50px 0;
+        background: url("../images/t12/t12-0.png") no-repeat scroll center;
+        background-size: cover;
+        > img {
+          padding: 0 20px;
+          height: 100px;
+        }
+        > .name-right {
+          display: flex;
+          flex-direction: column;
+          color: #ffffff;
+          > .name-age {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 10px 0;
+            > span:nth-of-type(1) {
+              font-size: 24px;
+            }
+            > span:nth-of-type(2) {
+              font-size: 20px;
+            }
+          }
+          img {
+            height:16px;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    > .intro {
+      @include flex-center;
+      padding: 30px 20px;
+      border-bottom: $intro-border;
+      > .intro-icon {
+        display: inline-block;
+        padding: 8px 8px;
+        border-left: 2px solid $color;
+      }
+    }
+    > ul {
+      padding-left: 35px;
+      > li {
+        @include flex-center;
+        padding: 30px 0;
+        list-style: none;
+        border-bottom: $intro-border;
+        > span {
+          word-break: break-all;
+        }
+        > .icon-star {
+          height: 18px;
+          padding: 0 10px 0 30px!important;
+          margin-right: 5px;
+          line-height: 18px;
+          color: black!important;
+          background: url("../images/t12/t12-8.png") no-repeat left;
+          background-size: contain;
+        }
+        > span:nth-of-type(1) {
+          color: grey;
+          flex-shrink: 0;
+          padding-right: 15px;
+          border-right: $intro-border
+        }
+        > span:nth-of-type(2) {
+          padding-left: 15px;
+        }
+        > .text-red {
+          color: red;
+        }
+      }
+    }
+  }
+  footer {
+    padding-bottom: 20px;
+    @include fixed;
+    bottom: 0;
+    background-color: #ffffff;
+    > div {
+      @include flex-center;
+      justify-content: space-around;
+      > button {
+        width: 40%;
+        height: 40px;
+        outline: none;
+        background-color: transparent;
+        color: $color;
+        border: 1px solid $color;
+        border-radius: 5px;
+        font-size: 16px;
+        &:hover {
+          background-color: $color;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+

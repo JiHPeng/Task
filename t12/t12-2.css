@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 66px 0; }
+  body > header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; }
+    body > header > .top1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      background-color: #5fc0cd; }
+      body > header > .top1 > .top-left {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-bottom: 3px solid #ffffff;
+        border-left: 3px solid #ffffff;
+        transform: rotate(45deg); }
+      body > header > .top1 > .top-middle {
+        padding: 20px;
+        font-size: 20px;
+        color: #ffffff; }
+      body > header > .top1 > .top-right {
+        display: inline-block;
+        width: 28px; }
+  body main {
+    font-size: 18px; }
+    body main > .data > .flex {
+      display: flex;
+      align-items: center;
+      padding: 50px 0;
+      background: url("../images/t12/t12-0.png") no-repeat scroll center;
+      background-size: cover; }
+      body main > .data > .flex > img {
+        padding: 0 20px;
+        height: 100px; }
+      body main > .data > .flex > .name-right {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff; }
+        body main > .data > .flex > .name-right > .name-age {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding: 10px 0; }
+          body main > .data > .flex > .name-right > .name-age > span:nth-of-type(1) {
+            font-size: 24px; }
+          body main > .data > .flex > .name-right > .name-age > span:nth-of-type(2) {
+            font-size: 20px; }
+        body main > .data > .flex > .name-right img {
+          height: 16px;
+          padding-right: 10px; }
+    body main > .intro {
+      display: flex;
+      align-items: center;
+      padding: 30px 20px;
+      border-bottom: 1px solid #e1e5e7; }
+      body main > .intro > .intro-icon {
+        display: inline-block;
+        padding: 8px 8px;
+        border-left: 2px solid #5fc0cd; }
+    body main > ul {
+      padding-left: 35px; }
+      body main > ul > li {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+        list-style: none;
+        border-bottom: 1px solid #e1e5e7; }
+        body main > ul > li > span {
+          word-break: break-all; }
+        body main > ul > li > .icon-star {
+          height: 18px;
+          padding: 0 10px 0 30px !important;
+          margin-right: 5px;
+          line-height: 18px;
+          color: black !important;
+          background: url("../images/t12/t12-8.png") no-repeat left;
+          background-size: contain; }
+        body main > ul > li > span:nth-of-type(1) {
+          color: grey;
+          flex-shrink: 0;
+          padding-right: 15px;
+          border-right: 1px solid #e1e5e7; }
+        body main > ul > li > span:nth-of-type(2) {
+          padding-left: 15px; }
+        body main > ul > li > .text-red {
+          color: red; }
+  body footer {
+    padding-bottom: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff; }
+    body footer > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      body footer > div > button {
+        width: 40%;
+        height: 40px;
+        outline: none;
+        background-color: transparent;
+        color: #5fc0cd;
+        border: 1px solid #5fc0cd;
+        border-radius: 5px;
+        font-size: 16px; }
+        body footer > div > button:hover {
+          background-color: #5fc0cd;
+          color: #ffffff; }
+
+/*# sourceMappingURL=t12-2.css.map */
