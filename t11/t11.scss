@@ -48,16 +48,20 @@ label {
   background-color: $text-color;
   span {
     display: $icon-display;
+    padding: 8px 0;
     text-align: center;
     width: $icon-width;
     height: 100%;
+    border-right: 1px solid $body-bg-color;
+    img {
+      height: 32px;
+    }
   }
   input {
     padding-left: 40px;
     width: calc(100% - 120px);
     height: $height;
     border: none;
-    border-left: 1px solid $body-bg-color;
     outline: none;
   }
   input::-webkit-input-placeholder {

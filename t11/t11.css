@@ -24,15 +24,18 @@ label {
   background-color: white; }
   label span {
     display: inline-block;
+    padding: 8px 0;
     text-align: center;
     width: 80px;
-    height: 100%; }
+    height: 100%;
+    border-right: 1px solid #eff0f4; }
+    label span img {
+      height: 32px; }
   label input {
     padding-left: 40px;
     width: calc(100% - 120px);
     height: 80px;
     border: none;
-    border-left: 1px solid #eff0f4;
     outline: none; }
   label input::-webkit-input-placeholder {
     color: #eff0f4; }
