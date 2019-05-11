@@ -8,8 +8,8 @@ body {
   $padding: 0 5%;
   $border1: 1px solid #e2e2e2;
   $bg-color: #5fc0cd;
-  margin-top: 134px;
-  margin-bottom: 94px;
+  $btn-color: #ffffff;
+  margin: 134px 0 94px 0;
   color: $font-color;
   font-size: 24px;
   header {
@@ -23,7 +23,7 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: $padding;
-      height: 90px;
+      height: 80px;
       background-color: $bg-color;
       .top-left {
         width: 42px;
@@ -35,17 +35,20 @@ body {
         label {
           margin: 0;
           button {
-            $btn-color: #ffffff;
-            padding: 10px 12px;
-            color: $btn-color;
+            padding: 15px 20px;
+            font-size: 24px;
             background-color: transparent;
             border: none;
             outline: none;
             border-radius: $bor-rad;
-            &:hover {
-              color: $bg-color;
-              background-color: $btn-color;
-            }
+          }
+          #a {
+            color: $bg-color;
+            background-color: $btn-color;
+          }
+          #b > a:link, a:visited, a:hover, a:active {
+            color: $btn-color;
+            text-decoration: none;
           }
         }
       }
@@ -148,12 +151,20 @@ body {
 @media screen and (max-width:500px) {
   body {
     $padding: 0;
+    margin-top: 90px;
     font-size: 16px;
     .top2, li{
       padding: $padding!important;
     }
+    .top1 {
+      height: 60px!important;
+    }
     .top1 img {
       height: 30px;
+    }
+    .top1 button {
+      padding: 13px 20px!important;
+      font-size: 14px!important;
     }
     .right-arrow {
       width: 10px!important;
@@ -161,6 +172,9 @@ body {
     }
     .icon1, .icon2 {
       height:14px;
+    }
+    .pad-left {
+      padding-left: 23px!important;
     }
     footer {
       font-size: 16px;

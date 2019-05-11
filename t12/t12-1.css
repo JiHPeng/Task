@@ -2,8 +2,7 @@
   margin: 0; }
 
 body {
-  margin-top: 134px;
-  margin-bottom: 94px;
+  margin: 134px 0 94px 0;
   color: #999999;
   font-size: 24px; }
   body header {
@@ -17,7 +16,7 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: 0 5%;
-      height: 90px;
+      height: 80px;
       background-color: #5fc0cd; }
       body header .top1 .top-left {
         width: 42px; }
@@ -27,15 +26,18 @@ body {
         body header .top1 .btn-bg label {
           margin: 0; }
           body header .top1 .btn-bg label button {
-            padding: 10px 12px;
-            color: #ffffff;
+            padding: 15px 20px;
+            font-size: 24px;
             background-color: transparent;
             border: none;
             outline: none;
             border-radius: 10px; }
-            body header .top1 .btn-bg label button:hover {
-              color: #5fc0cd;
-              background-color: #ffffff; }
+          body header .top1 .btn-bg label #a {
+            color: #5fc0cd;
+            background-color: #ffffff; }
+          body header .top1 .btn-bg label #b > a:link, body header .top1 .btn-bg label a:visited, body header .top1 .btn-bg label a:hover, body header .top1 .btn-bg label a:active {
+            color: #ffffff;
+            text-decoration: none; }
     body header .top2 {
       display: flex;
       justify-content: space-between;
@@ -109,16 +111,24 @@ body {
 
 @media screen and (max-width: 500px) {
   body {
+    margin-top: 90px;
     font-size: 16px; }
     body .top2, body li {
       padding: 0 !important; }
+    body .top1 {
+      height: 60px !important; }
     body .top1 img {
       height: 30px; }
+    body .top1 button {
+      padding: 13px 20px !important;
+      font-size: 14px !important; }
     body .right-arrow {
       width: 10px !important;
       height: 10px !important; }
     body .icon1, body .icon2 {
       height: 14px; }
+    body .pad-left {
+      padding-left: 23px !important; }
     body footer {
       font-size: 16px; }
       body footer img {
