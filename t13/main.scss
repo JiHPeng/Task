@@ -1,24 +1,16 @@
+@import "../css-reset.css";
+@import "style";
+
 body {
-  $bg-color: #5fc0cd;
-  $color-brown: #9d6400;
-  $color-gray: #909090;
-  $color-white: #ffffff;
-  margin: 0;
-  background-color: #e1e1e1;
   header {
-    line-height: 0;
-    background-color: #2699bb;
-    > img {
-      padding: 20px 0 20px 50px;
-      height: 20px;
+    .flex-box {
+      @include between;
     }
   }
   main {
-    padding: 10px 50px;
+    padding: 10px 30px;
     > .last-game {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include between;
       padding: 20px 20px;
       color: $color-gray;
       background-color: $color-white;
@@ -31,23 +23,64 @@ body {
         color: $color-gray;
       }
       > .right-arrow1 {
-        width: 20px;
-        height: 20px;
-        border-top: 2px solid $bg-color;
-        border-right: 2px solid $bg-color;
+        $hollow: 2px solid $bg-color;
+        width: 15px;
+        height: 15px;
+        border-top: $hollow;
+        border-right: $hollow;
         transform: rotate(45deg);
       }
     }
     > .game-list {
+      position: relative;
       margin-top: 30px;
       background-color: $color-white;
       border: 1px solid $color-gray;
       > .game-title {
+        padding: 15px 0;
         text-align: center;
         color: $color-brown;
         border-bottom: 1px solid $color-brown;
       }
-
+      > .game-content {
+        padding: 10px 20px;
+        > div {
+          text-align: center;
+          > a {
+            display: block;
+            width: 100%;
+            padding: $padding-tb25;
+            text-decoration: none;
+            color: $color-white;
+            background-color: $bg-color;
+          }
+          > p {
+            padding: $padding-tb15;
+          }
+        }
+      }
+      > .icon-wrap {
+        text-align: center;
+        margin-top: -10px;
+        > .icon {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: $color-gray;
+          border-radius: 50%;
+          &:hover {
+            background-color: $bg-color;
+          }
+        }
+      }
+      > .right-arrow2 {
+        position: absolute;
+        right: -5px;
+        top: calc(50% - 10px);
+        border-width: 10px;
+        border-style: solid dashed dashed dashed;
+        border-color: transparent transparent transparent #df9e29;
+      }
     }
   }
 }
