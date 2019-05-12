@@ -17,7 +17,7 @@ body {
         padding: $padding-tb25;
         height: 120px;
       }
-      > h1 {
+      h1 {
         display: inline-block;
         padding: $padding-tb25;
         text-align: $text-left;
@@ -62,7 +62,8 @@ body {
       @include between;
       padding: 10px 25px;
       a {
-        padding: 10px 15px;
+        padding: 10px 0;
+        width: 130px;
         text-decoration: none;
         border-radius: 5px;
       }
@@ -73,6 +74,7 @@ body {
         background-color: #e4c64a;
       }
       p {
+        text-align: $text-center;
         color: $color-white;
       }
     }

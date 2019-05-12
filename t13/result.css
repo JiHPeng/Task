@@ -1,0 +1,93 @@
+@import url(../css-reset.css);
+#menu {
+  display: none; }
+
+body {
+  padding-top: 50px; }
+  body header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 25px;
+    color: #ffffff;
+    line-height: 0;
+    font-size: 20px;
+    background-color: #29bde0;
+    z-index: 99; }
+    body header .flex-box {
+      display: flex; }
+      body header .flex-box > label {
+        display: inline-block; }
+      body header .flex-box img {
+        padding: 15px 0;
+        height: 20px; }
+  body footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99; }
+
+body header > .flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+body main > .main-top {
+  padding: 0 40px;
+  text-align: center;
+  background-color: #29bde0; }
+  body main > .main-top > img {
+    padding: 25px 0;
+    height: 120px; }
+  body main > .main-top h1 {
+    display: inline-block;
+    padding: 25px 0;
+    text-align: left;
+    font-size: 20px;
+    color: #d7bc2f; }
+  body main > .main-top p {
+    padding-bottom: 15px;
+    text-align: left;
+    color: #ffffff; }
+  body main > .main-top > .flex-box {
+    display: flex;
+    flex-wrap: wrap; }
+    body main > .main-top > .flex-box > p {
+      padding-right: 15px; }
+body main > .main-bot {
+  padding: 10px 40px;
+  border-bottom: 1px solid #bababa; }
+  body main > .main-bot > .flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px; }
+    body main > .main-bot > .flex-box > h2 {
+      font-size: 20px; }
+    body main > .main-bot > .flex-box > span {
+      color: #bababa; }
+  body main > .main-bot > p {
+    padding: 5px 0;
+    color: #909090; }
+body footer {
+  background-color: rgba(41, 189, 224, 0.6); }
+  body footer > .flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px; }
+    body footer > .flex-box a {
+      padding: 10px 0;
+      width: 130px;
+      text-decoration: none;
+      border-radius: 5px; }
+    body footer > .flex-box a:nth-of-type(1) {
+      background-color: #db3352; }
+    body footer > .flex-box a:nth-of-type(2) {
+      background-color: #e4c64a; }
+    body footer > .flex-box p {
+      text-align: center;
+      color: #ffffff; }
+
+/*# sourceMappingURL=result.css.map */
