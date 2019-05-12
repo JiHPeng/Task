@@ -65,7 +65,7 @@ body main {
       color: #9d6400;
       border-bottom: 1px solid #9d6400; }
     body main > .game-list > .game-content {
-      padding: 10px 20px; }
+      padding: 20px 20px; }
       body main > .game-list > .game-content > div {
         text-align: center; }
         body main > .game-list > .game-content > div > a {
@@ -79,7 +79,7 @@ body main {
           padding: 15px 0; }
     body main > .game-list > .icon-wrap {
       text-align: center;
-      margin-top: -10px; }
+      margin-top: -20px; }
       body main > .game-list > .icon-wrap > .icon {
         display: inline-block;
         width: 10px;
