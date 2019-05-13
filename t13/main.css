@@ -29,71 +29,74 @@ body {
     bottom: 0;
     z-index: 99; }
 
-body header .flex-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-body main {
-  padding: 10px 30px; }
-  body main > .last-game {
+body {
+  background-color: #eeeeee; }
+  body header .flex-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
-    color: #909090;
-    background-color: #ffffff;
-    border: 1px solid #909090; }
-    body main > .last-game > .left {
-      width: 20px; }
-    body main > .last-game > a {
-      text-decoration: none;
-      color: #909090; }
-    body main > .last-game > .right-arrow1 {
-      width: 15px;
-      height: 15px;
-      border-top: 2px solid #29bde0;
-      border-right: 2px solid #29bde0;
-      transform: rotate(45deg); }
-  body main > .game-list {
-    position: relative;
-    margin-top: 30px;
-    background-color: #ffffff;
-    border: 1px solid #909090; }
-    body main > .game-list > .game-title {
-      padding: 15px 0;
-      text-align: center;
-      color: #9d6400;
-      border-bottom: 1px solid #9d6400; }
-    body main > .game-list > .game-content {
-      padding: 20px 20px; }
-      body main > .game-list > .game-content > div {
-        text-align: center; }
-        body main > .game-list > .game-content > div > a {
-          display: block;
-          width: 100%;
-          padding: 25px 0;
-          text-decoration: none;
-          color: #ffffff;
-          background-color: #29bde0; }
-        body main > .game-list > .game-content > div > p {
-          padding: 15px 0; }
-    body main > .game-list > .icon-wrap {
-      text-align: center;
-      margin-top: -20px; }
-      body main > .game-list > .icon-wrap > .icon {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: #909090;
-        border-radius: 50%; }
-        body main > .game-list > .icon-wrap > .icon:hover {
-          background-color: #29bde0; }
-    body main > .game-list > .right-arrow2 {
-      position: absolute;
-      right: -5px;
-      top: calc(50% - 10px);
-      border-width: 10px;
-      border-style: solid dashed dashed dashed;
-      border-color: transparent transparent transparent #df9e29; }
+    justify-content: space-between; }
+  body main {
+    padding: 10px 30px; }
+    body main > .last-game {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px;
+      color: #c7c7c7;
+      background-color: #ffffff;
+      border: 1px solid #c7c7c7; }
+      body main > .last-game > .left {
+        width: 20px; }
+      body main > .last-game > a {
+        text-decoration: none;
+        color: #c7c7c7; }
+      body main > .last-game > .right-arrow1 {
+        width: 15px;
+        height: 15px;
+        border-top: 2px solid #29bde0;
+        border-right: 2px solid #29bde0;
+        transform: rotate(45deg); }
+    body main > .game-list {
+      position: relative;
+      margin-top: 30px;
+      background-color: #ffffff;
+      border: 1px solid #c7c7c7; }
+      body main > .game-list > .game-title {
+        padding: 15px 0;
+        text-align: center;
+        color: #fbb435;
+        border-bottom: 1px solid #fbb435; }
+      body main > .game-list > .game-content {
+        padding: 20px 20px; }
+        body main > .game-list > .game-content > div {
+          text-align: center; }
+          body main > .game-list > .game-content > div > a {
+            display: block;
+            width: 100%;
+            padding: 25px 0;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #29bde0; }
+          body main > .game-list > .game-content > div > p {
+            padding: 15px 0;
+            color: #c7c7c7; }
+      body main > .game-list > .icon-wrap {
+        text-align: center;
+        margin-top: -20px; }
+        body main > .game-list > .icon-wrap > .icon {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: #c7c7c7;
+          border-radius: 50%; }
+          body main > .game-list > .icon-wrap > .icon:hover {
+            background-color: #29bde0; }
+      body main > .game-list > .right-arrow2 {
+        position: absolute;
+        right: -5px;
+        top: calc(50% - 10px);
+        border-width: 10px;
+        border-style: solid dashed dashed dashed;
+        border-color: transparent transparent transparent #fbb435; }
 
 /*# sourceMappingURL=main.css.map */

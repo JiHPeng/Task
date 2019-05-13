@@ -2,6 +2,8 @@
 @import "style";
 
 body {
+  padding-top: 50px;
+  padding-bottom: 56px;
   header {
     > .flex-box {
       @include between;
@@ -68,10 +70,10 @@ body {
         border-radius: 5px;
       }
       a:nth-of-type(1) {
-        background-color: #db3352;
+        background-color: #f66f6f;
       }
       a:nth-of-type(2) {
-        background-color: #e4c64a;
+        background-color: #fbb435;
       }
       p {
         text-align: $text-center;

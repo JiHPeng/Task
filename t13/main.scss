@@ -2,6 +2,7 @@
 @import "style";
 
 body {
+  background-color: #eeeeee;
   header {
     .flex-box {
       @include between;
@@ -56,6 +57,7 @@ body {
           }
           > p {
             padding: $padding-tb15;
+            color: $color-gray;
           }
         }
       }
@@ -79,7 +81,7 @@ body {
         top: calc(50% - 10px);
         border-width: 10px;
         border-style: solid dashed dashed dashed;
-        border-color: transparent transparent transparent #df9e29;
+        border-color: transparent transparent transparent #fbb435;
       }
     }
   }
