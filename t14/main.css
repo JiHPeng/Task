@@ -181,6 +181,8 @@ body main {
   body main .main-top-box {
     text-align: center;
     width: 20%; }
+    body main .main-top-box h1, body main .main-top-box p {
+      line-height: 20px; }
     body main .main-top-box h1 {
       padding: 20px;
       font-size: 24px; }
@@ -267,7 +269,8 @@ body main {
           font-size: 18px;
           font-weight: bold; }
         body main .student-carousel ul li p {
-          text-align: left; }
+          text-align: left;
+          line-height: 24px; }
   body main .main-enterprise {
     display: flex;
     box-shadow: 1px 0 5px #999999; }
