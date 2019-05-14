@@ -84,14 +84,30 @@ body {
     }
   }
   footer {
-    padding: 0 $padding-both-sides;
-    color: $footer-color;
-    background-color: $color-green;
+    h1 {
+      padding-bottom: 30px;
+      text-align: center;
+      font-size: 24px;
+    }
     p {
       color: $footer-color;
     }
+    .footer-friend {
+      padding: 0 $padding-both-sides;
+      ul {
+        padding: 20px 0;
+        li {
+          &:hover {
+            text-decoration: underline solid #000000;
+          }
+        }
+      }
+    }
     .footer-box {
       @include flex-between;
+      padding: 0 $padding-both-sides;
+      background-color: $color-green;
+      color: $footer-color;
       p {
         padding: 20px 0;
       }
@@ -113,6 +129,7 @@ body {
     .footer-copyright {
       padding: 10px;
       text-align: center;
+      background-color: $color-green;
       border-top: 1px solid #30bf80;
     }
   }
@@ -171,6 +188,16 @@ body {
     }
   }
   footer {
+    .footer-friend {
+      @include flex-around;
+      ul {
+        flex-direction: column;
+        li {
+          padding: 5px 0;
+        }
+      }
+    }
+
     .footer-box {
       display: block!important;
       &-right {

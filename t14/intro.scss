@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "style";
+
+body {
+  main {
+    background-color: #fff;
+    z-index: 10;
+    .main-top {
+      @include flex-center;
+      padding: 0 $padding-both-sides;
+      background-color: #fbb435;
+      img {
+        width: 45%;
+      }
+    }
+    .main-position {
+      padding: 20px $padding-both-sides;
+      a {
+        color: $color-green;
+      }
+    }
+    nav {
+
+    }
+  }
+}

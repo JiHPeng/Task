@@ -192,16 +192,6 @@ body {
         }
       }
     }
-    .main-friend {
-      ul {
-        padding: 20px 0;
-        li {
-          &:hover {
-            text-decoration: underline solid #000000;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -240,15 +230,6 @@ body {
     }
     .main-enterprise {
       flex-direction: column;
-    }
-    .main-friend {
-      @include flex-around;
-      ul {
-        flex-direction: column;
-        li {
-          padding: 5px 0;
-        }
-      }
     }
   }
 }
