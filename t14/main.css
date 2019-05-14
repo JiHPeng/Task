@@ -47,6 +47,8 @@ body {
     padding: 0 5%;
     color: #ffffff;
     background-color: #29b078; }
+    body footer p {
+      color: #ffffff; }
     body footer .footer-box {
       display: flex;
       justify-content: space-between;
@@ -103,7 +105,12 @@ body {
           height: 57px;
           line-height: 57px; }
           header .navbar nav ul li:hover {
-            border: none !important; } }
+            border: none !important; }
+
+  footer .footer-box {
+    display: block !important; }
+    footer .footer-box-right {
+      text-align: left !important; } }
 body .intro-carousel {
   position: relative; }
 @keyframes intro-carousel {
@@ -131,6 +138,43 @@ body .intro-carousel {
         animation: intro-carousel 10s ease infinite; }
       body .intro-carousel ul li img {
         width: 100%; }
+  body .intro-carousel > .intro-carousel-icon {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 25px);
+    width: 50px; }
+    body .intro-carousel > .intro-carousel-icon .intro-carousel-icon-box {
+      position: relative; }
+      body .intro-carousel > .intro-carousel-icon .intro-carousel-icon-box span {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid #999999;
+        z-index: 5; }
+      body .intro-carousel > .intro-carousel-icon .intro-carousel-icon-box div {
+        position: absolute;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #29b078;
+        border-radius: 50%;
+        border: 1px solid #29b078;
+        z-index: 10;
+        animation: intro-carousel-icon 10s ease infinite; }
+@keyframes intro-carousel-icon {
+  0% {
+    left: 0; }
+  32% {
+    left: 0; }
+  33% {
+    left: 19px; }
+  65% {
+    left: 19px; }
+  66% {
+    left: 38px; }
+  100% {
+    left: 38px; } }
 body main {
   padding: 100px 5%;
   background-color: #fafafa; }
@@ -161,47 +205,45 @@ body main {
     padding: 50px 0;
     text-align: center;
     font-size: 24px; }
-  body main .main-method-box {
-    display: flex;
-    align-items: center;
-    width: 20%; }
-    body main .main-method-box .step {
-      display: inline-block;
-      flex-shrink: 0;
-      height: 70px;
-      width: 70px;
-      text-align: center;
-      line-height: 70px;
-      color: #29b078;
-      background-color: #fff;
-      border-radius: 50%;
-      box-shadow: 1px 0 5px #989898; }
-    body main .main-method-box p {
-      padding-left: 10px; }
+  body main .main-method {
+    padding: 20px; }
+    body main .main-method-box {
+      display: flex;
+      align-items: center;
+      width: 20%; }
+      body main .main-method-box .step {
+        display: inline-block;
+        flex-shrink: 0;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        line-height: 70px;
+        color: #29b078;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 1px 0 5px #989898; }
+      body main .main-method-box p {
+        padding-left: 10px; }
   body main .student-carousel {
     display: flex;
     overflow: hidden; }
 @keyframes student-carousel {
   0% {
     margin-left: 0; }
-  10% {
-    margin-left: 0; }
   20% {
-    margin-left: -50%; }
-  30% {
+    margin-left: 0; }
+  25% {
     margin-left: -100%; }
-  40% {
+  45% {
     margin-left: -100%; }
   50% {
     margin-left: -200%; }
-  60% {
+  75% {
     margin-left: -200%; }
-  70% {
-    margin-left: -300%; }
   80% {
     margin-left: -300%; }
-  90% {
-    margin-left: -400%; }
+  95% {
+    margin-left: -300%; }
   100% {
     margin-left: -400%; } }
     body main .student-carousel ul {
@@ -245,5 +287,58 @@ body main {
     padding: 20px 0; }
     body main .main-friend ul li:hover {
       text-decoration: underline solid #000000; }
+
+@media screen and (max-width: 768px) {
+  main .main-top {
+    flex-wrap: wrap; }
+    main .main-top-box {
+      padding-bottom: 30px;
+      width: 45% !important; }
+    main .main-top #number {
+      text-align: center !important;
+      border: none !important; }
+  main .main-method {
+    flex-wrap: wrap;
+    padding: 0 !important; }
+    main .main-method .main-method-box {
+      padding: 20px;
+      width: 40%; }
+    main .main-method img {
+      display: none; }
+  main .student-carousel ul {
+    flex-wrap: wrap; }
+    main .student-carousel ul li {
+      margin: 20px 0;
+      width: 40% !important; }
+  main .main-enterprise {
+    flex-direction: column; }
+  main .main-friend {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    main .main-friend ul {
+      flex-direction: column; }
+      main .main-friend ul li {
+        padding: 5px 0; } }
+@media screen and (max-width: 550px) {
+  main .main-top-box {
+    width: 100% !important; }
+    main .main-top-box p {
+      text-align: center !important; }
+  main .main-method-box {
+    width: 100% !important; }
+  main .student-carousel > ul > li {
+    box-sizing: border-box;
+    padding: 15px !important;
+    width: 100% !important; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main .main-method {
+    flex-wrap: wrap;
+    padding: 0 !important; }
+    main .main-method .main-method-box {
+      padding: 20px;
+      width: 40%; }
+    main .main-method img {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */

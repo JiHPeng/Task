@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import "style";
 
 body {
@@ -7,8 +8,8 @@ body {
   .intro-carousel {
     position: relative;
     @keyframes intro-carousel {
-      0% {margin-left:0;}
-      10% {margin-left:0;}
+      0% {margin-left: 0}
+      10% {margin-left: 0}
       33% {margin-left: -100%}
       43% {margin-left: -100%}
       66% {margin-left: -200%}
@@ -26,6 +27,42 @@ body {
         }
         img {
           width: 100%;
+        }
+      }
+    }
+    > .intro-carousel-icon {
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - 25px);
+      width: 50px;
+      .intro-carousel-icon-box {
+        position: relative;
+        span {
+          width: 10px;
+          height: 10px;
+          background-color: transparent;
+          border-radius: 50%;
+          border: 1px solid $color-gray;
+          z-index: 5;
+        }
+        div {
+          @keyframes intro-carousel-icon {
+            0% {left: 0}
+            32% {left: 0}
+            33% {left: 19px}
+            65% {left: 19px}
+            66% {left: 38px}
+            100% {left: 38px}
+          }
+          position: absolute;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          background-color: $color-green;
+          border-radius: 50%;
+          border: 1px solid $color-green;
+          z-index: 10;
+          animation: intro-carousel-icon 10s ease infinite;
         }
       }
     }
@@ -70,6 +107,7 @@ body {
       font-size: 24px;
     }
     .main-method {
+      padding: 20px;
       &-box {
         display: flex;
         align-items: center;
@@ -96,15 +134,13 @@ body {
       overflow: hidden;
       @keyframes student-carousel {
         0% {margin-left:0;}
-        10% {margin-left: 0;}
-        20% {margin-left: -50%;}
-        30% {margin-left: -100%;}
-        40% {margin-left: -100%;}
+        20% {margin-left: 0;}
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
         50% {margin-left: -200%;}
-        60% {margin-left: -200%;}
-        70% {margin-left: -300%;}
+        75% {margin-left: -200%;}
         80% {margin-left: -300%;}
-        90% {margin-left: -400%;}
+        95% {margin-left: -300%;}
         100% {margin-left: -400%;}
       }
       ul {
@@ -167,5 +203,87 @@ body {
 
 @media screen and (max-width: 768px) {
   main {
+    .main-top {
+      flex-wrap: wrap;
+      &-box {
+        padding-bottom: 30px;
+        width: 45%!important;
+      }
+      #number {
+        text-align: center!important;
+        border: none!important;
+      }
+    }
+    .main-method {
+      flex-wrap: wrap;
+      padding: 0!important;
+      .main-method-box {
+        padding: 20px;
+        width: 40%;
+      }
+      img {
+        display: none;
+      }
+    }
+    .student-carousel {
+      ul {
+        flex-wrap: wrap;
+        li {
+          margin: 20px 0;
+          width: 40%!important;
+        }
+      }
+    }
+    .main-enterprise {
+      flex-direction: column;
+    }
+    .main-friend {
+      @include flex-around;
+      ul {
+        flex-direction: column;
+        li {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    .main-top-box {
+      width: 100%!important;
+      p {
+        text-align: center!important;
+      }
+    }
+    .main-method-box {
+      width: 100%!important;
+    }
+    .student-carousel {
+      > ul {
+        > li {
+          box-sizing: border-box;
+          padding: 15px!important;
+          width: 100%!important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main {
+    .main-method {
+      flex-wrap: wrap;
+      padding: 0 !important;
+      .main-method-box {
+        padding: 20px;
+        width: 40%;
+      }
+      img {
+        display: none;
+      }
+    }
   }
 }
