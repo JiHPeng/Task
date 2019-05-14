@@ -1,0 +1,127 @@
+@import "style";
+
+body {
+  header {
+
+  }
+  .carousel {
+    position: relative;
+    @keyframes mycarousel {
+      0% {margin-left:0;}
+      10% {margin-left:0;}
+      33% {margin-left: -100%}
+      43% {margin-left: -100%}
+      66% {margin-left: -200%}
+      76% {margin-left: -200%}
+      100% {margin-left: -300%}
+    }
+    ul {
+      display: flex;
+      overflow: hidden;
+      li {
+        width: 100%;
+        flex-shrink: 0;
+        &:nth-of-type(1) {
+          animation: mycarousel 10s ease infinite;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  main {
+    padding: 100px $padding-both-sides;
+    background-color: #fafafa;
+    .main-top {
+      &-box {
+        text-align: center;
+        width: 20%;
+        h1 {
+          padding: 20px;
+          font-size: 24px;
+        }
+        p {
+          word-break: break-all;
+          word-wrap: break-word;
+          white-space:pre-wrap;
+          text-align: left;
+          color: $color-gray;
+        }
+      }
+      #number {
+        width: 15%;
+        padding-left: 5%;
+        text-align: left;
+        border-left: 1px dashed $color-gray;
+        h2 {
+          color: $color-gray;
+          padding: 10px 0;
+        }
+        span {
+          font-size: 18px;
+          color: $color-green;
+        }
+      }
+    }
+    > h1 {
+      padding: 50px 0;
+      text-align: center;
+      font-size: 24px;
+    }
+    .main-method {
+      &-box {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        .step {
+          display: inline-block;
+          flex-shrink: 0;
+          height: 70px;
+          width: 70px;
+          text-align: center;
+          line-height: 70px;
+          color: $color-green;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 1px 0 5px #989898;
+        }
+        p {
+          padding-left: 10px;
+        }
+      }
+    }
+    .main-enterprise {
+      display: flex;
+      box-shadow: 1px 0 5px #999999;
+      a {
+        @include flex-center;
+        flex: 1;
+        padding: 50px 0;
+        background-color: #fff;
+        &:hover {
+          box-shadow: 1px 0 5px #999999;
+          z-index: 99;
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .main-friend {
+      ul {
+        padding: 20px 0;
+        li {
+          &:hover {
+            text-decoration: underline solid #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+  }
+}
