@@ -72,6 +72,9 @@ body {
             box-sizing: border-box;
             background-color: $color-green;
             z-index: 3;
+            a {
+              color: #fff;
+            }
             &:hover {
               border-bottom: 5px solid #fff;
             }

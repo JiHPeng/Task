@@ -39,6 +39,8 @@ body {
           box-sizing: border-box;
           background-color: #29b078;
           z-index: 3; }
+          body header .navbar nav ul li a {
+            color: #fff; }
           body header .navbar nav ul li:hover {
             border-bottom: 5px solid #fff; }
   body header input {

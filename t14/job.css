@@ -39,6 +39,8 @@ body {
           box-sizing: border-box;
           background-color: #29b078;
           z-index: 3; }
+          body header .navbar nav ul li a {
+            color: #fff; }
           body header .navbar nav ul li:hover {
             border-bottom: 5px solid #fff; }
   body header input {
@@ -132,8 +134,9 @@ body {
 .card {
   position: relative;
   padding: 10px 0;
+  margin: 20px 0;
   width: 30%;
-  max-width: 400px;
+  min-width: 300px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px #aeb2b3;
@@ -175,7 +178,7 @@ body {
   .card .hov {
     position: absolute;
     top: 0;
-    left: 400px;
+    left: 700px;
     width: 100%;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -189,8 +192,8 @@ body {
     .card .hov p {
       padding: 0 30px; }
   .card:hover .hov {
-    transform: translate(-400px, 0);
-    transition: transform 1s;
+    transform: translate(-700px, 0);
+    transition: transform 0.5s;
     z-index: 15; }
 
 body main {
@@ -223,5 +226,16 @@ body main {
     border-bottom: 1px solid #c7c7c7; }
   body main .card-box {
     margin: 30px 0; }
+
+@media screen and (max-width: 1024px) {
+  .card-box {
+    flex-wrap: wrap; }
+    .card-box .card {
+      width: 45%; } }
+@media screen and (max-width: 768px) {
+  .card-box {
+    justify-content: center; }
+    .card-box .card {
+      width: 80%; } }
 
 /*# sourceMappingURL=job.css.map */

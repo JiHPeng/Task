@@ -2,8 +2,9 @@
   $border-color: #c8c8c8;
   position: relative;
   padding: 10px 0;
+  margin: 20px 0;
   width: 30%;
-  max-width: 400px;
+  min-width: 300px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px #aeb2b3;
@@ -62,7 +63,7 @@
     $hov-font-color: #fff;
     position: absolute;
     top: 0;
-    left: 400px;
+    left: 700px;
     width: 100%;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -79,8 +80,8 @@
     }
   }
   &:hover .hov {
-    transform: translate(-400px, 0);
-    transition: transform 1s;
+    transform: translate(-700px, 0);
+    transition: transform 0.5s;
     z-index: 15;
   }
 }
