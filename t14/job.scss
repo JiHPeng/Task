@@ -43,8 +43,20 @@ body {
   }
 }
 
+@media screen and (max-width: 1024px){
+  .card-box {
+    flex-wrap: wrap;
+    .card {
+      width: 45%;
+    }
+  }
+}
+
 @media screen and (max-width: 768px){
   .card-box {
-
+    justify-content: center;
+    .card {
+      width: 80%;
+    }
   }
 }
