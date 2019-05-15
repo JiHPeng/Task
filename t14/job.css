@@ -148,7 +148,7 @@ body {
   .card table {
     border-collapse: collapse;
     border: 2px solid #ffffff; }
-    .card table h2, .card table h3, .card table h4, .card table p {
+    .card table h2, .card table h4, .card table p {
       display: inline; }
     .card table h1 {
       padding-bottom: 10px;
@@ -157,6 +157,9 @@ body {
     .card table h2 {
       text-align: left;
       color: #db0400; }
+    .card table h3 {
+      text-align: center;
+      color: #c8c8c8; }
     .card table h4 {
       float: right; }
     .card table h5 {

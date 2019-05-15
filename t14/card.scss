@@ -15,7 +15,7 @@
     align-items: center;
   }
   table {
-    h2, h3, h4, p {
+    h2, h4, p {
       display: inline;
     }
     h1 {
@@ -28,6 +28,8 @@
       color: #db0400;
     }
     h3 {
+      text-align: center;
+      color: $border-color;
     }
     h4 {
       float: right;
