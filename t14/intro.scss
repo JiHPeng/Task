@@ -1,26 +1,108 @@
-@charset "utf-8";
+@charset "UTF-8";
 @import "style";
-
+$font-border: #bababa;
 body {
+  .pic {
+    @include flex-center;
+    padding: 0 $padding-both-sides;
+    background-color: #fbb435;
+    img {
+      width: 45%;
+    }
+  }
   main {
+    padding: 0 $padding-both-sides;
     background-color: #fff;
     z-index: 10;
-    .main-top {
-      @include flex-center;
-      padding: 0 $padding-both-sides;
-      background-color: #fbb435;
-      img {
-        width: 45%;
-      }
-    }
     .main-position {
-      padding: 20px $padding-both-sides;
+      padding: 20px 0;
       a {
         color: $color-green;
       }
     }
-    nav {
+    .main-wrap {
+      $border: 1px solid #BABABA;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 50px;
+      nav {
+        margin-right: 20px;
+        width: 310px;
+        height: 350px;
+        text-align: center;
+        border: $border;
+        border-radius: 5px;
+        h1 {
+          padding: 10px 0;
+          margin-bottom: 30px;
+          font-size: 18px;
+          font-weight: bold;
+          border-bottom: $border;
+        }
+        .main-wrap-nav-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a {
+            $icon-bg-color: #fbb435;
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 30px;
+            color: $color-green;
+            .main-wrap-nav-content-icon {
+              margin-right: 5px;
+              width: 14px;
+              height: 14px;
+              border: 1px solid $icon-bg-color;
+              border-radius: 50%;
+            }
+            &:hover .main-wrap-nav-content-icon {
+              background-color: $icon-bg-color;
+            }
+          }
+        }
+      }
+      &-content {
+        $divide-padding: 20px;
+        width: 70%;
+        text-indent: 32px;
+        border: $border;
+        border-radius: 5px;
+        &-top {
+          padding: $divide-padding;
+          border-bottom: 1px solid $font-border;
+          img {
+            padding-right: $divide-padding;
+          }
+        }
+        &-intro {
+          padding: $divide-padding;
+        }
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .main-wrap {
+    flex-direction: column;
+    align-items: center;
+    nav {
+      margin-right: 0!important;
+      margin-bottom: 20px;
+      width: 100%!important;
+    }
+    &-content {
+      width: 100%!important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-wrap-content-top {
+    flex-direction: column;
+    img {
+      padding: 20px 0!important;
     }
   }
 }
