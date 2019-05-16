@@ -48,11 +48,12 @@ body {
         div {
           @keyframes intro-carousel-icon {
             0% {left: 0}
-            32% {left: 0}
-            33% {left: 19px}
-            65% {left: 19px}
-            66% {left: 38px}
-            100% {left: 38px}
+            11% {left: 0}
+            12% {left: 19px}
+            44% {left: 19px}
+            45% {left: 38px}
+            76% {left: 38px}
+            77% {left: 0}
           }
           position: absolute;
           left: 0;
@@ -133,7 +134,9 @@ body {
       }
     }
     .student-carousel {
+      position: relative;
       display: flex;
+      padding-bottom: 30px;
       overflow: hidden;
       @keyframes student-carousel {
         0% {margin-left:0;}
@@ -141,8 +144,8 @@ body {
         25% {margin-left: -100%;}
         45% {margin-left: -100%;}
         50% {margin-left: -200%;}
-        75% {margin-left: -200%;}
-        80% {margin-left: -300%;}
+        70% {margin-left: -200%;}
+        75% {margin-left: -300%;}
         95% {margin-left: -300%;}
         100% {margin-left: -400%;}
       }
@@ -174,6 +177,45 @@ body {
           }
         }
       }
+      > .student-carousel-icon {
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 25px);
+        width: 60px;
+        .student-carousel-icon-box {
+          position: relative;
+          span {
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1px solid $color-gray;
+            z-index: 5;
+          }
+          div {
+            @keyframes student-carousel-icon {
+              0% {left: 0}
+              21% {left: 0}
+              22% {left: 16px}
+              46% {left: 16px}
+              47% {left: 32px}
+              71% {left: 32px}
+              72% {left: 48px;}
+              96% {left: 48px;}
+              97% {left: 0}
+            }
+            position: absolute;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: $color-green;
+            border-radius: 50%;
+            border: 1px solid $color-green;
+            z-index: 10;
+            animation: student-carousel-icon 20s ease infinite;
+          }
+        }
+      }//zhantie
     }
     .main-enterprise {
       display: flex;
