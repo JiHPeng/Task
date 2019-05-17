@@ -1,0 +1,22 @@
+body {
+  margin: 0; }
+
+div {
+  border-radius: 15%;
+  margin: 2%;
+  padding-top: 29.3%;
+  width: 29.3%;
+  background-color: orange; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap; }
+
+.bg {
+  border-radius: 15%;
+  margin: 2%;
+  padding-top: 29.3%;
+  width: 29.3%;
+  background-color: orange; }
+
+/*# sourceMappingURL=t1.css.map */
