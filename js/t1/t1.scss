@@ -17,3 +17,20 @@ nav{display:flex;flex-wrap:wrap;}
   background-color:orange;
 }
 
+footer {
+  button {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+  }
+}
+.start {
+  background-color: orange;
+  color: white;
+}
+
+.stop {
+  color: orange;
+}

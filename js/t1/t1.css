@@ -19,4 +19,18 @@ nav {
   width: 29.3%;
   background-color: orange; }
 
+footer button {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px; }
+
+.start {
+  background-color: orange;
+  color: white; }
+
+.stop {
+  color: orange; }
+
 /*# sourceMappingURL=t1.css.map */
