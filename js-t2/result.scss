@@ -1,0 +1,84 @@
+@import "../css-reset.css";
+@import "style";
+
+body {
+  padding-top: 50px;
+  padding-bottom: 56px;
+  header {
+    > .flex-box {
+      @include between;
+    }
+  }
+  main {
+    $padding-lr: 40px;
+    > .main-top {
+      padding: 0 $padding-lr;
+      text-align: $text-center;
+      background-color: $bg-color;
+      > img {
+        padding: $padding-tb25;
+        height: 120px;
+      }
+      h1 {
+        display: inline-block;
+        padding: $padding-tb25;
+        text-align: $text-left;
+        font-size: 20px;
+        color: #d7bc2f;
+      }
+      p {
+        padding-bottom: $padding-15;
+        text-align: $text-left;
+        color: $color-white;
+      }
+      > .flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        > p {
+          padding-right: $padding-15;
+        }
+      }
+    }
+    > .main-bot {
+      padding: 10px $padding-lr;
+      border-bottom: 1px solid #bababa;
+      > .flex-box {
+        @include between;
+        padding-bottom: 10px;
+        > h2 {
+          font-size: 20px;
+        }
+        > span {
+          color: #bababa;
+        }
+      }
+      > p {
+        padding: 5px 0;
+        color: $color-gray;
+      }
+    }
+  }
+  footer {
+    background-color: rgba(41, 189, 224, 0.6);
+    > .flex-box {
+      @include between;
+      padding: 10px 25px;
+      a {
+        padding: 10px 0;
+        width: 130px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      a:nth-of-type(1) {
+        background-color: #f66f6f;
+      }
+      a:nth-of-type(2) {
+        background-color: #fbb435;
+      }
+      p {
+        text-align: $text-center;
+        color: $color-white;
+      }
+    }
+  }
+}

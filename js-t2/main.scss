@@ -1,0 +1,88 @@
+@import "../css-reset.css";
+@import "style";
+
+body {
+  background-color: #eeeeee;
+  header {
+    .flex-box {
+      @include between;
+    }
+  }
+  main {
+    padding: 10px 30px;
+    > .last-game {
+      @include between;
+      padding: 20px 20px;
+      color: $color-gray;
+      background-color: $color-white;
+      border: 1px solid $color-gray;
+      > .left {
+        width: 20px;
+      }
+      > a {
+        text-decoration: none;
+        color: $color-gray;
+      }
+      > .right-arrow1 {
+        $hollow: 2px solid $bg-color;
+        width: 15px;
+        height: 15px;
+        border-top: $hollow;
+        border-right: $hollow;
+        transform: rotate(45deg);
+      }
+    }
+    > .game-list {
+      position: relative;
+      margin-top: 30px;
+      background-color: $color-white;
+      border: 1px solid $color-gray;
+      > .game-title {
+        padding: 15px 0;
+        text-align: center;
+        color: $color-brown;
+        border-bottom: 1px solid $color-brown;
+      }
+      > .game-content {
+        padding: 20px 20px;
+        > div {
+          text-align: center;
+          > a {
+            display: block;
+            width: 100%;
+            padding: $padding-tb25;
+            text-decoration: none;
+            color: $color-white;
+            background-color: $bg-color;
+          }
+          > p {
+            padding: $padding-tb15;
+            color: $color-gray;
+          }
+        }
+      }
+      > .icon-wrap {
+        text-align: center;
+        margin-top: -20px;
+        > .icon {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: $color-gray;
+          border-radius: 50%;
+          &:hover {
+            background-color: $bg-color;
+          }
+        }
+      }
+      > .right-arrow2 {
+        position: absolute;
+        right: -5px;
+        top: calc(50% - 10px);
+        border-width: 10px;
+        border-style: solid dashed dashed dashed;
+        border-color: transparent transparent transparent #fbb435;
+      }
+    }
+  }
+}

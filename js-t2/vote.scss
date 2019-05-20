@@ -1,0 +1,92 @@
+@import "../css-reset.css";
+@import "style";
+
+body {
+  background-color: $bg-color;
+  padding-bottom: 96px;
+  header > .flex-box {
+    @include between;
+  }
+  main {
+    > .flex-box {
+      @include between;
+      position: relative;
+      padding: $padding-lr25;
+      height: 50px;
+      line-height: 50px;
+      background-color: $bg-color-light;
+      > audio {
+        position: absolute;
+        right: 25px;
+        visibility: hidden;
+        transform: rotate(180deg);
+      }
+      > img {
+        height: 40px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        border: 10px solid;
+        border-color: $bg-color-light transparent transparent transparent;
+      }
+    }
+    > p {
+      padding: $padding-25;
+      color: $color-white;
+    }
+    > .wrap {
+      padding: 25px 5%;
+      text-align: center;
+      @include around;
+      > .inner-box {
+        padding: 3px;
+        height: 23vw;
+        max-height: 200px;
+        width: 23vw;
+        max-width: 200px;
+        background-color: $color-white;
+        > .inner-top {
+          @include center;
+          height: 75%;
+          font-size: 24px;
+          background-color: #f5c97b;
+        }
+        > .inner-bot {
+          @include center;
+          height: 25%;
+          color: $color-white;
+          background-color: #83b09a;
+        }
+        > .icon-box {
+          @include between;
+          margin: 0 -3px;
+          padding: 10px 0 20px 0;
+          visibility: hidden;
+          > img {
+            height: 4vw;
+            max-height: 40px;
+            background-color: $color-white;
+          }
+        }
+        &:hover .icon-box {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  footer {
+    padding: 20px 25px;
+    text-align: center;
+    background-color: $bg-color;
+    > a {
+      text-decoration: none;
+      > .confirm {
+        padding: 20px 0;
+        color: $color-white;
+        background-color: #fbb435;
+      }
+    }
+  }
+}
