@@ -9,9 +9,9 @@ function change() {
     var x = Math.floor(Math.random()*9);
     var c = Math.floor(Math.random()*9);
 
-    var first = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
-    var second = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
-    var third = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
+    var first = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
+    var second = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
+    var third = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
 
     for (;z === x || x === c || c === z;){
         z = Math.floor(Math.random()*9);
@@ -19,9 +19,9 @@ function change() {
         c = Math.floor(Math.random()*9);
     }
     for (;first === second || second === third || third === first;) {
-        first = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
-        second = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
-        third = ('000000'+Math.floor(Math.random() * 999999)).slice(-6);
+        first = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
+        second = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
+        third = ('000000'+Math.floor(Math.random() * 16581375).toString(16)).slice(-6);
     }
     var color = new Array()
     color[0] = '#'+ first;
