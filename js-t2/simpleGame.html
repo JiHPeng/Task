@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="simpleGame.css" type="text/css">
+    <title>Title</title>
+</head>
+<body onload="a()">
+<input type="button" onclick="back()" id="menu">
+<header>
+    <label for="menu"></label>
+</header>
+<main>
+    <h1>玩家配比</h1>
+    <div class="flex">
+        <div class="flex between">
+            <img src="../images/task3_03.png">
+            <div class="flex-center">杀手&nbsp;<span id="killerNum"></span>人</div>
+        </div>
+        <div class="flex between">
+            <img src="../images/task3_04.png">
+            <div class="flex-center">水民&nbsp;<span id="commonNum"></span>人</div>
+        </div>
+    </div>
+    <div class="words">
+        <input type="text" placeholder="水民词汇">
+        <input type="text" placeholder="杀手词汇">
+    </div>
+    <div>
+        <form name="am">
+            请输入玩家数量
+            <input id="member" type="text" name="member" value="8" oninput="a()">
+            <span>玩家数量为4-18</span>
+        </form>
+    </div>
+</main>
+<div class="sub">
+    <button>去发牌</button>
+</div>
+<script src="simpleGame.js"></script>
+</body>
+</html>
