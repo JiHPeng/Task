@@ -25,9 +25,9 @@ function a() {
     else {
         killer = null;
         num = null;
-        common= null;
     }
     common = num - killer;
+
     document.getElementById('killerNum').innerHTML = killer;
     document.getElementById('commonNum').innerHTML = common;
 }
