@@ -30,9 +30,17 @@
     <div>
         <form name="am">
             请输入玩家数量
-            <input id="member" type="text" name="member" value="8" oninput="a()">
+            <input type="text" id="inputNumber" name="total" value="8" onchange="a()">
             <span>玩家数量为4-18</span>
         </form>
+    </div>
+    <div class="scroll">
+        <p>玩家人数:<span id="numNow"></span>人</p>
+        <div class="flex">
+            <button type="button">-</button>
+            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" oninput="change();a()">
+            <button type="button">+</button>
+        </div>
     </div>
 </main>
 <div class="sub">
@@ -41,3 +49,4 @@
 <script src="simpleGame.js"></script>
 </body>
 </html>
+

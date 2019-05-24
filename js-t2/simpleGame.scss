@@ -1,5 +1,10 @@
 @import "../css-reset.css";
 @import "style";
+
+.relative {
+  position: relative;
+}
+
 body {
   background-color: #eeeeee;
   header {
@@ -53,6 +58,39 @@ body {
       @include box;
       > input {
         width: 10%;
+      }
+    }
+    .scroll {
+      @include box;
+      p {
+        #numNow {
+          color: #eea92b;
+        }
+      }
+      .flex {
+        @include around;
+        padding: 10px 0;
+        button {
+          padding: 0;
+          height: 20px;
+          width: 20px;
+        }
+        input {
+          width: 80%;
+          &[type=range] {
+            -webkit-appearance: none;
+            height: 5px;
+            background-color: #eea92b;
+            color: #eea92b;
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              width: 25px;
+              height: 15px;
+              background-color: #fff;
+              border: 1px solid #eea92b;
+            }
+          }
+        }
       }
     }
   }
