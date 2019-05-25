@@ -26,8 +26,10 @@ function a() {
         else {
             killer = 5;
         }
+
         //计算出平民身份人数
         common = Number(num.value) - killer;
+
         //分配身份
         //将杀手和平民按数量组成数组
         var killerNum = [];
@@ -39,8 +41,10 @@ function a() {
         commonNum.length = common;
         commonNum.fill("平民");
         var status = killerNum.concat(commonNum);
+
         //声明一个新数组，用来存放打乱顺序后的身份
         var playerNum = [];
+
         //循环，每次都会在新数组中的随机位置生
         // 成一个身份，同时，原数组的身份被删除
         for (;status.length > 0;){
@@ -50,6 +54,23 @@ function a() {
         }
         console.log(status);
         console.log(playerNum);
+
+        //移除每次点击出现的身份
+        var father = document.getElementById('result');
+        var child = document.getElementsByTagName('li');
+        for (var d = 0;d < child.length;){
+            father.removeChild(father.firstChild);
+        }
+
+        //给元素定位，然后添加元素
+        for (var l = 0; l < playerNum.length;l++){
+            var para = document.createElement("li");
+            var square = document.createElement("span");
+            var node = document.createTextNode(playerNum[l] + '1人');
+            father.appendChild(para);
+            para.appendChild(square);
+            para.appendChild(node);
+        }
     }
     else {
         alert('人数必须在4-18之间');
@@ -62,12 +83,22 @@ function a() {
     console.log(killer);
     console.log(common);
 }
-function set() {
-    document.getElementById('killerNum').innerHTML = killer;
-    document.getElementById('commonNum').innerHTML = common;
+function decrease() {
+    num.value--;
+    dragNum.value = num.value;
+    if (num.value < 4 ){
+        alert("最小人数为4人");
+        num.value = 4;
+    }
 }
-
-
+function increase() {
+    num.value++;
+    dragNum.value = num.value;
+    if (num.value > 18){
+        alert("最大人数为18人");
+        num.value = 18;
+    }
+}
 
 
 

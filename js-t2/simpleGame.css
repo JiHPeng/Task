@@ -56,15 +56,7 @@ body {
       border-left: 4px solid #fff; }
   body main {
     padding: 1%; }
-    body main h1 {
-      padding: 10px 1%;
-      margin: 5px 0;
-      background-color: #fff;
-      box-shadow: 1px 1px 2px #999999;
-      text-align: center;
-      font-size: 20px; }
     body main .top-box {
-      padding: 10px 1%;
       margin: 5px 0;
       background-color: #fff;
       box-shadow: 1px 1px 2px #999999; }
@@ -72,32 +64,36 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 20%; }
+        width: 20%;
+        border-right: 1px solid #c7c7c7; }
         body main .top-box > .top-box-left > p {
-          width: 10px;
+          width: 22px;
+          font-size: 22px;
           line-height: 40px;
           word-break: break-all; }
       body main .top-box > .top-box-right {
         width: 80%; }
-        body main .top-box > .top-box-right > .flex-box {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 100px 20%; }
-          body main .top-box > .top-box-right > .flex-box > .between > img {
-            padding-right: 15px;
-            height: 40px; }
-          body main .top-box > .top-box-right > .flex-box > .between > .flex-center {
-            font-size: 18px; }
+        body main .top-box > .top-box-right > ul {
+          flex-wrap: wrap;
+          padding: 15px 0;
+          height: 300px; }
+          body main .top-box > .top-box-right > ul > li {
+            box-sizing: border-box;
+            height: 20px;
+            width: 50%;
+            text-align: center;
+            color: #c7c7c7; }
+            body main .top-box > .top-box-right > ul > li > span {
+              display: inline-block;
+              padding: 5px;
+              background-color: #eea92b; }
         body main .top-box > .top-box-right > p {
-          margin-bottom: -5px;
           padding: 10px;
           text-align: center;
           color: #2493b3;
           border-top: 1px solid #e9e9e9;
           cursor: pointer; }
     body main .words {
-      padding: 10px 1%;
       margin: 5px 0;
       background-color: #fff;
       box-shadow: 1px 1px 2px #999999; }
@@ -107,14 +103,12 @@ body {
         border: none;
         border-bottom: 1px solid #c7c7c7; }
     body main form {
-      padding: 10px 1%;
       margin: 5px 0;
       background-color: #fff;
       box-shadow: 1px 1px 2px #999999; }
       body main form > input {
         width: 10%; }
     body main .scroll {
-      padding: 10px 1%;
       margin: 5px 0;
       background-color: #fff;
       box-shadow: 1px 1px 2px #999999; }
@@ -128,7 +122,9 @@ body {
         body main .scroll .flex button {
           padding: 0;
           height: 20px;
-          width: 20px; }
+          width: 20px;
+          color: #eea92b;
+          background-color: #fff; }
         body main .scroll .flex input {
           width: 80%; }
           body main .scroll .flex input[type=range] {
@@ -140,8 +136,9 @@ body {
               -webkit-appearance: none;
               width: 25px;
               height: 15px;
-              background-color: #fff;
-              border: 1px solid #eea92b; }
+              background: url("../images/js2/03.png") no-repeat;
+              background-size: cover;
+              cursor: pointer; }
   body .sub {
     padding: 0 1%; }
     body .sub button {

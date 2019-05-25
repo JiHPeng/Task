@@ -12,23 +12,21 @@
     <label for="menu"></label>
 </header>
 <main>
-    <h1>玩家配比</h1>
     <div class="flex top-box">
         <div class="top-box-left">
             <p>玩家配比</p>
         </div>
         <div class="top-box-right">
-            <div class="flex-box">
-                <div class="flex between">
-                    <img src="../images/task3_03.png">
-                    <div class="flex-center">杀手&nbsp;<span id="killerNum"></span>人</div>
-                </div>
-                <div class="flex between">
-                    <img src="../images/task3_04.png">
-                    <div class="flex-center">水民&nbsp;<span id="commonNum"></span>人</div>
-                </div>
-            </div>
-            <p onclick="set()">设置人数</p>
+            <ul class="flex" id="result">
+                <li>
+                    <span></span>
+                    杀手1人
+                </li>
+                <li>
+                    <span></span>
+                </li>
+            </ul>
+            <p onclick="a()">设置人数</p>
         </div>
     </div>
     <div class="words">
@@ -44,9 +42,9 @@
     </div>
     <div class="scroll">
         <div class="flex">
-            <button type="button" id="decrease">-</button>
-            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" onchange="change();a()">
-            <button type="button" id="increase">+</button>
+            <button type="button" id="decrease" onclick="decrease()">-</button>
+            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" onchange="change()">
+            <button type="button" id="increase" onclick="increase()">+</button>
         </div>
     </div>
 </main>

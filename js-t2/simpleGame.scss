@@ -28,44 +28,43 @@ body {
   main {
     padding: 1%;
     @mixin box {
-      padding: 10px 1%;
       margin: 5px 0;
       background-color: #fff;
       box-shadow: 1px 1px 2px #999999;
-    }
-    h1 {
-      @include box;
-      text-align: center;
-      font-size: 20px;
     }
     .top-box {
       @include box;
       > .top-box-left {
         @include center;
         width: 20%;
+        border-right: 1px solid $color-gray;
         > p {
-          width: 10px;
+          width: 22px;
+          font-size: 22px;
           line-height: 40px;
           word-break: break-all;
         }
       }
       > .top-box-right {
         width: 80%;
-        > .flex-box {
-          @include between;
-          padding: 100px 20%;
-          > .between {
-            > img {
-              padding-right: 15px;
-              height: 40px;
-            }
-            > .flex-center {
-              font-size: 18px;
+        > ul {
+          flex-wrap: wrap;
+          padding: 15px 0;
+          height: 300px;
+          > li {
+            box-sizing: border-box;
+            height: 20px;
+            width: 50%;
+            text-align: center;
+            color: $color-gray;
+            > span {
+              display: inline-block;
+              padding: 5px;
+              background-color: #eea92b;
             }
           }
         }
         > p {
-          margin-bottom: -5px;
           padding: 10px;
           text-align: center;
           color: #2493b3;
@@ -103,6 +102,8 @@ body {
           padding: 0;
           height: 20px;
           width: 20px;
+          color: #eea92b;
+          background-color: #fff;
         }
         input {
           width: 80%;
@@ -115,8 +116,9 @@ body {
               -webkit-appearance: none;
               width: 25px;
               height: 15px;
-              background-color: #fff;
-              border: 1px solid #eea92b;
+              background: url("../images/js2/03.png") no-repeat;
+              background-size: cover;
+              cursor: pointer;
             }
           }
         }
