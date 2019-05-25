@@ -13,14 +13,22 @@
 </header>
 <main>
     <h1>玩家配比</h1>
-    <div class="flex">
-        <div class="flex between">
-            <img src="../images/task3_03.png">
-            <div class="flex-center">杀手&nbsp;<span id="killerNum"></span>人</div>
+    <div class="flex top-box">
+        <div class="top-box-left">
+            <p>玩家配比</p>
         </div>
-        <div class="flex between">
-            <img src="../images/task3_04.png">
-            <div class="flex-center">水民&nbsp;<span id="commonNum"></span>人</div>
+        <div class="top-box-right">
+            <div class="flex-box">
+                <div class="flex between">
+                    <img src="../images/task3_03.png">
+                    <div class="flex-center">杀手&nbsp;<span id="killerNum"></span>人</div>
+                </div>
+                <div class="flex between">
+                    <img src="../images/task3_04.png">
+                    <div class="flex-center">水民&nbsp;<span id="commonNum"></span>人</div>
+                </div>
+            </div>
+            <p onclick="set()">设置人数</p>
         </div>
     </div>
     <div class="words">
@@ -30,16 +38,15 @@
     <div>
         <form name="am">
             请输入玩家数量
-            <input type="text" id="inputNumber" name="total" value="8" onchange="a()">
+            <input type="number" id="inputNumber" value="8" onchange="a()">
             <span>玩家数量为4-18</span>
         </form>
     </div>
     <div class="scroll">
-        <p>玩家人数:<span id="numNow"></span>人</p>
         <div class="flex">
-            <button type="button">-</button>
-            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" oninput="change();a()">
-            <button type="button">+</button>
+            <button type="button" id="decrease">-</button>
+            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" onchange="change();a()">
+            <button type="button" id="increase">+</button>
         </div>
     </div>
 </main>
