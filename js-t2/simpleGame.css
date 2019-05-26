@@ -12,23 +12,28 @@
 
 body {
   padding-top: 50px; }
+  body > input {
+    outline: none; }
+    body > input::-webkit-inner-spin-button, body > input::-webkit-outer-spin-button {
+      -webkit-appearance: none; }
   body header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 25px;
+    padding: 15px;
     color: #ffffff;
     line-height: 0;
     font-size: 20px;
     background-color: #29bde0;
     z-index: 99; }
     body header .flex-box {
-      display: flex; }
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
       body header .flex-box > label {
         display: inline-block; }
       body header .flex-box img {
-        padding: 15px 0;
         height: 20px; }
   body footer {
     position: fixed;

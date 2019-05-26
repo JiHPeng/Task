@@ -45,30 +45,35 @@ $text-right: right;
 }
 body {
   padding-top: 50px;
+  > input {
+    outline: none;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
   header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: $padding-lr25;
+    padding: $padding-15;
     color: $color-white;
     line-height: 0;
     font-size: 20px;
     background-color: $bg-color;
     z-index: 99;
     .flex-box {
-      display: flex;
+      @include between;
       > label {
         display: inline-block;
       }
       img {
-        padding: $padding-tb15;
         height: 20px;
       }
     }
   }
   main {
-
   }
   footer {
     position: fixed;

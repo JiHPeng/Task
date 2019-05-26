@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="simpleGame.css" type="text/css">
     <title>Title</title>
 </head>
 <body onload="a()">
-<input type="button" onclick="back()" id="menu">
+<input type="checkbox" id="menu">
 <header>
-    <label for="menu"></label>
+    <div class="flex-box">
+        <label for="menu">
+        </label>
+    </div>
 </header>
 <main>
     <div class="flex top-box">
@@ -18,15 +21,8 @@
         </div>
         <div class="top-box-right">
             <ul class="flex" id="result">
-                <li>
-                    <span></span>
-                    杀手1人
-                </li>
-                <li>
-                    <span></span>
-                </li>
             </ul>
-            <p onclick="a()">设置人数</p>
+            <p onclick="a();set()">设置人数</p>
         </div>
     </div>
     <div class="words">
@@ -43,12 +39,12 @@
     <div class="scroll">
         <div class="flex">
             <button type="button" id="decrease" onclick="decrease()">-</button>
-            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" onchange="change()">
+            <input type="range" max="18" min="4" value="4" step="1" name="drag" id="dragBar" onchange="change();a()">
             <button type="button" id="increase" onclick="increase()">+</button>
         </div>
     </div>
 </main>
-<div class="sub">
+<div class="sub" onclick="submit()">
     <button>去发牌</button>
 </div>
 <script src="simpleGame.js"></script>

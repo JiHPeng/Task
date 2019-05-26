@@ -26,51 +26,8 @@ function a() {
         else {
             killer = 5;
         }
-
         //计算出平民身份人数
         common = Number(num.value) - killer;
-
-        //分配身份
-        //将杀手和平民按数量组成数组
-        var killerNum = [];
-        killerNum.length = killer;
-        console.log(killer);
-        console.log(killerNum.length);
-        killerNum.fill("杀手");
-        var commonNum = [];
-        commonNum.length = common;
-        commonNum.fill("平民");
-        var status = killerNum.concat(commonNum);
-
-        //声明一个新数组，用来存放打乱顺序后的身份
-        var playerNum = [];
-
-        //循环，每次都会在新数组中的随机位置生
-        // 成一个身份，同时，原数组的身份被删除
-        for (;status.length > 0;){
-            var randomNum = Math.floor(Math.random()*status.length);
-            playerNum.push(status[randomNum]);
-            status.splice(randomNum , 1);
-        }
-        console.log(status);
-        console.log(playerNum);
-
-        //移除每次点击出现的身份
-        var father = document.getElementById('result');
-        var child = document.getElementsByTagName('li');
-        for (var d = 0;d < child.length;){
-            father.removeChild(father.firstChild);
-        }
-
-        //给元素定位，然后添加元素
-        for (var l = 0; l < playerNum.length;l++){
-            var para = document.createElement("li");
-            var square = document.createElement("span");
-            var node = document.createTextNode(playerNum[l] + '1人');
-            father.appendChild(para);
-            para.appendChild(square);
-            para.appendChild(node);
-        }
     }
     else {
         alert('人数必须在4-18之间');
@@ -83,6 +40,48 @@ function a() {
     console.log(killer);
     console.log(common);
 }
+
+//分配身份
+var killerNum = [];
+var commonNum = [];
+//声明一个新数组，用来存放打乱顺序后的身份
+var playerNum = [];
+function set() {
+    //每次执行函数都会清空数组
+    playerNum = [];
+    //将杀手和平民按数量组成数组
+    killerNum.length = killer;
+    killerNum.fill("杀手");
+    commonNum.length = common;
+    commonNum.fill("平民");
+    var status = killerNum.concat(commonNum);
+    //循环，每次都会在新数组中的随机位置生
+    // 成一个身份，同时，原数组的身份被删除
+    for (;status.length > 0;){
+        var randomNum = Math.floor(Math.random()*status.length);
+        playerNum.push(status[randomNum]);
+        status.splice(randomNum , 1);
+    }
+    console.log(status);
+    console.log(playerNum);
+
+    //移除每次点击出现的身份
+    var father = document.getElementById('result');
+    var child = document.getElementsByTagName('li');
+    for (var d = 0;d < child.length;){
+        father.removeChild(father.firstChild);
+    }
+    //给元素定位，然后添加元素
+    for (var l = 0; l < playerNum.length;l++){
+        var para = document.createElement("li");
+        var square = document.createElement("span");
+        var node = document.createTextNode(playerNum[l] + '1人');
+        father.appendChild(para);
+        para.appendChild(square);
+        para.appendChild(node);
+    }
+}
+
 function decrease() {
     num.value--;
     dragNum.value = num.value;
@@ -100,6 +99,11 @@ function increase() {
     }
 }
 
+function submit() {
+    var send = JSON.stringify(playerNum);
+    sessionStorage.data = send;
+    window.location.href = "flop.html";
+}
 
 
 
