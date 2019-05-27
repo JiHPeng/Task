@@ -110,6 +110,3 @@ function submit() {
     console.log(xx);
     window.location.href = "flop.html";
 }
-
-
-

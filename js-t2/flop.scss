@@ -1,2 +1,53 @@
 @import "../css-reset.css";
 @import "style.scss";
+
+body {
+  background-color: $bg-color;
+  header {
+    border-bottom: 0.5px solid #fff6e0;
+  }
+
+  main {
+    margin-top: 50px;
+    .main-box {
+      position: relative;
+      left:5%;
+      right:5%;
+      width: 90%;
+      padding: 5px;
+      background-color: #fff;
+      &-title {
+        position: absolute;
+        left: calc(50% - 25px);
+        top: -25px;
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        line-height: 44px;
+        font-size: 24px;
+        color: #f56b81;
+        background-color: #fff;
+        border: 3px solid #ffedc5;
+        border-radius: 50%;
+      }
+      &-inner {
+        &-top {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 10px;
+          padding-top: 40px;
+          height: 400px;
+          background-color: #ffedc5;
+        }
+        &-bottom {
+          padding: 10px;
+          margin-top: 2px;
+          height: 100px;
+          color: #fca000;
+          background-color: #ffedc5;
+        }
+      }
+    }
+  }
+}
