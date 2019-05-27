@@ -102,18 +102,20 @@ function increase() {
 function submit() {
     var cw = document.getElementById('comWord').value;
     var kw = document.getElementById('kilWord').value;
-
     if (playerNum.length != num.value){
         alert('请点击设置人数分配玩家');
-        return
+        return;
     }
-    // else if (cw = null || kw = null){
-    //     alert('请设置传递词条');
-    // }
+    else if (cw === ""){
+        alert('请设置传递词条');
+        return;
+    }
+    else if (kw === ""){
+        alert('请设置传递词条');
+        return;
+    }
     var zz = JSON.stringify(playerNum);
-    console.log(zz);
     var xx = sessionStorage.setItem('data',zz);
-    console.log(xx);
     sessionStorage.setItem('comWord',cw);
     sessionStorage.setItem('kilWord',kw);
     window.location.href = "flop.html";
