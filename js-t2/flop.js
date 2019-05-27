@@ -2,6 +2,8 @@ $(function () {
 });
 var playerNum = JSON.parse(sessionStorage.getItem('data'));
 console.log(playerNum);
+var cw = sessionStorage.getItem('comWord');
+var kw = sessionStorage.getItem('kilWord');
 var i = 0;
 
 function check() {
@@ -25,13 +27,15 @@ function check() {
             if (playerNum[i].match('杀手')){
                 img = '<img src="../images/js2/killer.png">';
                 identity = '<p>角色:杀手</p>';
+                words = '<span>词条：'+kw+'</span>';
             }
             else {
                 img = '<img src="../images/js2/common.png">';
                 identity = '<p>角色:平民</p>';
+                words = '<span>词条：'+cw+'</span>';
             }
-            //显示玩家的身份
-            $(".main-box-inner-top").append(img,identity);
+            //显示玩家的身份 词条
+            $(".main-box-inner-top").append(img,identity,words);
             //显示当前玩家的序号
             $(".main-box-title").text(""+o+"");
             //显示下一位玩家的序号
@@ -54,6 +58,9 @@ function check() {
     //最后一名玩家隐藏身份后
     else {
         $("#check").val("法官查看身份")
+        $("#check").click(function () {
+            window.location.href = "vote.html";
+        })
     }
 }
 

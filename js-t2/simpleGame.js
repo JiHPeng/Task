@@ -100,13 +100,21 @@ function increase() {
 }
 
 function submit() {
+    var cw = document.getElementById('comWord').value;
+    var kw = document.getElementById('kilWord').value;
+
     if (playerNum.length != num.value){
         alert('请点击设置人数分配玩家');
         return
     }
+    // else if (cw = null || kw = null){
+    //     alert('请设置传递词条');
+    // }
     var zz = JSON.stringify(playerNum);
     console.log(zz);
     var xx = sessionStorage.setItem('data',zz);
     console.log(xx);
+    sessionStorage.setItem('comWord',cw);
+    sessionStorage.setItem('kilWord',kw);
     window.location.href = "flop.html";
 }
