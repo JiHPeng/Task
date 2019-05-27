@@ -1,2 +1,3 @@
-var get = sessionStorage.send;
-var new= JSON.parse(get);
+var change = JSON.parse(sessionStorage.getItem('data'));
+
+console.log(change);

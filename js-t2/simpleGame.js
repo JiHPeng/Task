@@ -100,8 +100,14 @@ function increase() {
 }
 
 function submit() {
-    var send = JSON.stringify(playerNum);
-    sessionStorage.data = send;
+    if (playerNum.length != num.value){
+        alert('请点击设置人数分配玩家');
+        return
+    }
+    var zz = JSON.stringify(playerNum);
+    console.log(zz);
+    var xx = sessionStorage.setItem('data',zz);
+    console.log(xx);
     window.location.href = "flop.html";
 }
 
