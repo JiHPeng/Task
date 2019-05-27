@@ -11,9 +11,9 @@ body {
     margin-top: 50px;
     .main-box {
       position: relative;
-      left:5%;
-      right:5%;
-      width: 90%;
+      left: 10%;
+      right: 10%;
+      width: 80%;
       padding: 5px;
       background-color: #fff;
       &-title {
@@ -34,11 +34,18 @@ body {
         &-top {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          align-items: center;
           padding-bottom: 10px;
           padding-top: 40px;
-          height: 400px;
+          height: 350px;
           background-color: #ffedc5;
+          img {
+            padding-bottom: 50px;
+          }
+          p {
+            color: #1b6d85;
+            font-size: large;
+          }
         }
         &-bottom {
           padding: 10px;
@@ -48,6 +55,20 @@ body {
           background-color: #ffedc5;
         }
       }
+    }
+  }
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    input {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 20px;
+      width: 80%;
+      background-color: #eea92b;
+      color: #fff;
+      outline: none;
+      border: none;
     }
   }
 }
