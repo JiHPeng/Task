@@ -30,10 +30,6 @@ $("#quit").click(function () {
             $(".inner-box:nth-of-type("+s+")").children(".inner-top").css("background-color","red")
         }
     }
-    $(".inner-box:last-child").remove();
-    console.log($(".inner-box"));
-    var t=document.getElementsByClassName("inner-box");
-    console.log(t[0]);
 //小格子点击事件
 var focus;
 $(".inner-box").click(function () {
@@ -84,8 +80,6 @@ $("footer input").click(function () {
     //计算出剩余活人的身份
     var liveKiller = []; //活着的杀手
     var liveCommon = []; //活着的平民
-    var deadKill = []; //晚上死亡
-    var deadVote = []; //白天死亡
     playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
     console.log(playerInfo);
     for (var i = 0;i < playerInfo.length;i++){
@@ -99,8 +93,6 @@ $("footer input").click(function () {
         }
     }
     sessionStorage.setItem("playerInfo",JSON.stringify(playerInfo));
-    console.log(liveKiller);
-    console.log(liveCommon);
     if(step == 1){
         if(liveKiller.length > liveCommon.length){
             sessionStorage.setItem("winner","杀手");
