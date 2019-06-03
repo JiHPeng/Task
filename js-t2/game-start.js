@@ -108,12 +108,17 @@ for (var i = 0; i < playerInfo.length; i++){
     else if(playerInfo[i].state == 2){
         $("#main-box"+deadBox+" #vote p").html(""+playerInfo[i].num+"号玩家在第"+playerInfo[i].day+"天被投死");
     }
+}
+for (var i = 0; i < playerInfo.length; i++) {
+    var o = i + 1;
+    var u = i - 1;
     if (day < i){
         $("#main-box"+i+"").css("display","none");
     }
     if (day >= i){
         $("#main-box"+i+"").css("display","block");
         $("#main-box"+u+" span, #main-box"+u+" input").remove();
+        $("#main-box"+u+" .main-bot").css("display","none");
     }
 }
 $(".main-box:last-child").remove();

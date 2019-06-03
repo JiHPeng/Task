@@ -1,7 +1,6 @@
 $(function () {
 
 });
-JSON.parse(sessionStorage.getItem('playerInfo'));
 var playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
 var step = Number(sessionStorage.getItem("step"));
 var day = Number(sessionStorage.getItem("day"));
@@ -11,19 +10,30 @@ $("#quit").click(function () {
     window.location.href= "main.html";
 });
 //按照人数生成小格子
-function show() {
     for (var i = 0; i < playerInfo.length;i++){
         var o = i + 1;
-        $("#inner0").clone(true).appendTo(".wrap").attr("id","inner"+o+"");
-        $("#inner"+i+" .inner-bot").html(+playerInfo[i].num+"号");
-        $("#inner"+i+" .inner-top").html(playerInfo[i].identity);
+        $(".wrap").append("<div class=\"inner-box\">" +
+            "<div class=\"inner-top\">"+playerInfo[i].identity+"</div>" +
+            "<div class=\"inner-bot\">"+playerInfo[i].num+"号</div>" +
+            "<div class=\"icon-box\">" +
+            "<img src=\"../images/t13/vote_04.png\">" +
+            "<img src=\"../images/t13/vote_05.png\">" +
+            "<img src=\"../images/t13/vote_06.png\">" +
+            "<img src=\"../images/t13/vote_07.png\">" +
+            "</div>" +
+            "</div>");
+        // $("#inner0").clone(true).appendTo(".wrap").attr("id","inner"+o+"");
+        // $("#inner"+i+" .inner-bot").html(+playerInfo[i].num+"号");
+        // $("#inner"+i+" .inner-top").html(playerInfo[i].identity);
         if (playerInfo[i].state != 0){
-            $("#inner"+i+"").children(".inner-top").css("background-color","red")
+            var s = playerInfo[i].num;
+            $(".inner-box:nth-of-type("+s+")").children(".inner-top").css("background-color","red")
         }
     }
     $(".inner-box:last-child").remove();
     console.log($(".inner-box"));
-}
+    var t=document.getElementsByClassName("inner-box");
+    console.log(t[0]);
 //小格子点击事件
 var focus;
 $(".inner-box").click(function () {
@@ -56,16 +66,15 @@ $(".inner-box").click(function () {
 
 //最下方按钮
 $("footer input").click(function () {
-    if (focus == ""){
+    if (focus == null){
+        alert("no!");
         return;
     }
-    if(step == 0){
-    }
-    else if (step == 1){
+    if (step == 1){
         playerInfo[focus].state = 1;
         playerInfo[focus].day = day + 1;
     }
-    else{
+    else if(step == 4){
         playerInfo[focus].state = 2;
         playerInfo[focus].day = day + 1;
         day = day + 1;
@@ -88,16 +97,6 @@ $("footer input").click(function () {
                 liveCommon.push(playerInfo[i]);
             }
         }
-        // else if(playerInfo[i].state == 1){
-        //     deadKill.push(playerInfo[i]);
-        //     sessionStorage.setItem("deadKill",JSON.stringify(deadKill));
-        //     playerInfo[i].state = 3;
-        // }
-        // else if(playerInfo[i].state == 2){
-        //     deadVote.push(playerInfo[i]);
-        //     sessionStorage.setItem("deadVote",JSON.stringify(deadVote));
-        //     playerInfo[i].state = 4;
-        // }
     }
     sessionStorage.setItem("playerInfo",JSON.stringify(playerInfo));
     console.log(liveKiller);
