@@ -2,18 +2,14 @@ $(function () {
 
 });
 
-//右上角退出按钮
-$("#exit").click(function () {
-    var exit = confirm("确认退出？");
-    if (exit == true) {
-        window.location.href = "main.html";
-    }
-});
+var playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
+//day初始值为0，为第一天
+var day = Number(sessionStorage.getItem("day"));
 
-//每天step下拉菜单
-$(".main-top").click(function () {
-    $(this).next().toggle(500);
-});
+//点击按钮颜色变化，按照4个step划分，按钮每点击一次，step+1，按钮点击后被禁用
+var step = Number(sessionStorage.getItem("step"));
+console.log(step);
+console.log(typeof step);
 
 var date = [
     "一",
@@ -26,49 +22,74 @@ var date = [
     "八",
     "九"
 ];
+//右上角退出按钮
+$("#exit").click(function () {
+    var exit = confirm("确认退出？");
+    if (exit == true) {
+        window.location.href = "main.html";
+    }
+});
 
-var playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
-var day = Number(sessionStorage.getItem("day"));
-
-//点击按钮颜色变化，按照4个step划分，按钮每点击一次，step+1，按钮点击后被禁用
-var step = Number(sessionStorage.getItem("step"));
-console.log(step);
-console.log(typeof step);
-
-//一天过去后，按钮恢复
-if (step > 3){
-    sessionStorage.setItem("step", 0);
-    step = 0;
+//根据天数，控制元素显示
+for (var i = 0; i < playerInfo.length; i++){
+    var o = i + 1;
+    var u = i - 1;
+    console.log(u);
+    $("main").append("    <div class=\"main-box\">\n" +
+        "        <div class=\"main-top\">\n" +
+        "            <div class=\"main-top-left\"></div>\n" +
+        "            <div class=\"main-top-center\">第"+date[i]+"天</div>\n" +
+        "            <div class=\"main-top-right\"></div>\n" +
+        "        </div>\n" +
+        "        <div class=\"main-bottom\">\n" +
+        "            <div class=\"main-bottom-nav\"></div>\n" +
+        "            <div class=\"main-bottom-right relative\">\n" +
+        "                <img class=\"moon\" src=\"../images/js2/moon.png\">\n" +
+        "                <img class=\"sun\" src=\"../images/js2/sun.png\">\n" +
+        "                <ul class=\"right-top\">\n" +
+        "                    <li id=\"killer\">\n" +
+        "                        <span></span>\n" +
+        "                        <input type=\"button\" value=\"杀手杀人\">\n" +
+        "                        <p></p>\n" +
+        "                    </li>\n" +
+        "                    <li id=\"ghost\">\n" +
+        "                        <span></span>\n" +
+        "                        <input type=\"button\" value=\"亡灵发言\">\n" +
+        "                    </li>\n" +
+        "                    <li id=\"all\">\n" +
+        "                        <span></span>\n" +
+        "                        <input type=\"button\" value=\"全民发言\">\n" +
+        "                    </li>\n" +
+        "                    <li id=\"vote\">\n" +
+        "                        <span></span>\n" +
+        "                        <input type=\"button\" value=\"投票\">\n" +
+        "                        <p></p>\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "    </div>\n");
+    var deadBox = Number(playerInfo[i].day);
+    if (playerInfo[i].state == 1){
+        $(".main-box:nth-of-type("+deadBox+")").find("#killer p").html(""+playerInfo[i].num+"号玩家在第"+playerInfo[i].day+"天黑夜被杀");
+    }
+    else if(playerInfo[i].state == 2){
+        $(".main-box:nth-of-type("+deadBox+")").find("#vote p").html(""+playerInfo[i].num+"号玩家在第"+playerInfo[i].day+"天被投死");
+    }
 }
-
-$("#killer input").click(function () {
-    window.location.href = "vote.html";
-    step = step +1;
-    sessionStorage.setItem("step",""+step+"");
-});
-
-$("#ghost input").click(function () {
-    alert("请幽灵发言");
-    step = step +1;
-    sessionStorage.setItem("step",""+step+"");
-    checkStep();
-});
-
-$("#all input").click(function () {
-    alert("所有人按顺序发言");
-    step = step +1;
-    sessionStorage.setItem("step",""+step+"");
-    Number(sessionStorage.getItem("step"));
-    checkStep();
-});
-
-$("#vote input").click(function () {
-    window.location.href = "vote.html";
-    step = step +1;
-    sessionStorage.setItem("step",""+step+"");
-});
-
-function checkStep() {
+for (var i = 0; i < playerInfo.length; i++) {
+    var o = i + 1;
+    var u = i - 1;
+    if (day < i){
+        $(".main-box:nth-of-type("+o+")").css("display","none");
+    }
+    if (day >= i){
+        $(".main-box:nth-of-type("+i+")").css("display","block");
+        $(".main-box:nth-of-type("+i+") span, .main-box:nth-of-type("+i+") input").remove();
+        $(".main-box:nth-of-type("+i+") .main-bottom").css("display","none");
+    }
+}
+function check() {
     if (step == 0){
         $("#killer input").attr("disabled",false);
         $("#ghost input,#all input,#vote input").attr("disabled",true);
@@ -94,34 +115,52 @@ function checkStep() {
         $("#killer input,#ghost input,#all input").attr("disabled",true);
     }
 }
-//根据天数，控制元素显示
-for (var i = 0; i < playerInfo.length; i++){
-    var o = i + 1;
-    var u = i - 1;
-    console.log(u);
-    $("#main-box0").clone(true).appendTo("main").attr("id","main-box"+o+"");
-    $("#main-box"+i+" .main-top-center").text("第"+date[i]+"天");
-    var deadBox = Number(playerInfo[i].day) -1;
-    if (playerInfo[i].state == 1){
-        $("#main-box"+deadBox+" #killer p").html(""+playerInfo[i].num+"号玩家在第"+playerInfo[i].day+"天黑夜被杀");
-    }
-    else if(playerInfo[i].state == 2){
-        $("#main-box"+deadBox+" #vote p").html(""+playerInfo[i].num+"号玩家在第"+playerInfo[i].day+"天被投死");
-    }
+check();
+
+
+//每天step下拉菜单
+$(".main-top").click(function () {
+    $(this).next().toggle(200);
+});
+
+
+//一天过去后，按钮恢复
+if (step > 3){
+    sessionStorage.setItem("step", 0);
+    step = 0;
 }
-for (var i = 0; i < playerInfo.length; i++) {
-    var o = i + 1;
-    var u = i - 1;
-    if (day < i){
-        $("#main-box"+i+"").css("display","none");
-    }
-    if (day >= i){
-        $("#main-box"+i+"").css("display","block");
-        $("#main-box"+u+" span, #main-box"+u+" input").remove();
-        $("#main-box"+u+" .main-bot").css("display","none");
-    }
-}
-$(".main-box:last-child").remove();
+
+$("#killer input").click(function () {
+    window.location.href = "vote.html";
+    step = step +1;
+    sessionStorage.setItem("step",""+step+"");
+});
+
+$("#ghost input").click(function () {
+    alert("请幽灵发言");
+    step = step +1;
+    sessionStorage.setItem("step",""+step+"");
+    check();
+});
+
+$("#all input").click(function () {
+    alert("所有人按顺序发言");
+    step = step +1;
+    sessionStorage.setItem("step",""+step+"");
+    Number(sessionStorage.getItem("step"));
+    check();
+});
+
+$("#vote input").click(function () {
+    window.location.href = "vote.html";
+    step = step +1;
+    sessionStorage.setItem("step",""+step+"");
+});
+
+    // $("#main-box0").clone(true).appendTo("main").attr("id","main-box"+o+"");
+    // $("#main-box"+i+" .main-top-center").text("第"+date[i]+"天");
+
+
 
 
 

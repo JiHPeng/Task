@@ -115,7 +115,7 @@ $("footer input").click(function () {
             sessionStorage.setItem("winner","平民");
             window.location.href = "result.html";
         }
-        else if(liveKiller.length > liveCommon.length){
+        else if(liveKiller.length >= liveCommon.length){
             sessionStorage.setItem("winner","杀手");
             window.location.href = "result.html";
         }
