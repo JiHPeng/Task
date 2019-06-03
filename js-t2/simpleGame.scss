@@ -7,22 +7,10 @@
 
 body {
   background-color: #eeeeee;
-  input {
-    outline: none;
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button{
-      -webkit-appearance: none;
-    }
-  }
   header {
     padding: $padding-15;
     label {
-      $return: 4px solid #fff;
-      height:20px;
-      width: 20px;
       transform: rotate(45deg);
-      border-bottom: $return;
-      border-left: $return;
     }
   }
   main {

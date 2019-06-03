@@ -66,17 +66,18 @@ body {
           background-color: #83b09a;
         }
         > .icon-box {
-          @include center;
+          @include between;
           margin: 0 -3px;
           padding: 10px 0 20px 0;
+          visibility: hidden;
           > img {
-            height: 5vw;
+            height: 4vw;
             max-height: 40px;
             background-color: $color-white;
-            display: none;
           }
         }
         &:hover .icon-box {
+          visibility: visible;
         }
       }
     }
@@ -85,13 +86,13 @@ body {
     padding: 20px 25px;
     text-align: center;
     background-color: $bg-color;
-    > input {
-      padding: 20px 0;
-      width: 80%;
-      color: $color-white;
-      background-color: #fbb435;
-      outline: none;
-      border: none;
+    > a {
+      text-decoration: none;
+      > .confirm {
+        padding: 20px 0;
+        color: $color-white;
+        background-color: #fbb435;
+      }
     }
   }
 }

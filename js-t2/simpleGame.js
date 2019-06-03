@@ -65,7 +65,7 @@ function set() {
     console.log(status);
     console.log(playerNum);
 
-    //移除每次点击出现的身份
+    //移除上次点击出现的身份
     var father = document.getElementById('result');
     var child = document.getElementsByTagName('li');
     for (var d = 0;d < child.length;){
@@ -118,5 +118,13 @@ function submit() {
     var xx = sessionStorage.setItem('data',zz);
     sessionStorage.setItem('comWord',cw);
     sessionStorage.setItem('kilWord',kw);
+    //创建一个数组，内容是对象，对象内容为序号，身份，状态
+    var cc = [];
+    //循环创建对象，并push到cc数组中
+    for (var i = 1; i <= playerNum.length;i++){
+        cc.push({num: i, identity: playerNum[i-1],state: 0,day: ""})
+    }
+    //将序号，身份，状态数组，转换存储
+    sessionStorage.setItem("playerInfo",JSON.stringify(cc));
     window.location.href = "flop.html";
 }

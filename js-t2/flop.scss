@@ -5,6 +5,10 @@ body {
   background-color: $bg-color;
   header {
     border-bottom: 0.5px solid #fff6e0;
+    label {
+      border: none;
+      transform: rotate(45deg);
+    }
   }
 
   main {

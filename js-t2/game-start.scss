@@ -1,0 +1,90 @@
+@import "../css-reset.css";
+@import "style";
+
+body {
+  background-color: #ebebeb;
+  @mixin unfold {
+    $unfold: 4px solid $bg-color;
+    height:20px;
+    width: 20px;
+    transform: rotate(-45deg);
+    border-bottom: $unfold;
+    border-left: $unfold;
+  }
+  header {
+    label {
+      transform: rotate(45deg);
+    }
+  }
+  main {
+    padding: 30px $padding-15 $padding-15 $padding-15;
+    .main-box {
+      background-color: #fff;
+      border: 1px solid $color-gray;
+      margin-bottom: 20px;
+      .main-top {
+        @include between;
+        padding: $padding-15;
+        border-bottom: 1px solid $color-gray;
+        &-left {
+          @include unfold;
+          visibility: hidden;
+        }
+        &-center {
+          color: $bg-color;
+          font-weight: bold;
+        }
+        &-right {
+          @include unfold;
+          }
+      }
+      .main-bottom {
+        display: flex;
+        &-nav {
+          width: 40px;
+          border-right: 1px solid $color-gray;
+        }
+        &-right {
+          flex: 1;
+          padding: $padding-25;
+          .moon {
+            position: absolute;
+            left: -15px;
+            top: 38px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+          }
+          .sun {
+            position: absolute;
+            left: -15px;
+            top: 120px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+          }
+          .right-top {
+            li {
+              @include center;
+              flex-wrap: wrap;
+              margin-bottom: 25px;
+              span {
+                display: inline-block;
+                border: 6px solid $bg-color;
+                border-color: transparent $bg-color transparent transparent;
+              }
+              input {
+                width: 90%;
+                padding: 20px 10px;
+                background-color: $bg-color;
+                color: #fff;
+                outline: none;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

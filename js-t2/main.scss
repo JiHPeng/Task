@@ -3,6 +3,11 @@
 
 body {
   background-color: #eeeeee;
+  header {
+    label {
+      border: none!important;
+    }
+  }
   main {
     padding: 10px 30px;
     > .last-game {

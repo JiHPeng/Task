@@ -5,7 +5,6 @@ console.log(playerNum);
 var cw = sessionStorage.getItem('comWord');
 var kw = sessionStorage.getItem('kilWord');
 var i = 0;
-
 function check() {
     //清空上次出现的内容
     $(".main-box-inner-top").empty();
@@ -17,11 +16,10 @@ function check() {
     var identity;  //显示的身份
     var words;    //显示的词条
 
-    //设定分配的上限为playerNum
+    //设定分配的上限为playerNum玩家人数在范围内时
     if (i <= playerNum.length - 1) {
         //初始时，i=0，为整数，点击后显示身份
-        //变量i每次点击增加0.5，当i为整数时，也就是初始页面时
-        //点击后产生的效果
+        //变量i每次点击增加0.5，当i为整数时，也就是初始页面时点击后产生的效果
         if (Number.isInteger(i) === true){
             //通过匹配字段来操作dom元素内容
             if (playerNum[i].match('杀手')){
@@ -57,10 +55,12 @@ function check() {
     }
     //最后一名玩家隐藏身份后
     else {
-        $("#check").val("法官查看身份")
+        $("#check").val("法官查看身份");
         $("#check").click(function () {
+            sessionStorage.setItem("day",0);
+            sessionStorage.setItem("step",0);
             window.location.href = "vote.html";
-        })
+        });
     }
 }
 

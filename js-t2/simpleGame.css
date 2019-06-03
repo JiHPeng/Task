@@ -10,6 +10,14 @@
   align-items: center;
   justify-content: center; }
 
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.relative {
+  position: relative; }
+
 body {
   padding-top: 50px; }
   body > input {
@@ -32,7 +40,11 @@ body {
       align-items: center;
       justify-content: space-between; }
       body header .flex-box > label {
-        display: inline-block; }
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border-bottom: 4px solid #fff;
+        border-left: 4px solid #fff; }
       body header .flex-box img {
         height: 20px; }
   body footer {
@@ -47,18 +59,10 @@ body {
 
 body {
   background-color: #eeeeee; }
-  body input {
-    outline: none; }
-    body input::-webkit-inner-spin-button, body input::-webkit-outer-spin-button {
-      -webkit-appearance: none; }
   body header {
     padding: 15px; }
     body header label {
-      height: 20px;
-      width: 20px;
-      transform: rotate(45deg);
-      border-bottom: 4px solid #fff;
-      border-left: 4px solid #fff; }
+      transform: rotate(45deg); }
   body main {
     padding: 1%; }
     body main .top-box {
