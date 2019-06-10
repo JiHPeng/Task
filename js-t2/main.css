@@ -55,9 +55,35 @@ body {
     z-index: 99; }
 
 body {
-  background-color: #eeeeee; }
-  body header label {
-    border: none !important; }
+  background-color: #eeeeee;
+  display: flex;
+  padding: 0;
+  overflow: hidden; }
+  body nav {
+    position: absolute;
+    width: 80%;
+    flex-shrink: 0; }
+    body nav ul li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px; }
+      body nav ul li span {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        transform: rotate(45deg);
+        border-top: 3px solid #29bde0;
+        border-right: 3px solid #29bde0; }
+  body .wrap {
+    position: absolute;
+    width: 100%;
+    flex-shrink: 0; }
+  body header {
+    display: block;
+    position: inherit; }
+    body header label {
+      border: none !important; }
   body main {
     padding: 10px 30px; }
     body main > .last-game {

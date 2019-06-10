@@ -3,7 +3,36 @@
 
 body {
   background-color: #eeeeee;
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  nav {
+    position: absolute;
+    width: 80%;
+    flex-shrink: 0;
+    ul {
+      li {
+        @include between;
+        padding: 5px 10px;
+        span {
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          transform: rotate(45deg);
+          border-top: 3px solid $bg-color;
+          border-right: 3px solid $bg-color;
+        }
+      }
+    }
+  }
+  .wrap {
+    position: absolute;
+    width: 100%;
+    flex-shrink: 0;
+  }
   header {
+    display: block;
+    position: inherit;
     label {
       border: none!important;
     }
