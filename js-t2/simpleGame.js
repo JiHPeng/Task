@@ -1,6 +1,7 @@
-function back() {
+
+$("#menu").click(function () {
     window.location.href='main.html';
-}
+});
 var killer;
 var common;
 var dragNum = document.getElementById('dragBar');

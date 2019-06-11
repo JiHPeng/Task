@@ -54,20 +54,38 @@ body {
     bottom: 0;
     z-index: 99; }
 
+html {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
 body {
   background-color: #eeeeee;
-  display: flex;
-  padding: 0;
-  overflow: hidden; }
+  padding: 0; }
   body nav {
     position: absolute;
+    display: none;
     width: 80%;
-    flex-shrink: 0; }
+    height: 700px;
+    flex-shrink: 0;
+    background-color: white;
+    z-index: 99; }
     body nav ul li {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      border-bottom: 1px solid #cccccc; }
+      body nav ul li div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        color: #29bde0;
+        font-size: 20px; }
+        body nav ul li div img {
+          padding: 0 10px; }
       body nav ul li span {
         display: inline-block;
         height: 20px;
@@ -78,6 +96,8 @@ body {
   body .wrap {
     position: absolute;
     width: 100%;
+    top: 0;
+    padding-top: 80px;
     flex-shrink: 0; }
   body header {
     display: block;

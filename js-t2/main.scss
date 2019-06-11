@@ -1,19 +1,37 @@
 @import "../css-reset.css";
 @import "style.scss";
 
+html{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 body {
   background-color: #eeeeee;
-  display: flex;
   padding: 0;
-  overflow: hidden;
   nav {
     position: absolute;
+    display: none;
     width: 80%;
+    height: 700px;
     flex-shrink: 0;
+    background-color: white;
+    z-index: 99;
     ul {
       li {
         @include between;
         padding: 5px 10px;
+        border-bottom: 1px solid #cccccc;
+        div {
+          @include center;
+          padding: 5px;
+          color: $bg-color;
+          font-size: 20px;
+          img {
+            padding: 0 10px;
+          }
+        }
         span {
           display: inline-block;
           height: 20px;
@@ -28,6 +46,8 @@ body {
   .wrap {
     position: absolute;
     width: 100%;
+    top: 0;
+    padding-top: 80px;
     flex-shrink: 0;
   }
   header {

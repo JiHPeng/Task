@@ -88,14 +88,17 @@ body {
         flex-direction: column;
         align-items: center;
         padding-bottom: 10px;
-        padding-top: 40px;
+        padding-top: 60px;
         height: 350px;
         background-color: #ffedc5; }
         body main .main-box-inner-top img {
           padding-bottom: 50px; }
         body main .main-box-inner-top p {
+          margin-bottom: 30px;
           color: #1b6d85;
-          font-size: large; }
+          font-size: 24px; }
+        body main .main-box-inner-top span {
+          font-size: 24px; }
       body main .main-box-inner-bottom {
         padding: 10px;
         margin-top: 2px;

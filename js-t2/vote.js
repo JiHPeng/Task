@@ -6,8 +6,13 @@ var step = Number(sessionStorage.getItem("step"));
 var day = Number(sessionStorage.getItem("day"));
 console.log(playerInfo);
 $("#quit").click(function () {
-   alert("结束游戏？");
-    window.location.href= "main.html";
+   var quit = confirm("结束游戏？");
+   if (quit ==true){
+       window.location.href= "main.html";
+   }
+   else {
+       return;
+   }
 });
 //按照人数生成小格子
     for (var i = 0; i < playerInfo.length;i++){

@@ -2,6 +2,8 @@ $(function () {
 
 });
 
+
+
 var playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
 //day初始值为0，为第一天
 var day = Number(sessionStorage.getItem("day"));
@@ -27,6 +29,14 @@ $("#exit").click(function () {
     var exit = confirm("确认退出？");
     if (exit == true) {
         window.location.href = "main.html";
+    }
+});
+
+//左上角返回按钮
+$("label").click(function () {
+    var back = confirm("确认退出？");
+    if (back == true) {
+        window.location.href = "simpleGame.html";
     }
 });
 

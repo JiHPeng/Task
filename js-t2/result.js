@@ -4,6 +4,7 @@ $(function () {
 
 var playerInfo = JSON.parse(sessionStorage.getItem('playerInfo'));
 var day = Number(sessionStorage.getItem("day"));
+var winner = sessionStorage.getItem("winner");
 var date = [
     "一",
     "二",
@@ -15,7 +16,36 @@ var date = [
     "八",
     "九"
 ];
+function aliveKillerNum(live) {
+    return live.identity=="杀手" && live.state == "0";
+}
 
+function deadKillerNum(dead) {
+    return dead.identity=="杀手" && dead.state == "2";
+}
+
+function aliveCommonNum(live) {
+    return live.identity=="平民" && live.state == "0";
+}
+function commonNum(all) {
+    return all.identity=="平民";
+}
+var aliveKiller = playerInfo.filter(aliveKillerNum).length;
+var deadKiller = playerInfo.filter(deadKillerNum).length;
+var aliveCommon = playerInfo.filter(aliveCommonNum).length;
+var common = playerInfo.filter(commonNum).length;
+if (winner == "平民"){
+    $(".main-top img").attr("src","../images/t13/result_03.png");
+    $("h1").text("本轮游戏共抓出杀手"+deadKiller+"人。生还平民"+aliveCommon+"人。");
+}
+else {
+    $(".main-top img").attr("src","../images/t13/result.png");
+    $("h1").text("本轮游戏共抓出杀手"+deadKiller+"人。");
+}
+
+var allKiller = Number(aliveKiller)+Number(deadKiller);
+$("#player #killer").html("杀"+"&nbsp;&nbsp;&nbsp;&nbsp;"+"手 "+allKiller+"人");
+$("#player #common").html("平"+"&nbsp;&nbsp;&nbsp;&nbsp;"+"民 "+common+"人");
 
 for (var o = 0; o < day; o++){
     $("main").append("<div class='main-bot'>" +

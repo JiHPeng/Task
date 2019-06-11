@@ -1,5 +1,25 @@
 $(function () {
 });
+$("label").click(function () {
+   var back = confirm("返回人数设置页面？");
+   if (back == true){
+       window.location.href = "simpleGame.html";
+   }
+   else{
+       return;
+   }
+});
+$("#quit").click(function () {
+    var quit = confirm("返回主菜单？");
+    if (quit == true){
+        window.location.href = "main.html";
+    }
+    else{
+        return;
+    }
+});
+
+
 var playerNum = JSON.parse(sessionStorage.getItem('data'));
 console.log(playerNum);
 var cw = sessionStorage.getItem('comWord');
@@ -48,7 +68,8 @@ function check() {
         //i为非整数时显示的内容
         else {
             $(".main-box-title").text(""+p+"");
-            $("#check").val("查看"+p+"号玩家身份")
+            $("#check").val("查看"+p+"号玩家身份");
+            $(".main-box-inner-top").append('<img src="../images/js2/check.png" style="width: 180px">');
         }
         i = i + 0.5;
         console.log(i);
