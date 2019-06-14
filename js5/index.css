@@ -22,23 +22,54 @@ body {
       display: flex;
       flex-direction: column;
       padding: 15px; }
+      body .box form label {
+        position: relative; }
+        body .box form label img {
+          -webkit-filter: drop-shadow(40px 0 #F88E1D);
+          transform: translateX(-100%); }
       body .box form input {
         margin: 10px 0;
         padding: 10px 0;
         width: 100%;
-        border-radius: 5px; }
+        border-radius: 5px;
+        outline: none; }
       body .box form #user, body .box form #pword {
         padding-left: 50px;
-        outline: #eea92b;
         border: 1px solid #cccccc; }
-      body .box form #user {
-        background: url("images/user.png") no-repeat 12px; }
-      body .box form #pword {
-        background: url("images/password.png") no-repeat 12px; }
+        body .box form #user:focus, body .box form #pword:focus {
+          border: 1px solid orange; }
+          body .box form #user:focus + svg, body .box form #pword:focus + svg {
+            color: orange; }
+      body .box form #error {
+        color: red;
+        font-size: 12px;
+        height: 12px; }
       body .box form #signin {
         text-align: center;
         color: #fff;
         background-color: #eea92b;
         border: none; }
+
+.user-icon {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+  color: #cccccc; }
+
+.password-icon {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+  color: #cccccc; }
 
 /*# sourceMappingURL=index.css.map */
