@@ -1,4 +1,4 @@
-body {
+.login-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,45 +6,48 @@ body {
   background: url("images/bg.jpg") no-repeat;
   background-position: center;
   background-size: cover; }
-  body .box {
+  .login-box .box {
     position: relative;
     padding: 50px 0;
     width: 320px;
     border-radius: 5px;
     background-color: #fff; }
-    body .box img {
+    .login-box .box img {
       position: absolute;
       top: -35px;
       left: calc(50% - 35px);
       border-radius: 35px;
       box-shadow: 0 0 5px -3px; }
-    body .box form {
+    .login-box .box form {
       display: flex;
       flex-direction: column;
       padding: 15px; }
-      body .box form label {
+      .login-box .box form label {
         position: relative; }
-        body .box form label img {
+        .login-box .box form label img {
           -webkit-filter: drop-shadow(40px 0 #F88E1D);
           transform: translateX(-100%); }
-      body .box form input {
+      .login-box .box form input {
         margin: 10px 0;
         padding: 10px 0;
         width: 100%;
         border-radius: 5px;
         outline: none; }
-      body .box form #user, body .box form #pword {
+      .login-box .box form #user, .login-box .box form #pword {
         padding-left: 50px;
         border: 1px solid #cccccc; }
-        body .box form #user:focus, body .box form #pword:focus {
+        .login-box .box form #user:focus, .login-box .box form #pword:focus {
           border: 1px solid orange; }
-          body .box form #user:focus + svg, body .box form #pword:focus + svg {
+          .login-box .box form #user:focus + svg, .login-box .box form #pword:focus + svg {
             color: orange; }
-      body .box form #error {
+      .login-box .box form p {
+        position: absolute;
+        top: 190px;
         color: red;
         font-size: 12px;
         height: 12px; }
-      body .box form #signin {
+      .login-box .box form #signin {
+        margin-top: 20px;
         text-align: center;
         color: #fff;
         background-color: #eea92b;

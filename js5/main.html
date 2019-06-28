@@ -1,0 +1,63 @@
+<div class="main-box">
+    <header class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+            <img src="images/list/logo.png">
+            <div class="row align-items-center">
+                <button>管理员</button>
+                <img src="images/list/header-icon.png">
+                <button>刘德华</button>
+                <button>退出</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <div>
+                    <img id="home" src="images/list/home.png">
+                    <h1><a ui-sref="main.welcome">欢迎页</a></h1>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/tools.png">
+                    <p>信息管理</p>
+                    <img src="images/list/arrow.png">
+                </div>
+                <ul>
+                    <li>公司信息</li>
+                    <li>职位信息</li>
+                </ul>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/tools.png">
+                    <p>内容管理</p>
+                    <img src="images/list/arrow.png">
+                </div>
+                <ul>
+                    <li><a ui-sref="main.Article" ui-sref-opts="{reload:'main.Article'}">Article管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <div>
+                    <img src="images/list/tools.png">
+                    <p>后台管理</p>
+                    <img src="images/list/arrow.png">
+                </div>
+                <ul>
+                    <li>账号管理</li>
+                    <li>角色管理</li>
+                    <li>修改密码</li>
+                    <li>模块管理</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="router-box">
+        <div ui-view>
+
+        </div>
+    </div>
+</div>

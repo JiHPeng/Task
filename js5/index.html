@@ -1,36 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <title>萝卜多后台管理系统</title>
-</head>
-<body>
+<div class="login-box" ng-controller="signin">
     <div class="box">
         <img src="images/logo.png">
-        <form>
+        <form name = loginForm novalidate class="login-form">
             <label for="user">
-                <input type="text" id="user" placeholder="用户名">
+                <input ng-model="uid" type="text" name="uid" id="user" placeholder="用户名" required>
                 <svg class="user-icon">
                     <use xlink:href="#icon-user"></use>
                 </svg>
             </label>
             <label for="pword">
-                <input type="password" id="pword" placeholder="密码">
+                <input ng-model="pwd" type="password" name="pwd" id="pword" placeholder="密码" required>
                 <svg class="password-icon">
                     <use xlink:href="#icon-lock"></use>
                 </svg>
             </label>
-            <p id="error"></p>
-            <input type="button" id="signin" value="登录" onclick="go()">
+            <!--<p ng-show="loginForm.uid.$error.required && loginForm.pwd.$dirty">请填写用户名</p>-->
+            <!--<p ng-show="loginForm.pwd.$error.required && loginForm.uid.$dirty">请填写密码</p>-->
+            <p ng-show="loginForm.uid.$error.required && loginForm.pwd.$error.required">请填写用户名和密码</p>
+            <input ng-click="go()" type="submit" id="signin" value="登录"
+                   ng-disabled="loginForm.uid.$pristine || loginForm.pwd.$pristine">
         </form>
     </div>
-
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="icon/iconfont.js"></script>
-    <script src="index.js"></script>
-</body>
-</html>
+</div>

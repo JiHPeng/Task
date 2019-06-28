@@ -1,0 +1,122 @@
+@import "main";
+
+.list-box {
+  .searchBar {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: 109px;
+    background-color: $color-lightgray;
+    border: 1px solid $color-heavygray;
+    > .function {
+      > div {
+        justify-content: flex-end;
+        > input {
+          flex: 0;
+          width: 30%;
+        }
+      }
+    }
+    > .state {
+       > div {
+         > input {
+           flex: 0;
+           width: 300px;
+         }
+       }
+    }
+    > div {
+      > div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        > span {
+          padding-right: 16px;
+          word-break: keep-all;
+        }
+        > input, select {
+          width: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+        }
+      }
+    }
+  }
+  .manage {
+    margin-top: 10px;
+    border: 1px solid $color-heavygray;
+    .manage-title {
+      @include between;
+      padding: 5px 10px;
+      border-bottom: 1px solid $color-heavygray;
+    }
+    > .manage-content {
+      margin: 10px 10px;
+      width: calc(100% - 20px);
+
+      > thead {
+        background-color: $color-gray;
+
+        > tr {
+          border-collapse: collapse;
+          border: 1px solid $color-heavygray;
+          > th {
+            padding: 8px 0;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+      > tbody {
+        > tr {
+          border: 1px solid $color-heavygray;
+          border-collapse: collapse;
+          > td {
+            padding: 10px 0;
+            text-align: center;
+            vertical-align: middle;
+            > img {
+              height: 80px;
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    .quantity, .jump {
+      display: flex;
+      align-items: center;
+      word-break: keep-all;
+      > input {
+        width: 0;
+        flex-grow: 1;
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+    }
+    .page {
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          padding: 5px;
+        }
+      }
+    }
+    > button {
+      padding: 5px;
+    }
+  }
+}
+
+
+//bootstrap
+.modal-header .close {
+  margin: -1rem 0rem -1rem -1rem;
+}

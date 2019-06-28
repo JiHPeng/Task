@@ -1,4 +1,4 @@
-body {
+.login-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,12 +49,15 @@ body {
           }
         }
       }
-      #error {
+      p {
+        position: absolute;
+        top: 190px;
         color: red;
         font-size: 12px;
         height: 12px;
       }
       #signin{
+        margin-top: 20px;
         text-align: center;
         color: #fff;
         background-color: #eea92b;

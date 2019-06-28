@@ -1,0 +1,127 @@
+$color-brown: #fbb435;
+$color-gray: #f2f2f2;
+$color-lightgray: #fbfbfb;
+$color-heavygray: #cccccc;
+$color-white: #ffffff;
+$text-left: left;
+$text-center: center;
+$text-right: right;
+
+@mixin between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-box {
+  margin: 9px;
+  border: 1px solid $color-heavygray;
+  .router-box {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 210px);
+    padding: 10px;
+  }
+}
+
+header {
+  background-color: $color-gray;
+  border-bottom: 1px solid $color-heavygray;
+  > .row {
+    height: 80px;
+    padding: 5px 10px;
+    img {
+      height: 60px;
+    }
+    > .row {
+      padding-right: 20px;
+      img {
+        height: 24px;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  display: inline-block;
+  width: 200px;
+  height: 600px;
+  font-size: 16px;
+  background-color: $color-gray;
+  border: 1px solid $color-heavygray;
+  > ul {
+    margin: -1px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-bottom: none;
+    > li {
+      > div {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        border-bottom: 1px solid #000000;
+        font-weight: bold;
+        > #home {
+          height: 25px;
+          padding: 0 7.5px;
+        }
+        > img {
+          padding: 0 10px;
+          height: 20px;
+        }
+        > img:last-child {
+          height: 20px;
+          transform: rotate(90deg);
+        }
+        > p {
+          flex: 1;
+        }
+      }
+      > ul {
+        > li {
+          margin: 0 20px;
+          padding: 12px 0;
+          border-bottom: 1px solid $color-heavygray;
+          text-indent: 25px;
+        }
+        > li:last-child {
+          margin: 0;
+          border-bottom: 1px solid #000000;
+          text-indent: 45px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 250px);
+  margin: 10px 0 0 15px;
+}

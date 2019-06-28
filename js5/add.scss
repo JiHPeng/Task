@@ -1,0 +1,16 @@
+@import "main";
+
+.add-box {
+  > .edit {
+    background-color: $color-lightgray;
+    border: 1px solid $color-heavygray;
+  }
+  > .inner {
+    padding: 50px;
+    border: 1px solid $color-heavygray;
+    border-top: none;
+    > .type {
+
+    }
+  }
+}

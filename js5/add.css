@@ -1,0 +1,86 @@
+.main-box {
+  margin: 9px;
+  border: 1px solid #cccccc; }
+  .main-box .router-box {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 210px);
+    padding: 10px; }
+
+header {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cccccc; }
+  header > .row {
+    height: 80px;
+    padding: 5px 10px; }
+    header > .row img {
+      height: 60px; }
+    header > .row > .row {
+      padding-right: 20px; }
+      header > .row > .row img {
+        height: 24px; }
+      header > .row > .row button {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer; }
+        header > .row > .row button:focus {
+          outline: none; }
+        header > .row > .row button:hover {
+          color: red; }
+
+nav {
+  display: inline-block;
+  width: 200px;
+  height: 600px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc; }
+  nav > ul {
+    margin: -1px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-bottom: none; }
+    nav > ul > li > div {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      width: 100%;
+      border-bottom: 1px solid #000000;
+      font-weight: bold; }
+      nav > ul > li > div > #home {
+        height: 25px;
+        padding: 0 7.5px; }
+      nav > ul > li > div > img {
+        padding: 0 10px;
+        height: 20px; }
+      nav > ul > li > div > img:last-child {
+        height: 20px;
+        transform: rotate(90deg); }
+      nav > ul > li > div > p {
+        flex: 1; }
+    nav > ul > li > ul > li {
+      margin: 0 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #cccccc;
+      text-indent: 25px; }
+    nav > ul > li > ul > li:last-child {
+      margin: 0;
+      border-bottom: 1px solid #000000;
+      text-indent: 45px; }
+
+main {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 250px);
+  margin: 10px 0 0 15px; }
+
+.add-box > .edit {
+  background-color: #fbfbfb;
+  border: 1px solid #cccccc; }
+.add-box > .inner {
+  padding: 50px;
+  border: 1px solid #cccccc;
+  border-top: none; }
+
+/*# sourceMappingURL=add.css.map */

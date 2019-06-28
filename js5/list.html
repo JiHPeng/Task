@@ -1,0 +1,187 @@
+<div class="list-box" ng-controller="listbox">
+    <div class="searchBar">
+        <div class="title col-4">
+            <div>
+                <span>标&nbsp;&nbsp;&nbsp;&nbsp;题</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="creater col-3">
+            <div>
+                <span>创建者</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="time col-5">
+            <div>
+                <span>创建时间</span>
+                <input type="text">
+                -
+                <input type="text">
+            </div>
+        </div>
+        <div class="state col-4">
+            <div>
+                <span>状&nbsp;&nbsp;&nbsp;&nbsp;态</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="type col-3">
+            <div>
+                <span>类&emsp;型</span>
+                <input type="text">
+            </div>
+        </div>
+        <div class="function col-5">
+            <div>
+                <input type="button" value="清空">
+                <input type="button" value="搜索">
+            </div>
+        </div>
+    </div>
+    <div class="manage">
+        <div class="manage-title">
+            <p>Article管理</p>
+            <div>
+                <input type="button" value="保存排序">
+                <input type="button" value="+新增">
+            </div>
+        </div>
+        <table class="manage-content">
+            <thead class="manage-content-title">
+            <tr>
+                <th>序号</th>
+                <th>图片</th>
+                <th>标题</th>
+                <th>类型</th>
+                <th>创建者</th>
+                <th>创建时间</th>
+                <th>修改时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody ng-repeat="x in info | limitTo:number">
+                <tr>
+                    <td>{{ x.id }}</td>
+                    <td><img src="{{ x.img}}"></td>
+                    <td>{{ x.title }}</td>
+                    <td>{{ x.type }}</td>
+                    <td>{{ x.author }}</td>
+                    <td>
+                        <div>{{ x.createAt | date:'yyyy-MM-dd'}}</div>
+                        <div>{{ x.createAt | date:'HH:mm:ss'}}</div>
+                    </td>
+                    <td>
+                        <div>{{ x.updateAt | date:'yyyy-MM-dd'}}</div>
+                        <div>{{ x.updateAt | date:'HH:mm:ss'}}</div>
+                    </td>
+                    <td>{{ a[x.status] }}</td>
+                    <td>
+                        <input data-toggle="modal" data-target="#statusModal" type="button" value="{{b[x.status]}}">
+                        <input ng-model="changebtn" data-toggle="modal" data-target="#editModal" type="button" value="编辑">
+                        <input ng-model="deletebtn" data-toggle="modal" data-target="#deleteModal" type="button" value="删除">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 上下线 -->
+    <div class="modal fade" id="statusModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="statusModalLabel">
+                        是否进行更改
+                    </h4>
+                </div>
+                <!--<div class="modal-body">-->
+                <!--在这里添加一些文本-->
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button ng-click="change()" type="button" class="btn btn-primary"
+                            data-dismiss="modal">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div><!-- 上下线 -->
+    <!-- 编辑 -->
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="editModalLabel">
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    在这里添加一些文本
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div><!-- 编辑 -->
+    <!-- 删除 -->
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        是否确认删除
+                    </h4>
+                </div>
+                <!--<div class="modal-body">-->
+
+                <!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        删除
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div><!-- 删除 -->
+
+    <div class="bottom">
+        <div class="quantity col-3">
+            每页显示
+            <input type="number" ng-model="quantity" value="{{ quantity }}">
+            条
+        </div>
+        <div class="page col-5">
+            <ul>
+                <li>首页</li>
+                <li ng-repeat="x in page track by $index">{{ $index + 1 }}</li>
+                <li>末页</li>
+            </ul>
+        </div>
+        <div class="jump col-3">
+            跳转至
+            <input type="number" ng-model="jump">
+            页
+        </div>
+        <button ng-click="confirm()" class="col-1">确认</button>
+    </div>
+</div>
