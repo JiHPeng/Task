@@ -18,11 +18,69 @@
 <script src="demo.js"></script>
 <script>
 
-    function a () {
-        a = NaN;
-        return isNaN("1");
+    var app = angular.module('myApp', []);
+    // 自定义模态框（标题、内容（插入模板）、作用域、成功回调、取消回调）
+    $rootScope.diyModal = function(title, content, scope, okFn, cancelFn) {
+        var modal = $modal({
+            html: true,
+            show: false,
+            templateUrl: 'views/template/commonTemplate.html',
+            controller: function($scope) {
+                $scope.content = content;
+                $scope.title = title;
+                $scope.scope = scope;
+
+                $scope.scope.hide = function () {
+                    modal.$promise.then(modal.hide);
+                };
+
+                $scope.ok = function() {
+                    typeof okFn == 'function' && okFn($scope.scope);
+                };
+                $scope.cancel = function() {
+                    typeof cancelFn == 'function' && cancelFn();
+                    modal.$promise.then(modal.hide);
+                };
+            }
+        });
+        modal.$promise.then(modal.show);
+    };
+
+
+    $rootScope.confirm("确定删除【" + li.title + "】吗？", aaa());
+
+    function aaa() {
+        adminCardType.cardTypeDelete(vm.params.id).then(function (res) {
+            if (res.data.code == 0) {
+                $state.go($state.current, vm.params, {
+                    reload: true
+                });
+            } else {
+                $rootScope.alert(res.data.message);
+            }
+        });
     }
-    console.log(a());
+
+    $rootScope.confirm = function(content, okFn, cancelFn) {
+        var modal = $modal({
+            html: true,
+            show: false,
+            templateUrl: 'views/template/ptteng-confirm-0.0.1.html',
+            controller: function($scope) {
+                $scope.content = content;
+                $scope.ok = function() {
+                    typeof okFn == 'function' && okFn();
+                    modal.$promise.then(modal.hide);
+                };
+                $scope.cancel = function($scope) {
+                    typeof cancelFn == 'function' && cancelFn();
+                    modal.$promise.then(modal.hide);
+                };
+            }
+        });
+        modal.$promise.then(modal.show);
+    };
 </script>
 </body>
 </html>
+
