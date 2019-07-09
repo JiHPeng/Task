@@ -7,15 +7,29 @@
     <script src="https://cdn.bootcss.com/angular.js/1.7.0/angular-route.min.js"></script>
     <link rel="stylesheet" href="main.css" type="text/css">
     <title>萝卜多后台管理系统</title>
+    <style>
+        ul {
+            padding: 50px;
+        }
+        li {
+            padding-left: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../angularjs-datetime-picker/css/wui.min.css">
 </head>
 <body ng-app="myApp">
 
+<ul>
+    <li>11</li>
+</ul>
 
-
+<button onclick="ff(1)">aaa</button>
+<button onclick="hh()">hh</button>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="demo.js"></script>
+
 <script>
 
     var app = angular.module('myApp', []);
@@ -80,6 +94,12 @@
         });
         modal.$promise.then(modal.show);
     };
+
+    app.config(['$logProvider', function ($logProvider) {
+        $logProvider.debugEnabled(false);  //关闭$log的debug功能
+    }])
+
+
 </script>
 </body>
 </html>

@@ -82,5 +82,16 @@ main {
   padding: 50px;
   border: 1px solid #cccccc;
   border-top: none; }
+  .add-box > .inner > .img > input {
+    height: 40px; }
+  .add-box > .inner > div {
+    padding-bottom: 20px; }
+  .add-box > .inner > table {
+    margin-bottom: 20px; }
+    .add-box > .inner > table th, .add-box > .inner > table td {
+      padding: 10px 20px; }
+  .add-box > .inner table, .add-box > .inner th, .add-box > .inner td {
+    border-collapse: collapse;
+    border: 1px solid #cccccc; }
 
 /*# sourceMappingURL=add.css.map */

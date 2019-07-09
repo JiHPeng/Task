@@ -1,26 +1,23 @@
 <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="add.css">
-<div class="add-box" ng-controller="addbox">
-    <div class="edit">
-        新增/编辑
+<div class="add-box" ng-controller="addBox">
+    <div class="edit" ng-model="head">
+        {{ head }}
     </div>
     <div class="inner">
         <div class="type">
             类型
-            <select>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
+            <select ng-options="x for x in selectType" ng-model="type">
+                <option value="">--请选择--</option>
             </select>
         </div>
         <div class="title">
             标题名称
-            <input type="text">
+            <input type="text" ng-model="title">
         </div>
-        <div class="link">
+        <div class="url">
             跳转链接
-            <input type="text">
+            <input type="text" ng-model="url">
         </div>
         <div class="img">
             配图
@@ -36,19 +33,18 @@
                 <th>操作</th>
             </tr>
             <tr>
-                <td></td>
+                <td><img src=""></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td>
-                    <input type="button" value="上传">
-                    <input type="button" value="删除">
+                    <button ng-click="">上传</button>
+                    <button ng-click="">删除</button>
                 </td>
             </tr>
         </table>
-        <input type="button" value="立即上线">
-        <input type="button" value="存为草稿">
-        <input type="button" value="取消">
-
+        <button ng-click="">立即上线</button>
+        <button ng-click="">存为草稿</button>
+        <button ng-click="">取消</button>
     </div>
 </div>

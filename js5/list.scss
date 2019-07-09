@@ -11,9 +11,10 @@
     > .function {
       > div {
         justify-content: flex-end;
-        > input {
+        > button {
           flex: 0;
-          width: 30%;
+          flex-basis: 20%;
+          margin: 0 5px;
         }
       }
     }
@@ -25,6 +26,15 @@
          }
        }
     }
+    > .type {
+      > div {
+        > select {
+          width: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+        }
+      }
+    }
     > div {
       > div {
         display: flex;
@@ -34,7 +44,16 @@
           padding-right: 16px;
           word-break: keep-all;
         }
-        > input, select {
+        > input {
+          width: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+        }
+        > select {
+          width: 50%;
+          text-align-last: center;
+        }
+        > wui-date {
           width: 0;
           flex-grow: 1;
           flex-shrink: 1;

@@ -84,12 +84,17 @@ main {
   border: 1px solid #cccccc; }
   .list-box .searchBar > .function > div {
     justify-content: flex-end; }
-    .list-box .searchBar > .function > div > input {
+    .list-box .searchBar > .function > div > button {
       flex: 0;
-      width: 30%; }
+      flex-basis: 20%;
+      margin: 0 5px; }
   .list-box .searchBar > .state > div > input {
     flex: 0;
     width: 300px; }
+  .list-box .searchBar > .type > div > select {
+    width: 0;
+    flex-grow: 1;
+    flex-shrink: 1; }
   .list-box .searchBar > div > div {
     display: flex;
     align-items: center;
@@ -97,7 +102,14 @@ main {
     .list-box .searchBar > div > div > span {
       padding-right: 16px;
       word-break: keep-all; }
-    .list-box .searchBar > div > div > input, .list-box .searchBar > div > div select {
+    .list-box .searchBar > div > div > input {
+      width: 0;
+      flex-grow: 1;
+      flex-shrink: 1; }
+    .list-box .searchBar > div > div > select {
+      width: 50%;
+      text-align-last: center; }
+    .list-box .searchBar > div > div > wui-date {
       width: 0;
       flex-grow: 1;
       flex-shrink: 1; }

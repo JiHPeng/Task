@@ -3,39 +3,61 @@
         <div class="title col-4">
             <div>
                 <span>标&nbsp;&nbsp;&nbsp;&nbsp;题</span>
-                <input type="text">
+                <input ng-model="title" type="text">
             </div>
         </div>
         <div class="creater col-3">
             <div>
                 <span>创建者</span>
-                <input type="text">
+                <input ng-model="creater" type="text">
             </div>
         </div>
         <div class="time col-5">
             <div>
                 <span>创建时间</span>
-                <input type="text">
+                <wui-date class=""
+                          format="yyyy-mm-dd hh:mm:ss"
+                          position="right"
+                          placeholder="请选择或输入日期"
+                          id="dateStart"
+                          width="100%"
+                          btns="{'ok':'确定','now':'此刻'}"
+                          ng-model="dateStart"
+                >
+                </wui-date>
                 -
-                <input type="text">
+                <wui-date class=""
+                        format="yyyy-mm-dd hh:mm:ss"
+                        position="right"
+                        placeholder="请选择或输入日期"
+                        id="dateEnd"
+                        width="100%"
+                        btns="{'ok':'确定','now':'此刻'}"
+                        ng-model="dateEnd"
+                >
+                </wui-date>
             </div>
         </div>
         <div class="state col-4">
             <div>
                 <span>状&nbsp;&nbsp;&nbsp;&nbsp;态</span>
-                <input type="text">
+                <select ng-model="state" ng-options="x for x in selectStatus">
+                    <option value="">--请选择--</option>
+                </select>
             </div>
         </div>
         <div class="type col-3">
             <div>
                 <span>类&emsp;型</span>
-                <input type="text">
+                <select ng-model="type" ng-options="x for x in selectType">
+                    <option value="">--请选择--</option>
+                </select>
             </div>
         </div>
         <div class="function col-5">
             <div>
-                <input type="button" value="清空">
-                <input type="button" value="搜索">
+                <button ng-click="clear()">清空</button>
+                <button ng-click="search()">搜索</button>
             </div>
         </div>
     </div>
@@ -43,8 +65,8 @@
         <div class="manage-title">
             <p>Article管理</p>
             <div>
-                <input type="button" value="保存排序">
-                <input type="button" value="+新增">
+                <button>保存排序</button>
+                <button ui-sref="main.add">新增</button>
             </div>
         </div>
         <table class="manage-content">
@@ -61,7 +83,7 @@
                 <th>操作</th>
             </tr>
             </thead>
-            <tbody ng-repeat="x in info | limitTo:number">
+            <tbody ng-repeat="x in info">
                 <tr>
                     <td>{{ x.id }}</td>
                     <td><img src="{{ x.img}}"></td>
@@ -76,11 +98,11 @@
                         <div>{{ x.updateAt | date:'yyyy-MM-dd'}}</div>
                         <div>{{ x.updateAt | date:'HH:mm:ss'}}</div>
                     </td>
-                    <td>{{ a[x.status] }}</td>
+                    <td>{{ statusView[x.status] }}</td>
                     <td>
-                        <input data-toggle="modal" data-target="#statusModal" type="button" value="{{b[x.status]}}">
-                        <input ng-model="changebtn" data-toggle="modal" data-target="#editModal" type="button" value="编辑">
-                        <input ng-model="deletebtn" data-toggle="modal" data-target="#deleteModal" type="button" value="删除">
+                        <button ng-click="change(x.id, x.status)" data-toggle="modal" data-target="#statusModal">{{statusbtn[x.status]}}</button>
+                        <button ng-model="edit" data-toggle="modal" data-target="#editModal">编辑</button>
+                        <button ng-model="delete" data-toggle="modal" data-target="#deleteModal">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -104,7 +126,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                     </button>
-                    <button ng-click="change()" type="button" class="btn btn-primary"
+                    <button ng-click="changeConfirm()" type="button" class="btn btn-primary"
                             data-dismiss="modal">
                         提交更改
                     </button>
@@ -167,16 +189,11 @@
     <div class="bottom">
         <div class="quantity col-3">
             每页显示
-            <input type="number" ng-model="quantity" value="{{ quantity }}">
+            <input type="number" ng-model="size">
             条
         </div>
-        <div class="page col-5">
-            <ul>
-                <li>首页</li>
-                <li ng-repeat="x in page track by $index">{{ $index + 1 }}</li>
-                <li>末页</li>
-            </ul>
-        </div>
+        <page-change class="page col-5">
+        </page-change>
         <div class="jump col-3">
             跳转至
             <input type="number" ng-model="jump">
@@ -185,3 +202,6 @@
         <button ng-click="confirm()" class="col-1">确认</button>
     </div>
 </div>
+
+
+
