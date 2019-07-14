@@ -6,8 +6,11 @@
     </div>
     <div class="inner">
         <div class="type">
-            类型
-            <select ng-options="x for x in selectType" ng-model="type">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类型
+            <select ng-options="x as y for (x, y) in selectType" ng-model="type" ng-change="industryShow()">
+                <option value="">--请选择--</option>
+            </select>
+            <select ng-if="industryShow()" ng-options="x as y for (x, y) in selectIndustry" ng-model="industry">
                 <option value="">--请选择--</option>
             </select>
         </div>
@@ -19,11 +22,20 @@
             跳转链接
             <input type="text" ng-model="url">
         </div>
-        <div class="img">
-            配图
-            <input type="file">
+        <div class="explain">
+            <input id="editor-content" ng-model="content">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明&nbsp;</span>
+            <!-- 加载编辑器的容器 -->
+            <textarea id="ueditor" name="ueditor" type="text/plain">{{ content }}</textarea>
         </div>
-        <div class="preview"></div>
+        <div class="img-upload">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配图
+            <label for="img-upload" class="btn btn-primary">选择文件</label>
+            <input id="img-upload" type="file" nv-file-select="" uploader="upload" accept="image/*">
+        </div>
+        <div class="preview" ng-if="imgShow">
+            <img ng-src="{{ imgSrc }}">
+        </div>
         <table>
             <tr>
                 <th>图片名</th>
@@ -33,18 +45,21 @@
                 <th>操作</th>
             </tr>
             <tr>
-                <td><img src=""></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ imgName }}</td>
+                <td>{{ imgSize }}</td>
                 <td>
-                    <button ng-click="">上传</button>
-                    <button ng-click="">删除</button>
+                    <div class="range-value">{{ progressBar }}%</div>
+                    <input class="range" id="range" ng-model="progressBar" type="range" min="0" max="100" step="1" disabled>
+                </td>
+                <td>{{  }}</td>
+                <td>
+                    <button ng-click="uploadConfirm()">上传</button>
+                    <button ng-click="uploadDelete()">删除</button>
                 </td>
             </tr>
         </table>
-        <button ng-click="">立即上线</button>
-        <button ng-click="">存为草稿</button>
-        <button ng-click="">取消</button>
+        <button ng-click="go(2)">立即上线</button>
+        <button ng-click="go(1)">存为草稿</button>
+        <button ng-click="cancel()">取消</button>
     </div>
 </div>

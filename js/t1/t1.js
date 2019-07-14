@@ -1,4 +1,5 @@
 var all = document.getElementsByTagName('div');
+all.splice(0 , 1);
 var aa;
 function change() {
     for (var i=0;i<all.length;i++){

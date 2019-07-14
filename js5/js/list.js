@@ -1,12 +1,9 @@
 //Article管理
-
-
-app.controller('listbox',function ($scope,$rootScope, $http, $window, $stateParams, $state) {
+app.controller('listbox',function ($scope,$scope, $http, $window, $stateParams, $state, type, status) {
     $http({
         method: 'GET',
         url: "/carrots-admin-ajax/a/article/search",
         params: $stateParams,
-        responseType: "json"
     }).then(function successCallback(response) {
         console.log($stateParams);
         console.log($state);
@@ -23,20 +20,20 @@ app.controller('listbox',function ($scope,$rootScope, $http, $window, $statePara
         }
         $scope.page = pageArray.concat();
         //status约定转换
-        $scope.selectStatus = ["草稿", "上线"];
+        $scope.selectStatus = status;
         //type约定转换
-        $scope.selectType = ["首页banner", "找职位banner", "找精英banner", "行业大图"];
+        $scope.selectType = type;
         //上下线按钮
-        $scope.statusView = [" ", "草稿", "上线"];
-        $scope.statusbtn = [" ","上线", "下线"];
+        // $scope.statusView = [" ", "草稿", "上线"];
+        // $scope.statusbtn = [" ","上线", "下线"];
     }, function errorCallback() {
     });
-
+    //时间转换为时间戳
     var date = function (a) {
         var b = new Date(a);
         return b.valueOf();
     };
-    //搜索功能
+    //搜索功能，判断时间是否为NaN
     function dateJudge(d) {
         if (isNaN(d) == true){
             return "";
@@ -59,18 +56,14 @@ app.controller('listbox',function ($scope,$rootScope, $http, $window, $statePara
     };
     //点击上下线时获取参数
     $scope.change = function (id, status) {
-        $rootScope.id = id;
-        $rootScope.status = status;
+        $scope.id = id;
+        $scope.status = status;
     };
     //模态框确认和取消
     //上下线 1=草稿 2=上线
     $scope.changeConfirm = function () {
-        console.log(status);
-        console.log(Number(true));
-        console.log(Number(false));
-        console.log($rootScope.status);
         let a;
-        if ($rootScope.status == 1){
+        if ($scope.status == 1){
             a = 2;
         }
         else {
@@ -80,7 +73,7 @@ app.controller('listbox',function ($scope,$rootScope, $http, $window, $statePara
             method: 'PUT',
             url: "/carrots-admin-ajax/a/u/article/status",
             params: {
-                id: $rootScope.id,
+                id: $scope.id,
                 status: a
             },
             headers:{'Content-Type': 'Application/json'}
@@ -88,7 +81,25 @@ app.controller('listbox',function ($scope,$rootScope, $http, $window, $statePara
             $window.location.reload();
         })
     };
-
+    $scope.edit = function (id) {
+        $state.go('main.add',{
+            id : id
+        })
+    };
+    //删除
+    $scope.delete = function (id) {
+        $scope.id = id; //获取要删除的id
+    };
+    //模态框确认删除
+    $scope.deleteConfirm = function () {
+        $http({
+            method: 'DELETE',
+            url: '/carrots-admin-ajax/a/u/article/'+$scope.id,
+            headers:{'Content-Type': 'Application/json'}
+        }).then(function () {
+            $window.location.reload();
+        })
+    };
     //最下方确定按钮
     $scope.confirm = function () {
         //设置每页显示数量

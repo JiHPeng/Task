@@ -41,7 +41,7 @@
         <div class="state col-4">
             <div>
                 <span>状&nbsp;&nbsp;&nbsp;&nbsp;态</span>
-                <select ng-model="state" ng-options="x for x in selectStatus">
+                <select ng-model="status" ng-options="x as y for (x,y) in selectStatus">
                     <option value="">--请选择--</option>
                 </select>
             </div>
@@ -49,7 +49,7 @@
         <div class="type col-3">
             <div>
                 <span>类&emsp;型</span>
-                <select ng-model="type" ng-options="x for x in selectType">
+                <select ng-model="type" ng-options="x as y for (x,y) in selectType">
                     <option value="">--请选择--</option>
                 </select>
             </div>
@@ -86,9 +86,9 @@
             <tbody ng-repeat="x in info">
                 <tr>
                     <td>{{ x.id }}</td>
-                    <td><img src="{{ x.img}}"></td>
+                    <td><img ng-src="{{ x.img }}"></td>
                     <td>{{ x.title }}</td>
-                    <td>{{ x.type }}</td>
+                    <td>{{ x.type | typeFilter}}</td>
                     <td>{{ x.author }}</td>
                     <td>
                         <div>{{ x.createAt | date:'yyyy-MM-dd'}}</div>
@@ -98,11 +98,11 @@
                         <div>{{ x.updateAt | date:'yyyy-MM-dd'}}</div>
                         <div>{{ x.updateAt | date:'HH:mm:ss'}}</div>
                     </td>
-                    <td>{{ statusView[x.status] }}</td>
+                    <td>{{ x.status | statusFilter }}</td>
                     <td>
-                        <button ng-click="change(x.id, x.status)" data-toggle="modal" data-target="#statusModal">{{statusbtn[x.status]}}</button>
-                        <button ng-model="edit" data-toggle="modal" data-target="#editModal">编辑</button>
-                        <button ng-model="delete" data-toggle="modal" data-target="#deleteModal">删除</button>
+                        <button ng-click="change(x.id, x.status)" data-toggle="modal" data-target="#statusModal">{{x.status | downFilter}}</button>
+                        <button ng-click="edit(x.id)">编辑</button>
+                        <button ng-click="delete(x.id)" data-toggle="modal" data-target="#deleteModal">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -158,7 +158,7 @@
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->
-    </div><!-- 编辑 -->
+    </div>
     <!-- 删除 -->
     <div class="modal fade" id="deleteModal">
         <div class="modal-dialog">
@@ -178,7 +178,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">
                         关闭
                     </button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    <button ng-click="deleteConfirm()" type="button" class="btn btn-primary" data-dismiss="modal">
                         删除
                     </button>
                 </div>

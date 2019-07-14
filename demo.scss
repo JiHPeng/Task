@@ -1,0 +1,53 @@
+$maincolor: #5fc0cd;
+$minorcolor: #e26163;
+@mixin wid-hei-bgc-col($width, $height, $bgc, $color) {
+  width: $width;
+  height: $height;
+  background-color: $bgc;
+  color: $color;
+}
+@mixin absolute($direction, $number, $px) {
+  position: absolute;
+  #{$direction}: $number;
+  margin-#{$direction}: $px;
+}
+@mixin flex($flex, $px) {
+  display: flex;
+  #{$flex}: $px;
+}
+%body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+%flex {
+  display: flex;
+  align-items: center;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "STHeiti";
+  background-color: #f5f5f5;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+header {
+  @include wid-hei-bgc-col(100%, 50px, $maincolor, #fff);
+  @include flex(top, 0px);
+  nav {
+    height: 50px;
+    position: relative;
+    @extend %flex, %body;
+    span {
+      font-size: 18px;
+      @include absolute(left, 50%, -18px);
+    }
+    a {
+      font-size: 36px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body ng-app="myApp">
+
+
+
+
+<!-- 加载编辑器的容器 -->
+<textarea id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </textarea>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="ueditor-jsp/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="ueditor-jsp/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container',{
+        initialFrameWidth :'100%',//设置编辑器宽度
+        initialFrameHeight:'40%',//设置编辑器高度
+        scaleEnabled:true,//设置不自动调整高度
+        //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
+        enableContextMenu: false//右键菜单
+    });
+
+</script>
+</body>
+</html>

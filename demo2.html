@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #range {
+            padding: 0;
+            outline: none;
+            -webkit-appearance: none;
+            width:100%;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(#0930a6, #0e4aff, #07298c) no-repeat, #fbfbfb;
+            background-size: 0 100%;
+            height: 16px;
+            transition: all linear 1s;
+        }
+        #range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height:16px;
+            width: 16px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="addBox">
+    <input type="file" accept="image/png,image/jpeg" nv-file-select="" uploader="upload">
+    <img id ="pre" ng-src="{{iconUrl}}">
+    <button ng-click="uploadConfirm()">上传</button>
+    <div ng-if="show">11111111</div>
+    <button ng-click="go1()">11</button>
+    <button ng-click="go2()">11</button>
+
+</div>
+
+<!--<div>-->
+    <!--<div>-->
+        <!--<div onclick="aaa(event)" style="height: 100px;background-color: red"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<button id="aa" onclick="aaa(event)">111</button>-->
+<!--<input id="bb" type="text" value="11111">-->
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular-file-upload/2.5.0/angular-file-upload.js"></script>
+<script src="https://cdn.bootcss.com/angular-ui-router/1.0.18/angular-ui-router.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.6.1/angular-animate.js"></script>
+<script>
+//    function aaa(e) {
+//        var btn = document.getElementById("aa");
+//        console.log(btn);
+//        console.log(e.target);
+//    }
+//    $("#bb").click(function (e) {
+//        console.log($("#bb"));
+//        console.log(e.target);
+//        $("#bb")[0].value = "22222"
+//    });
+
+
+//var read = new FileReader();
+//console.log($("input[name='file1']").val());
+//$("input[name='file1']").change( function(){
+//    console.log($("input[name='file1']").val());
+//    console.log($("input[name='file1']"));
+//    var f = $("input[name='file1']")[0].files[0];
+//    imgName = f.name;
+//    imgSize = (f.size/1024/1024).toFixed(2);
+//    read.readAsDataURL(f);
+//    read.onload = function () {
+//        document.getElementById('show').src=this.result; //this就是read
+//    }
+//});
+
+var app = angular.module('myApp',['angularFileUpload']);
+app.controller('addBox', ['$scope', 'FileUploader', function($scope, FileUploader) {
+    var uploader = $scope.upload = new FileUploader;
+    var reader = new FileReader();
+    uploader.onAfterAddingFile = function(fileItem) {
+
+//        加载完成后自动显示预览图
+//        reader.addEventListener("load", function (e) {
+//            //文件加载完之后，更新angular绑定
+//            $scope.$apply(function(){
+//                $scope.iconUrl = e.target.result;
+//            });
+//        }, false);
+
+//        使用FileReader获取图片的信息
+        reader.readAsDataURL(fileItem._file);
+        console.log(fileItem._file);
+    };
+    //确认上传 显示预览图
+    $scope.uploadConfirm = function () {
+        $scope.iconUrl = reader.result;
+    };
+
+    $scope.go1 = function () {
+        $scope.show = true;
+    };
+    $scope.go2 = function () {
+        $scope.show = false;
+    }
+
+}]);
+
+
+
+</script>
+
+<script>
+    (function ($) {
+
+        $("#upload").on("click", function () {
+
+            var formData = new FormData();
+
+            if ($('#file')[0].files[0] != null) {
+
+                formData.append('multipartFile1', $('#file')[0].files[0]);
+
+            }
+
+            if ($('#file1')[0].files[0] != null) {
+
+                formData.append('multipartFile1', $('#file1')[0].files[0]);
+
+            }
+
+            if ($('#file2')[0].files[0] != null) {
+
+                formData.append('multipartFile2', $('#file2')[0].files[0]);
+
+            }
+
+            if ($('#file3')[0].files[0] != null) {
+
+                formData.append('multipartFile2', $('#file3')[0].files[0]);
+
+            }
+
+            if ($('#file4')[0].files[0] != null) {
+
+                formData.append('multipartFile2', $('#file4')[0].files[0]);
+
+            }
+
+            formData.append("type", "222");
+
+            $.ajax({
+
+                url: "SpringMVC/fileUpload",
+
+                type: 'POST',
+
+                cache: false,
+
+                data: formData,
+
+                processData: false,
+
+                contentType: false,
+
+                success: function (result) {
+                },
+
+                error: function (err) {
+                }
+
+            });
+
+        })
+
+    }(jQuery));
+</script>
+</body>
+
+</html>

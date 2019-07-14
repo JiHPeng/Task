@@ -1,4 +1,4 @@
-var app = angular.module("myApp",['ui.router', 'wui.date']);
+var app = angular.module("myApp",['ui.router', 'wui.date', 'angularFileUpload']);
 // 路由
 
     app.config(function ($stateProvider, $urlRouterProvider) {
