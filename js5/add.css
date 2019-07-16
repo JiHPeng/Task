@@ -82,14 +82,14 @@ main {
   padding: 50px;
   border: 1px solid #cccccc;
   border-top: none; }
+  .add-box > .inner > .title > input, .add-box > .inner .url > input {
+    width: 60%; }
   .add-box > .inner > .img-upload > input {
     display: none; }
   .add-box > .inner > .preview > img {
     max-width: 200px; }
   .add-box > .inner > .explain {
     display: flex; }
-    .add-box > .inner > .explain > #editor-content {
-      display: none; }
     .add-box > .inner > .explain > span {
       word-break: keep-all; }
     .add-box > .inner > .explain > #ueditor {

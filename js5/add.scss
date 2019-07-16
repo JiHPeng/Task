@@ -9,6 +9,11 @@
     padding: 50px;
     border: 1px solid $color-heavygray;
     border-top: none;
+    > .title, .url {
+      > input {
+        width: 60%;
+      }
+    }
     > .img-upload {
       > input {
         display: none;
@@ -22,7 +27,6 @@
     > .explain {
       display: flex;
       > #editor-content {
-        display: none;
       }
       > span {
         word-break: keep-all;

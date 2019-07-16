@@ -23,10 +23,10 @@
             <input type="text" ng-model="url">
         </div>
         <div class="explain">
-            <input id="editor-content" ng-model="content">
+            <input type="button" id="editor-content" ng-click="con()">
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明&nbsp;</span>
             <!-- 加载编辑器的容器 -->
-            <textarea id="ueditor" name="ueditor" type="text/plain">{{ content }}</textarea>
+            <textarea id="ueditor" name="ueditor" ng-bind="content"></textarea>
         </div>
         <div class="img-upload">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配图

@@ -27,23 +27,10 @@
 </head>
 <body ng-app="myApp">
 
-<div ng-controller="addBox">
-    <input type="file" accept="image/png,image/jpeg" nv-file-select="" uploader="upload">
-    <img id ="pre" ng-src="{{iconUrl}}">
-    <button ng-click="uploadConfirm()">上传</button>
-    <div ng-if="show">11111111</div>
-    <button ng-click="go1()">11</button>
-    <button ng-click="go2()">11</button>
+<div ng-controller="box">
+
 
 </div>
-
-<!--<div>-->
-    <!--<div>-->
-        <!--<div onclick="aaa(event)" style="height: 100px;background-color: red"></div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--<button id="aa" onclick="aaa(event)">111</button>-->
-<!--<input id="bb" type="text" value="11111">-->
 
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -53,132 +40,12 @@
 <script src="https://cdn.bootcss.com/angular-ui-router/1.0.18/angular-ui-router.js"></script>
 <script src="https://cdn.bootcss.com/angular.js/1.6.1/angular-animate.js"></script>
 <script>
-//    function aaa(e) {
-//        var btn = document.getElementById("aa");
-//        console.log(btn);
-//        console.log(e.target);
-//    }
-//    $("#bb").click(function (e) {
-//        console.log($("#bb"));
-//        console.log(e.target);
-//        $("#bb")[0].value = "22222"
-//    });
+    var app = angular.module('myApp', []);
+    app.directive('demo1',function () {
+        return {
 
-
-//var read = new FileReader();
-//console.log($("input[name='file1']").val());
-//$("input[name='file1']").change( function(){
-//    console.log($("input[name='file1']").val());
-//    console.log($("input[name='file1']"));
-//    var f = $("input[name='file1']")[0].files[0];
-//    imgName = f.name;
-//    imgSize = (f.size/1024/1024).toFixed(2);
-//    read.readAsDataURL(f);
-//    read.onload = function () {
-//        document.getElementById('show').src=this.result; //this就是read
-//    }
-//});
-
-var app = angular.module('myApp',['angularFileUpload']);
-app.controller('addBox', ['$scope', 'FileUploader', function($scope, FileUploader) {
-    var uploader = $scope.upload = new FileUploader;
-    var reader = new FileReader();
-    uploader.onAfterAddingFile = function(fileItem) {
-
-//        加载完成后自动显示预览图
-//        reader.addEventListener("load", function (e) {
-//            //文件加载完之后，更新angular绑定
-//            $scope.$apply(function(){
-//                $scope.iconUrl = e.target.result;
-//            });
-//        }, false);
-
-//        使用FileReader获取图片的信息
-        reader.readAsDataURL(fileItem._file);
-        console.log(fileItem._file);
-    };
-    //确认上传 显示预览图
-    $scope.uploadConfirm = function () {
-        $scope.iconUrl = reader.result;
-    };
-
-    $scope.go1 = function () {
-        $scope.show = true;
-    };
-    $scope.go2 = function () {
-        $scope.show = false;
-    }
-
-}]);
-
-
-
-</script>
-
-<script>
-    (function ($) {
-
-        $("#upload").on("click", function () {
-
-            var formData = new FormData();
-
-            if ($('#file')[0].files[0] != null) {
-
-                formData.append('multipartFile1', $('#file')[0].files[0]);
-
-            }
-
-            if ($('#file1')[0].files[0] != null) {
-
-                formData.append('multipartFile1', $('#file1')[0].files[0]);
-
-            }
-
-            if ($('#file2')[0].files[0] != null) {
-
-                formData.append('multipartFile2', $('#file2')[0].files[0]);
-
-            }
-
-            if ($('#file3')[0].files[0] != null) {
-
-                formData.append('multipartFile2', $('#file3')[0].files[0]);
-
-            }
-
-            if ($('#file4')[0].files[0] != null) {
-
-                formData.append('multipartFile2', $('#file4')[0].files[0]);
-
-            }
-
-            formData.append("type", "222");
-
-            $.ajax({
-
-                url: "SpringMVC/fileUpload",
-
-                type: 'POST',
-
-                cache: false,
-
-                data: formData,
-
-                processData: false,
-
-                contentType: false,
-
-                success: function (result) {
-                },
-
-                error: function (err) {
-                }
-
-            });
-
-        })
-
-    }(jQuery));
+        }
+    })
 </script>
 </body>
 

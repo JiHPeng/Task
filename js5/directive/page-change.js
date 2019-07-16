@@ -1,4 +1,4 @@
-// app.directive('pageChange',function (page) {
+// app.directive('pageChange',function (prePage) {
 //     return {
 //         restrict: 'E',
 //         template:'<ul>' +

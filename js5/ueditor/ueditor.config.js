@@ -19,8 +19,8 @@
      * 因此，UEditor提供了针对不同页面的编辑器可单独配置的根路径，具体来说，在需要实例化编辑器的页面最顶部写上如下代码即可。当然，需要令此处的URL等于对应的配置。
      * window.UEDITOR_HOME_URL = "/xxxx/xxxx/";
      */
-    // var URL = window.UEDITOR_HOME_URL || getUEBasePath();
-    var URL = "/ueditor-jsp/";
+    var URL = window.UEDITOR_HOME_URL || getUEBasePath();
+
     /**
      * 配置项主体。注意，此处所有涉及到路径的配置别遗漏URL变量。
      */
@@ -34,14 +34,89 @@
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
-            'undo', 'redo', '|',
-            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
-            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
-            'fontfamily', 'fontsize', '|',
-            'directionalityltr', 'directionalityrtl', 'indent', '|',
-            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
-            'horizontal', 'date', 'time',
-            'print', 'searchreplace', 'help'
+            'fullscreen',
+			// 'source',
+			// '|',
+			'undo',
+			'redo', '|',
+            'paragraph',
+            'fontfamily',
+            'fontsize',
+            '|',
+            'bold',
+			'italic',
+			'underline',
+			'fontborder',
+			'strikethrough',
+			// 'superscript',
+			// 'subscript',
+			'removeformat',
+			'formatmatch',
+			// 'autotypeset',
+			// 'blockquote',
+			'pasteplain', '|',
+			'forecolor',
+			'backcolor',
+			'insertorderedlist',
+			'insertunorderedlist',
+			'selectall',
+			'cleardoc', '|',
+            // 'rowspacingtop',
+			// 'rowspacingbottom',
+			// 'lineheight',
+			// '|',
+			// 'customstyle',	//自定义标题
+
+            // 'directionalityltr',	//从左向右输入
+			// 'directionalityrtl',	//从右向左输入
+			// 'indent', '|',
+            'justifyleft',
+			'justifycenter',
+			'justifyright',
+			'justifyjustify', '|',
+			'touppercase',
+			'tolowercase', '|',
+            'link',
+			'unlink',
+			// 'anchor', '|',
+			// 'imagenone',
+			// 'imageleft',
+			// 'imageright',
+			// 'imagecenter',
+			'|',
+            'emotion',
+			// 'scrawl',
+			'attachment',
+			// 'map',
+			// 'gmap',
+			// 'insertframe',
+			// 'insertcode',
+			// 'pagebreak',
+			// 'template',
+			// 'background', '|',
+            // 'horizontal',
+			// 'date',
+			// 'time',
+			// 'spechars', '|',
+            // 'inserttable',
+			// 'deletetable',
+			// 'insertparagraphbeforetable',
+			// 'insertrow',
+			// 'deleterow',
+			// 'insertcol',
+			// 'deletecol',
+			// 'mergecells',
+			// 'mergeright',
+			// 'mergedown',
+			// 'splittocells',
+			// 'splittorows',
+			// 'splittocols',
+			// 'charts', '|',
+            // 'print',
+			// 'preview',
+			// 'searchreplace',
+			// 'drafts',
+			// 'help'
         ]]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
         //,labelMap:{

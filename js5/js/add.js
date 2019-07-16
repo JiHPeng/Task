@@ -3,6 +3,7 @@ app.controller('addBox', function ($scope, FileUploader, $stateParams, $state, $
     $scope.selectIndustry = industry;   //行业大图时，行业下拉框
     UE.delEditor('ueditor');
     // UE.getEditor('ueditor');
+    <!-- 实例化富文本编辑器 -->
     var ue = UE.getEditor('ueditor',{
         initialFrameWidth :'100%',//设置编辑器宽度
         initialFrameHeight:'40%',//设置编辑器高度
@@ -10,6 +11,11 @@ app.controller('addBox', function ($scope, FileUploader, $stateParams, $state, $
         //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
         enableContextMenu: false//右键菜单
     });
+    $scope.con = function () {
+        console.log("富文本内容为"+ue.getContent());
+        console.log("服务器获取的数据为"+$scope.content);
+    };
+
     if ($stateParams.id == undefined) {
         $scope.head = "新增Article";
         $scope.go = function (onOff) {
@@ -43,6 +49,7 @@ app.controller('addBox', function ($scope, FileUploader, $stateParams, $state, $
             url: "/carrots-admin-ajax/a/article/" + $stateParams.id,
         }).then(function (res) {
             console.log(res);
+            $scope.res = res;
             $scope.title = res.data.data.article.title;
             $scope.type = res.data.data.article.type.toString();
             $scope.industry = res.data.data.article.industry.toString();
@@ -50,8 +57,8 @@ app.controller('addBox', function ($scope, FileUploader, $stateParams, $state, $
             $scope.imgShow = true;//展示图片预览
             $scope.imgSrc = res.data.data.article.img;
             $scope.content = res.data.data.article.content;
-            console.log($scope.content);
         });
+        //上线或草稿
         $scope.go = function (onOff) {
             $http({
                 method:'PUT',
@@ -151,8 +158,6 @@ app.controller('addBox', function ($scope, FileUploader, $stateParams, $state, $
     $scope.cancel = function () {
         history.go(-1)
     };
-    <!-- 实例化富文本编辑器 -->
-
 });
 
 
