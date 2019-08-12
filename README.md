@@ -14,7 +14,7 @@
 <a href="https://jihpeng.github.io/Task/t14/main.html">Task14-15</a>
 
 <h1>Js</h1>
-<a href="https://jihpeng.github.io/Task/js/t1.html">Task1</a>
+<a href="https://jihpeng.github.io/Task/js/t1/t1.html">Task1</a>
 <a href="https://jihpeng.github.io/Task/js-t2/main.html">Task2-4</a>
 <a href="https://jihpeng.github.io/Task/js5/index.html">Task5-10</a>
 
